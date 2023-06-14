@@ -2,7 +2,7 @@
   <form>
     <md-card>
       <md-card-header :data-background-color="dataBackgroundColor">
-        <h4 class="title">Edit Profile</h4>
+        <h4 class="title">Project Request</h4>
         <p class="category">Complete your profile</p>
       </md-card-header>
 

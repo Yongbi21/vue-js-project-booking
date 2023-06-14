@@ -11,13 +11,13 @@
         <i class="bi bi-house"></i>
         <p>Home</p>
       </sidebar-link>
-      <sidebar-link to="/user">
+      <sidebar-link to="/table">
         <i class="bi bi-folder"></i>
         <p>Project Request</p>
       </sidebar-link>
-      <sidebar-link to="/table">
-        <i class="bi bi-graph-up-arrow"></i>
-        <p>Pricing and Quoting</p>
+      <sidebar-link to="/user">
+        <i class="bi-graph-up-arrow"></i>
+        <p>Pricing and Qutoting</p>
       </sidebar-link>
       <sidebar-link to="/typography">
         <i class="bi bi-calendar"></i>
@@ -27,11 +27,11 @@
         <i class="bi bi-chat-dots"></i>
         <p>Notifications</p>
       </sidebar-link>
-      <sidebar-link to="/maps">
+      <sidebar-link to="/">
         <i class="bi bi-gear-fill"></i>
         <p>Settings</p>
       </sidebar-link>
-      <sidebar-link to="/maps">
+      <sidebar-link to="/logout">
         <i class="bi bi-box-arrow-left"></i>
         <p>Logout</p>
       </sidebar-link>
@@ -70,7 +70,7 @@ export default {
   },
   data() {
     return {
-      sidebarBackground: "green",
+      sidebarBackground: "orange",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
     };
   },

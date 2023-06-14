@@ -6,7 +6,10 @@
     :style="sidebarStyle"
   >
     <div class="logo">
-      <a href="#" class="simple-text logo-mini">
+      <a
+        href="https://www.facebook.com/contactdreamers/"
+        class="simple-text logo-mini"
+      >
         <div class="logo-img">
           <img :src="imgLogo" alt="" />
         </div>
@@ -41,23 +44,23 @@ export default {
     SidebarLink,
   },
   props: {
-    title: {
+    /*title: {
       type: String,
       default: "dreameRS",
-    },
+    },*/
     sidebarBackgroundImage: {
       type: String,
       default: require("@/assets/img/sidebar-2.jpg"),
     },
     imgLogo: {
       type: String,
-      default: require("@/assets/img/dreamers logo.png"),
+      default: require("@/assets/img/dreamerstextdd.png"),
     },
     sidebarItemColor: {
       type: String,
-      default: "green",
+      default: "orange",
       validator: (value) => {
-        let acceptedValues = ["", "purple", "blue", "green", "orange", "red"];
+        let acceptedValues = ["", "orange", "blue", "green", "purple", "red"];
         return acceptedValues.indexOf(value) !== -1;
       },
     },

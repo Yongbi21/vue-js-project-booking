@@ -228,36 +228,37 @@
             }
 
             .logo-img{
-              width: 40px;
+              width: 250px;
               display: inline-block;
               height: 40px;
-              background: $white-color;
-              border-radius: 50%;
-              text-align: center;
+              //background: $white-color;
+              //border-radius: 50%;
+              //text-align: center;
               overflow: hidden;
-              @include shadow-big();
+              //@include shadow-big();
 
                 img{
                   width: 55%;
-                  vertical-align: -webkit-baseline-middle;
+                vertical-align: -webkit-baseline-middle;
+                  
                 }
             }
         }
     }
 
     .logo-tim{
-        border-radius: 50%;
-        border: 1px solid #333;
+        //border-radius: 50%;
+       // border: 1px solid #333;
         display: block;
         height: 61px;
         width: 61px;
-        float: left;
+        //float: left;
         overflow: hidden;
 
-        img{
+        /*img{
             width: 60px;
             height: 60px;
-        }
+        }*/
     }
 
     &:after{

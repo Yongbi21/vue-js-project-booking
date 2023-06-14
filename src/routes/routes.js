@@ -44,6 +44,11 @@ const routes = [
         name: "Notifications",
         component: Notifications,
       },
+      /*{
+        path: "logout",
+        name: "logout",
+        component: Logout,
+      },*/
     ],
   },
 ];

@@ -114,8 +114,8 @@ export default {
       sidebarColors: [
         { color: "purple", active: false },
         { color: "blue", active: false },
-        { color: "green", active: true },
-        { color: "orange", active: false },
+        { color: "green", active: false },
+        { color: "orange", active: true },
         { color: "red", active: false },
       ],
       sidebarImages: [

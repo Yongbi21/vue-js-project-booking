@@ -31,22 +31,24 @@
       <div
         class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
       >
+        <template slot="header">
+          <h4 class="title">Project Status</h4>
+        </template>
         <chart-card
           :chart-data="emailsSubscriptionChart.data"
           :chart-options="emailsSubscriptionChart.options"
           :chart-responsive-options="emailsSubscriptionChart.responsiveOptions"
           :chart-type="'Bar'"
-          data-background-color="red"
+          data-background-color="FFFFFF"
         >
           <template slot="content">
-            <h4 class="title">Email Subscription</h4>
-            <p class="category">Last Campaign Performance</p>
+            <h4 class="title">Project Status</h4>
           </template>
 
           <template slot="footer">
             <div class="stats">
               <md-icon>access_time</md-icon>
-              updated 10 days ago
+              <div id="rounded-box">Last 7 days</div>
             </div>
           </template>
         </chart-card>
@@ -260,29 +262,22 @@ export default {
       emailsSubscriptionChart: {
         data: {
           labels: [
-            "Ja",
-            "Fe",
-            "Ma",
-            "Ap",
-            "Mai",
-            "Ju",
-            "Jul",
-            "Au",
-            "Se",
-            "Oc",
-            "No",
-            "De",
+            "Jan 12",
+            "Jan 18",
+            "Jan 20",
+            "Jan 23",
+            "Jan 27",
+            "Jan 28",
+            "Jan 29",
           ],
-          series: [
-            [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-          ],
+          series: [[18, 37, 70, 150, 50, 90, 80]],
         },
         options: {
           axisX: {
             showGrid: false,
           },
-          low: 0,
-          high: 1000,
+          low: 20,
+          high: 1000 / 4,
           chartPadding: {
             top: 0,
             right: 5,
@@ -294,7 +289,7 @@ export default {
           [
             "screen and (max-width: 640px)",
             {
-              seriesBarDistance: 5,
+              seriesBarDistance: 6,
               axisX: {
                 labelInterpolationFnc: function (value) {
                   return value[0];
