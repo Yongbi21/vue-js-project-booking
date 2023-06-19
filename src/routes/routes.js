@@ -7,12 +7,20 @@ import Typography from "@/pages/Typography.vue";
 import Icons from "@/pages/Icons.vue";
 import Maps from "@/pages/Maps.vue";
 import Notifications from "@/pages/Notifications.vue";
+import Logout from "@/pages/Logout.vue";
+
+import Login from "@/pages/Login.vue";
 
 const routes = [
   {
     path: "/",
+    name: "login",
+    component: Login,
+  },
+  {
+    path: "/",
+    name: "dashboard",
     component: DashboardLayout,
-    redirect: "/dashboard",
     children: [
       {
         path: "dashboard",
@@ -45,11 +53,16 @@ const routes = [
         component: Notifications,
       },
       /*{
-        path: "logout",
-        name: "logout",
-        component: Logout,
+        path: "settings",
+        name: "Settings",
+        component: Settings,
       },*/
     ],
+  },
+  {
+    path: "login",
+    name: "logout",
+    component: Logout,
   },
 ];
 

@@ -25,13 +25,13 @@
       </sidebar-link>
       <sidebar-link to="/notifications">
         <i class="bi bi-chat-dots"></i>
-        <p>Notifications</p>
+        <p>Messenger</p>
       </sidebar-link>
-      <sidebar-link to="/">
+      <sidebar-link to="/settings">
         <i class="bi bi-gear-fill"></i>
         <p>Settings</p>
       </sidebar-link>
-      <sidebar-link to="/logout">
+      <sidebar-link to="/login">
         <i class="bi bi-box-arrow-left"></i>
         <p>Logout</p>
       </sidebar-link>
