@@ -4,22 +4,21 @@
       <nav>
         <ul>
           <li>
-            <a href="https://www.creative-tim.com">Creative Tim</a>
+            <a href="#"> Home</a>
           </li>
           <li>
-            <a href="https://creative-tim.com/presentation"> About Us </a>
+            <a href="#"> Features </a>
           </li>
           <li>
-            <a href="http://blog.creative-tim.com"> Blog </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/license"> Licenses </a>
+            <a href="#"> About </a>
           </li>
         </ul>
       </nav>
       <div class="copyright text-center">
         &copy; {{ new Date().getFullYear() }}
-        <a href="#" target="_blank">dreamers IT Solution Inc.</a>
+        <a href="#" target="_blank"
+          >Develop by WMSU Interns - Alright Reserved</a
+        >
       </div>
     </div>
   </footer>

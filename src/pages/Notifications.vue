@@ -1,173 +1,249 @@
 <template>
-  <div class="content">
-    <div class="md-layout">
-      <div class="md-layout-item">
-        <md-card>
-          <md-card-header data-background-color="green">
-            <h4 class="title">Notifications</h4>
-            <p class="category">
-              Handcrafted by us with <i class="fa fa-heart heart"></i>
-            </p>
-          </md-card-header>
-          <md-card-content>
-            <div class="md-layout">
-              <div class="md-layout-item md-medium-size-100">
-                <h5>Notifications Style</h5>
-                <div class="alert alert-info">
-                  <span>This is a plain notification</span>
-                </div>
-                <div class="alert alert-info">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span>This is a notification with close button.</span>
-                </div>
-                <div
-                  class="alert alert-info alert-with-icon"
-                  data-notify="container"
-                >
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <i data-notify="icon" class="material-icons">add_alert</i>
-                  <span data-notify="message"
-                    >This is a notification with close button and icon.</span
-                  >
-                </div>
-                <div
-                  class="alert alert-info alert-with-icon"
-                  data-notify="container"
-                >
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <i data-notify="icon" class="material-icons">add_alert</i>
-                  <span data-notify="message"
-                    >This is a notification with close button and icon and have
-                    many lines. You can see that the icon and the close button
-                    are always vertically aligned. This is a beautiful
-                    notification. So you don't have to worry about the
-                    style.</span
-                  >
-                </div>
-              </div>
-              <div class="md-layout-item md-medium-size-100">
-                <h5>Notification states</h5>
-                <div class="alert alert-info">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span
-                    ><b> Info - </b> This is a regular notification made with
-                    ".alert-info"</span
-                  >
-                </div>
-                <div class="alert alert-success">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span
-                    ><b> Success - </b> This is a regular notification made with
-                    ".alert-success"</span
-                  >
-                </div>
-                <div class="alert alert-warning">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span
-                    ><b> Warning - </b> This is a regular notification made with
-                    ".alert-warning"</span
-                  >
-                </div>
-                <div class="alert alert-danger">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span
-                    ><b> Danger - </b> This is a regular notification made with
-                    ".alert-danger"</span
-                  >
-                </div>
-                <div class="alert alert-primary">
-                  <button type="button" aria-hidden="true" class="close">
-                    ×
-                  </button>
-                  <span
-                    ><b> Primary - </b> This is a regular notification made with
-                    ".alert-primary"</span
-                  >
-                </div>
-              </div>
+  <section style="background-color: #eee">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
+          <h5 class="font-weight-bold mb-3 text-center text-lg-start">
+            Member
+          </h5>
 
-              <div class="md-layout-item md-size-100">
-                <div class="places-buttons text-center">
-                  <h5 class="text-center">
-                    Notifications Places
-                    <p class="category">Click to view notifications</p>
-                  </h5>
-                  <md-button
-                    class="md-primary"
-                    @click="notifyVue('top', 'left')"
-                    >Top Left</md-button
-                  >
-                  <md-button
-                    class="md-primary"
-                    @click="notifyVue('top', 'center')"
-                    >Top Center</md-button
-                  >
-                  <md-button
-                    class="md-primary"
-                    @click="notifyVue('top', 'right')"
-                    >Top Right</md-button
-                  >
-                  <md-button
-                    class="md-primary"
-                    @click="notifyVue('bottom', 'left')"
-                    >Bottom Left</md-button
-                  >
-                  <md-button
-                    class="md-primary"
-                    @click="notifyVue('bottom', 'center')"
-                    >Bottom Center</md-button
-                  >
-                  <md-button
-                    class="md-primary"
-                    @click="notifyVue('bottom', 'right')"
-                    >Bottom Right</md-button
-                  >
+          <div class="card">
+            <div class="card-body">
+              <ul class="list-unstyled mb-0">
+                <li class="p-2 border-bottom" style="background-color: #eee">
+                  <a href="#!" class="d-flex justify-content-between">
+                    <div class="d-flex flex-row">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-8.webp"
+                        alt="avatar"
+                        class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                        width="60"
+                      />
+                      <div class="pt-1">
+                        <p class="fw-bold mb-0">John Doe</p>
+                        <p class="small text-muted">Hello, Are you there?</p>
+                      </div>
+                    </div>
+                    <div class="pt-1">
+                      <p class="small text-muted mb-1">Just now</p>
+                      <span class="badge bg-danger float-end">1</span>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-2 border-bottom">
+                  <a href="#!" class="d-flex justify-content-between">
+                    <div class="d-flex flex-row">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-1.webp"
+                        alt="avatar"
+                        class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                        width="60"
+                      />
+                      <div class="pt-1">
+                        <p class="fw-bold mb-0">Danny Smith</p>
+                        <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                      </div>
+                    </div>
+                    <div class="pt-1">
+                      <p class="small text-muted mb-1">5 mins ago</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-2 border-bottom">
+                  <a href="#!" class="d-flex justify-content-between">
+                    <div class="d-flex flex-row">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-2.webp"
+                        alt="avatar"
+                        class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                        width="60"
+                      />
+                      <div class="pt-1">
+                        <p class="fw-bold mb-0">Alex Steward</p>
+                        <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                      </div>
+                    </div>
+                    <div class="pt-1">
+                      <p class="small text-muted mb-1">Yesterday</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-2 border-bottom">
+                  <a href="#!" class="d-flex justify-content-between">
+                    <div class="d-flex flex-row">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-3.webp"
+                        alt="avatar"
+                        class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                        width="60"
+                      />
+                      <div class="pt-1">
+                        <p class="fw-bold mb-0">Ashley Olsen</p>
+                        <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                      </div>
+                    </div>
+                    <div class="pt-1">
+                      <p class="small text-muted mb-1">Yesterday</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-2 border-bottom">
+                  <a href="#!" class="d-flex justify-content-between">
+                    <div class="d-flex flex-row">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-4.webp"
+                        alt="avatar"
+                        class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                        width="60"
+                      />
+                      <div class="pt-1">
+                        <p class="fw-bold mb-0">Kate Moss</p>
+                        <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                      </div>
+                    </div>
+                    <div class="pt-1">
+                      <p class="small text-muted mb-1">Yesterday</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-2 border-bottom">
+                  <a href="#!" class="d-flex justify-content-between">
+                    <div class="d-flex flex-row">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
+                        alt="avatar"
+                        class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                        width="60"
+                      />
+                      <div class="pt-1">
+                        <p class="fw-bold mb-0">Lara Croft</p>
+                        <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                      </div>
+                    </div>
+                    <div class="pt-1">
+                      <p class="small text-muted mb-1">Yesterday</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="p-2">
+                  <a href="#!" class="d-flex justify-content-between">
+                    <div class="d-flex flex-row">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                        alt="avatar"
+                        class="rounded-circle d-flex align-self-center me-3 shadow-1-strong"
+                        width="60"
+                      />
+                      <div class="pt-1">
+                        <p class="fw-bold mb-0">Brad Pitt</p>
+                        <p class="small text-muted">Lorem ipsum dolor sit.</p>
+                      </div>
+                    </div>
+                    <div class="pt-1">
+                      <p class="small text-muted mb-1">5 mins ago</p>
+                      <span class="text-muted float-end"
+                        ><i class="fas fa-check" aria-hidden="true"></i
+                      ></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-7 col-xl-8">
+          <ul class="list-unstyled">
+            <li class="d-flex justify-content-between mb-4">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                alt="avatar"
+                class="rounded-circle d-flex align-self-start me-3 shadow-1-strong"
+                width="60"
+              />
+              <div class="card">
+                <div class="card-header d-flex justify-content-between p-3">
+                  <p class="fw-bold mb-0">Brad Pitt</p>
+                  <p class="text-muted small mb-0">
+                    <i class="far fa-clock"></i> 12 mins ago
+                  </p>
+                </div>
+                <div class="card-body">
+                  <p class="mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
                 </div>
               </div>
-            </div>
-          </md-card-content>
-        </md-card>
+            </li>
+            <li class="d-flex justify-content-between mb-4">
+              <div class="card w-100">
+                <div class="card-header d-flex justify-content-between p-3">
+                  <p class="fw-bold mb-0">Lara Croft</p>
+                  <p class="text-muted small mb-0">
+                    <i class="far fa-clock"></i> 13 mins ago
+                  </p>
+                </div>
+                <div class="card-body">
+                  <p class="mb-0">
+                    Sed ut perspiciatis unde omnis iste natus error sit
+                    voluptatem accusantium doloremque laudantium.
+                  </p>
+                </div>
+              </div>
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
+                alt="avatar"
+                class="rounded-circle d-flex align-self-start ms-3 shadow-1-strong"
+                width="60"
+              />
+            </li>
+            <li class="d-flex justify-content-between mb-4">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                alt="avatar"
+                class="rounded-circle d-flex align-self-start me-3 shadow-1-strong"
+                width="60"
+              />
+              <div class="card">
+                <div class="card-header d-flex justify-content-between p-3">
+                  <p class="fw-bold mb-0">Brad Pitt</p>
+                  <p class="text-muted small mb-0">
+                    <i class="far fa-clock"></i> 10 mins ago
+                  </p>
+                </div>
+                <div class="card-body">
+                  <p class="mb-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="bg-white mb-3">
+              <div class="form-outline">
+                <textarea
+                  class="form-control"
+                  id="textAreaExample2"
+                  rows="4"
+                ></textarea>
+                <label class="form-label" for="textAreaExample2">Message</label>
+              </div>
+            </li>
+            <button type="button" class="btn btn-info btn-rounded float-end">
+              Send
+            </button>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
+<style scoped>
+</style>
 
 <script>
-export default {
-  data() {
-    return {
-      type: ["", "info", "success", "warning", "danger"],
-      notifications: {
-        topCenter: false,
-      },
-    };
-  },
-  methods: {
-    notifyVue(verticalAlign, horizontalAlign) {
-      var color = Math.floor(Math.random() * 4 + 1);
-      this.$notify({
-        message:
-          "Welcome to <b>Material Dashboard</b> - a beautiful freebie for every web developer.",
-        icon: "add_alert",
-        horizontalAlign: horizontalAlign,
-        verticalAlign: verticalAlign,
-        type: this.type[color],
-      });
-    },
-  },
-};
+export default {};
 </script>

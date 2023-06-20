@@ -6,11 +6,10 @@
       >
         <md-card class="md-card-plain">
           <md-card-header data-background-color="green">
-            <h4 class="title">Table on Plain Background</h4>
-            <p class="category">Here is a subtitle for this table</p>
+            <h4 class="title">Pricing And Quoting</h4>
           </md-card-header>
           <md-card-content>
-            <ordered-table></ordered-table>
+            <simple-table></simple-table>
           </md-card-content>
         </md-card>
       </div>
@@ -19,11 +18,11 @@
 </template>
 
 <script>
-import { OrderedTable } from "@/components";
+import { SimpleTable } from "@/components";
 
 export default {
   components: {
-    OrderedTable,
+    SimpleTable,
   },
 };
 </script>

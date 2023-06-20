@@ -15,7 +15,7 @@
         <i class="bi bi-folder"></i>
         <p>Project Request</p>
       </sidebar-link>
-      <sidebar-link to="/user">
+      <sidebar-link to="/pricing-quoting">
         <i class="bi-graph-up-arrow"></i>
         <p>Pricing and Qutoting</p>
       </sidebar-link>
@@ -29,9 +29,9 @@
       </sidebar-link>
       <sidebar-link to="/settings">
         <i class="bi bi-gear-fill"></i>
-        <p>Settings</p>
+        <p>Admin Settings</p>
       </sidebar-link>
-      <sidebar-link to="/login">
+      <sidebar-link to="/">
         <i class="bi bi-box-arrow-left"></i>
         <p>Logout</p>
       </sidebar-link>
