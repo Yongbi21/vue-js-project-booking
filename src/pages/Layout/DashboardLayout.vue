@@ -9,9 +9,9 @@
       <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/dashboard">
         <i class="bi bi-house"></i>
-        <p>Home</p>
+        <p>Dashboard</p>
       </sidebar-link>
-      <sidebar-link to="/table">
+      <sidebar-link to="/projectRequest">
         <i class="bi bi-folder"></i>
         <p>Project Request</p>
       </sidebar-link>
@@ -19,7 +19,7 @@
         <i class="bi-graph-up-arrow"></i>
         <p>Pricing and Qutoting</p>
       </sidebar-link>
-      <sidebar-link to="/typography">
+      <sidebar-link to="/projectStatus">
         <i class="bi bi-calendar"></i>
         <p>Project Tracking Status</p>
       </sidebar-link>

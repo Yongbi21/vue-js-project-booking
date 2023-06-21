@@ -32,7 +32,7 @@
         <chart-card
           :chart-data="dataCompletedTasksChart.data"
           :chart-options="dataCompletedTasksChart.options"
-          :chart-type="'Line'"
+          :chart-type="'Donut'"
           data-background-color="green"
         >
           <template slot="content">

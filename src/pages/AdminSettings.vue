@@ -5,29 +5,32 @@
         <md-card>
           <md-card-content>
             <div id="settings">
-              <div class="row">
-                <div class="form-outline form-white mb-4">
-                  <input type="checkbox" id="checkbox1" />
-                  <label class="form-label" for="checkbox1"
-                    >Automated Reminders</label
-                  >
+              <div class="left">
+                <div class="auto">
+                  <div class="form-outline form-white mb-4">
+                    <input type="checkbox" id="checkbox1" />
+                    <label class="form-label" for="checkbox1"
+                      >Automated Reminders</label
+                    >
+                  </div>
+                </div>
+                <div class="in app">
+                  <h2>Delivery Methods</h2>
+                  <div class="form-outline form-white mb-4">
+                    <input type="checkbox" id="checkbox1" />
+                    <label class="form-label" for="checkbox1"
+                      >In - App notifications</label
+                    >
+                  </div>
+                </div>
+                <div class="email">
+                  <div class="form-outline form-white mb-4">
+                    <input type="checkbox" id="checkbox1" />
+                    <label class="form-label" for="checkbox1">Email</label>
+                  </div>
                 </div>
               </div>
-              <div class="row">
-                <h2>Delivery Methods</h2>
-                <div class="form-outline form-white mb-4">
-                  <input type="checkbox" id="checkbox1" />
-                  <label class="form-label" for="checkbox1"
-                    >In - App notifications</label
-                  >
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-outline form-white mb-4">
-                  <input type="checkbox" id="checkbox1" />
-                  <label class="form-label" for="checkbox1">Email</label>
-                </div>
-              </div>
+
               <div class="row">
                 <h2>Admin Notifications</h2>
                 <div class="form-outline form-white mb-4">
@@ -47,8 +50,8 @@
                     <input type="date" id="datepicker" placeholder="01/06/23" />
                   </div>
                 </div>
-                <button>Save</button>
               </div>
+              <button>Save</button>
             </div>
           </md-card-content>
         </md-card>
@@ -56,7 +59,11 @@
     </div>
   </div>
 </template>
-
+<style scoped>
+.right {
+  float: right;
+}
+</style>
 <script>
 export default {};
 </script>

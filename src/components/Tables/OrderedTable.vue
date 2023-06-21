@@ -26,11 +26,10 @@
         <md-table-cell md-label="Priority">{{ item.priority }}</md-table-cell>
         <md-table-cell md-label="Due Date">{{ item.duedate }}</md-table-cell>
         <md-table-cell md-label="File">{{ item.file }}</md-table-cell>
-        <md-table-cell md-label="Action"></md-table-cell>
-        <md-table-actions>
+        <md-table-cell-action md-label="Actions">
           <md-button>Action</md-button>
           <md-button>Action</md-button>
-        </md-table-actions>
+        </md-table-cell-action>
       </md-table-row>
       <md-table-pagination
         :md-page-size="2"

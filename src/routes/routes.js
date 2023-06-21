@@ -3,7 +3,7 @@ import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
 import Dashboard from "@/pages/Dashboard.vue";
 import PricingQuoting from "@/pages/PricingQuoting.vue";
 import TableList from "@/pages/ProjectRequest.vue";
-/*import Typography from "@/pages/Typography.vue";*/
+import ChartCards from "@/pages/ProjectStatus.vue";
 import Icons from "@/pages/Icons.vue";
 import Notifications from "@/pages/Notifications.vue";
 import Settings from "@/pages/AdminSettings.vue";
@@ -31,14 +31,14 @@ const routes = [
         component: PricingQuoting,
       },
       {
-        path: "table",
+        path: "projectRequest",
         component: TableList,
       },
-      /*{
-        path: "typography",
-        name: "Typography",
-        component: Typography,
-      },*/
+      {
+        path: "projectStatus",
+        name: "Project Status",
+        component: ChartCards,
+      },
       {
         path: "icons",
         name: "Icons",
