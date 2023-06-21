@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
-    <notifications></notifications>
 
     <side-bar
       :sidebar-item-color="sidebarBackground"
@@ -23,7 +22,7 @@
         <i class="bi bi-calendar"></i>
         <p>Project Tracking Status</p>
       </sidebar-link>
-      <sidebar-link to="/notifications">
+      <sidebar-link to="/messenger">
         <i class="bi bi-chat-dots"></i>
         <p>Messenger</p>
       </sidebar-link>

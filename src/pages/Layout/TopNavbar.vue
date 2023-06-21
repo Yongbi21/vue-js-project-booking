@@ -26,7 +26,6 @@
             </md-autocomplete>
           </div>
           <md-list>
-
             <!-- <md-list-item href="#/notifications" class="dropdown">
               <drop-down>
                 <a slot="title" class="dropdown-toggle" data-toggle="dropdown">
@@ -45,8 +44,8 @@
             </md-list-item> -->
 
             <li class="md-list-item">
-              <a
-                href="#/notifications"
+              <router-link
+                to="/dashboard"
                 class="md-list-item-router md-list-item-container md-button-clean dropdown"
               >
                 <div class="md-list-item-content">
@@ -61,12 +60,14 @@
                       <p class="hidden-lg hidden-md">Notifications</p>
                     </md-button>
                     <ul class="dropdown-menu dropdown-menu-right">
-                      <li><a href="#">Kelly Kapoor responded to your email</a></li>
+                      <li>
+                        <a href="#">Kelly Kapoor responded to your email</a>
+                      </li>
                       <li><a href="#">You have 3 new tasks</a></li>
                     </ul>
                   </drop-down>
                 </div>
-              </a>
+              </router-link>
             </li>
 
             <md-list-item href="#/user">
@@ -85,11 +86,7 @@ export default {
   data() {
     return {
       selectedEmployee: null,
-      employees: [
-      "Jim Halpert",
-        "Angela Martin",
-        "Kelly Kapoor",
-      ],
+      employees: ["Jim Halpert", "Angela Martin", "Kelly Kapoor"],
     };
   },
   methods: {
