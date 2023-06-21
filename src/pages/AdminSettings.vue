@@ -50,6 +50,7 @@
                     <input type="date" id="datepicker" placeholder="01/06/23" />
                   </div>
                 </div>
+                <button>Save</button>
               </div>
               <button>Save</button>
             </div>

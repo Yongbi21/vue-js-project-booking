@@ -1,16 +1,16 @@
 {
-  "name": "vue-material-dashboard",
+  "name": "project-booking-app",
   "version": "1.5.1",
   "private": true,
   "scripts": {
+    "start": "concurrently \"npm run sass\" \"run serve\"",
     "serve": "vue-cli-service serve --open",
     "dev": "npm run serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "chart.js": "^4.3.0",
-    "chartist": "^0.11.4",
+    "chartist": "0.11.4",
     "core-js": "3.26.1",
     "google-maps": "4.3.3",
     "mdb-ui-kit": "^6.4.0",
@@ -28,13 +28,15 @@
     "@vue/cli-service": "^5.0.8",
     "@vue/eslint-config-prettier": "7.0.0",
     "babel-eslint": "10.1.0",
+    "concurrently": "8.2.0",
     "es6-promise": "4.2.8",
     "eslint": "7.32.0",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-vue": "7.20.0",
     "prettier": "2.8.1",
-    "sass": "1.56.2",
+    "sass": "^1.56.2",
     "sass-loader": "10.2.0",
+    "vite": "^4.3.9",
     "vue-template-compiler": "2.7.14"
   }
 }

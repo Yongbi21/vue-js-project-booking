@@ -26,10 +26,6 @@
             </md-autocomplete>
           </div>
           <md-list>
-            <md-list-item href="#/">
-              <i class="material-icons">dashboard</i>
-              <p class="hidden-lg hidden-md">Dashboard</p>
-            </md-list-item>
 
             <!-- <md-list-item href="#/notifications" class="dropdown">
               <drop-down>
@@ -65,11 +61,8 @@
                       <p class="hidden-lg hidden-md">Notifications</p>
                     </md-button>
                     <ul class="dropdown-menu dropdown-menu-right">
-                      <li><a href="#">Mike John responded to your email</a></li>
-                      <li><a href="#">You have 5 new tasks</a></li>
-                      <li><a href="#">You're now friend with Andrew</a></li>
-                      <li><a href="#">Another Notification</a></li>
-                      <li><a href="#">Another One</a></li>
+                      <li><a href="#">Kelly Kapoor responded to your email</a></li>
+                      <li><a href="#">You have 3 new tasks</a></li>
                     </ul>
                   </drop-down>
                 </div>
@@ -93,14 +86,9 @@ export default {
     return {
       selectedEmployee: null,
       employees: [
-        "Jim Halpert",
-        "Dwight Schrute",
-        "Michael Scott",
-        "Pam Beesly",
+      "Jim Halpert",
         "Angela Martin",
         "Kelly Kapoor",
-        "Ryan Howard",
-        "Kevin Malone",
       ],
     };
   },
