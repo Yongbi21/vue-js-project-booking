@@ -3,6 +3,7 @@
   "version": "1.5.1",
   "private": true,
   "scripts": {
+    "start": "concurrently \"npm run sass\" \"run serve\"",
     "serve": "vue-cli-service serve --open",
     "dev": "npm run serve",
     "build": "vue-cli-service build",
@@ -20,6 +21,7 @@
     "vue-social-sharing": "3.0.9"
   },
   "devDependencies": {
+    "concurrently": "8.2.0",
     "@vue/cli-plugin-babel": "^5.0.8",
     "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-plugin-router": "^5.0.8",
