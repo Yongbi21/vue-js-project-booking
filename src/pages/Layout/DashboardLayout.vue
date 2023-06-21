@@ -9,7 +9,7 @@
       <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/dashboard">
         <i class="bi bi-house"></i>
-        <p>Home</p>
+        <p>Dashboard</p>
       </sidebar-link>
       <sidebar-link to="/table">
         <i class="bi bi-folder"></i>
