@@ -52,7 +52,6 @@
                 </div>
                 <button>Save</button>
               </div>
-              <button>Save</button>
             </div>
           </md-card-content>
         </md-card>
