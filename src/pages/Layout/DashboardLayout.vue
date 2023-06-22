@@ -1,6 +1,6 @@
+<!-- eslint-disable prettier/prettier -->
 <template>
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
-
     <side-bar
       :sidebar-item-color="sidebarBackground"
       :sidebar-background-image="sidebarBackgroundImage"
@@ -18,7 +18,7 @@
         <i class="bi-graph-up-arrow"></i>
         <p>Pricing and Qutoting</p>
       </sidebar-link>
-      <sidebar-link to="/projectStatus">
+      <sidebar-link to="/test">
         <i class="bi bi-calendar"></i>
         <p>Project Tracking Status</p>
       </sidebar-link>
