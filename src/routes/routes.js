@@ -7,9 +7,15 @@ import ChartCards from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
 
+import LandingPage from "@/pages/LandingPage.vue";
 import Login from "@/pages/Login.vue";
 
 const routes = [
+  {
+    path: "/",
+    name: "landingpage",
+    component: LandingPage,
+  },
   {
     path: "/",
     name: "login",

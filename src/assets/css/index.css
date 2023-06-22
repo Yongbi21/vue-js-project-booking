@@ -1,0 +1,35 @@
+*{
+ font-family: 'Zilla Slab';
+ background-color: white;
+}
+#content
+{
+  padding-top: 100px;
+  font-weight: 300;
+  font-size: 40px;
+}
+
+.custom-padding 
+{
+    padding-right: 40px;
+}
+.custom-btn {
+  color:black;
+  border-color: orange;
+}
+.nav-link{
+    font-size: 23px;
+}
+#header .navbar-brand,
+#sideheader .nav-link{
+  color: black;
+}
+#header {
+    display: flex;
+    align-items: center;
+  }
+  
+#header .navbar-brand {
+    margin-left: 8px;
+    font-size: 35px;
+}
