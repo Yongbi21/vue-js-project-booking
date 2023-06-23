@@ -1,280 +1,122 @@
 <template>
-  <div class="content">
-    <div class="md-layout">
-      <div class="div1">
-        <div
-      class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
-    >
-      <chart-card
-        :chart-data="emailsSubscriptionChart.data"
-        :chart-options="emailsSubscriptionChart.options"
-        :chart-responsive-options="emailsSubscriptionChart.responsiveOptions"
-        :chart-type="'Bar'"
-        data-background-color="red"
-      >
-        <template slot="content">
-          <h4 class="title">Project Status</h4>
-          <p class="category">Last Campaign Performance</p>
-        </template>
-
-        <template slot="footer">
-          <div class="stats">
-            <md-icon>access_time</md-icon>
-            updated 10 days ago
+  <div class="row row-cols-1 row-cols-sm-1 g-3">
+    <div class="card" id="projectdetails" style="width: 25rem">
+      <ul class="list-group list-group-flush">
+        <div class="card-header">Project Details</div>
+        <div>
+          <span id="proj">Real Estate Project</span>
+          <i class="bi bi-three-dots-vertical"></i>
+          <p id="realstit">
+            Create a consistent look and feel smooth on web and mobile, revision
+            in landing page.
+          </p>
+          <br />
+          <div class="logo-container">
+            <a href="#">Kurt and team</a>
+            <img src="../assets/img/angkol.png" alt="Logo 1" />
+            <img src="../assets/img/kalbs.png" alt="Logo 2" />
+            <img src="../assets/img/angkol.png" alt="Logo 3" />
           </div>
-        </template>
-      </chart-card>
+        </div>
+        <li class="list-group-item"></li>
+        <div>
+          <span id="proj">Travel Mobile Design</span>
+          <i class="bi bi-three-dots-vertical"></i>
+          <p id="realstit">
+            Create a consistent look and feel smooth on web and mobile, revision
+            in landing page.
+          </p>
+          <br />
+          <div class="logo-container">
+            <a href="#">Jonel</a>
+            <img src="../assets/img/angkol.png" alt="Logo 1" />
+          </div>
+        </div>
+        <li class="list-group-item"></li>
+        <div>
+          <span id="proj">Health Tracker Device</span>
+          <i class="bi bi-three-dots-vertical"></i>
+          <p id="realstit">
+            Create a consistent look and feel smooth on web and mobile, revision
+            in landing page.
+          </p>
+          <br />
+          <div class="logo-container">
+            <a href="#">Bembol</a>
+            <img src="../assets/img/kalbs.png" alt="Logo 1" />
+          </div>
+        </div>
+      </ul>
     </div>
+    <div class="col" id="chart">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Project Deadline</h5>
+          <div></div>
+        </div>
+      </div>
     </div>
-      <div
-        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-33"
-      >
-        <chart-card
-          :chart-data="dataCompletedTasksChart.data"
-          :chart-options="dataCompletedTasksChart.options"
-          :chart-type="'Line'"
-          data-background-color="green"
-        >
-          <template slot="content">
-            <h4 class="title">Completed Tasks</h4>
-            <p class="category">Last Campaign Performance</p>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon>access_time</md-icon>
-              campaign sent 26 minutes ago
-            </div>
-          </template>
-        </chart-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-      >
-        <stats-card data-background-color="green">
-          <template slot="header">
-            <md-icon>store</md-icon>
-          </template>
-
-          <template slot="content">
-            <p class="category">Revenue</p>
-            <h3 class="title">$34,245</h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon>date_range</md-icon>
-              Last 24 Hours
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-      >
-        <stats-card data-background-color="orange">
-          <template slot="header">
-            <md-icon>content_copy</md-icon>
-          </template>
-
-          <template slot="content">
-            <p class="category">Used Space</p>
-            <h3 class="title">
-              49/50
-              <small>GB</small>
-            </h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon class="text-danger">warning</md-icon>
-              <a href="#pablo">Get More Space...</a>
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-      >
-        <stats-card data-background-color="red">
-          <template slot="header">
-            <md-icon>info_outline</md-icon>
-          </template>
-
-          <template slot="content">
-            <p class="category">Fixed Issues</p>
-            <h3 class="title">75</h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon>local_offer</md-icon>
-              Tracked from Github
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-50 md-xsmall-size-100 md-size-25"
-      >
-        <stats-card data-background-color="blue">
-          <template slot="header">
-            <i class="fab fa-twitter"></i>
-          </template>
-
-          <template slot="content">
-            <p class="category">Folowers</p>
-            <h3 class="title">+245</h3>
-          </template>
-
-          <template slot="footer">
-            <div class="stats">
-              <md-icon>update</md-icon>
-              Just Updated
-            </div>
-          </template>
-        </stats-card>
-      </div>
-      <div
-        class="md-layout-item md-medium-size-100 md-xsmall-size-100 md-size-50"
-      >
-        <nav-tabs-card>
-          <template slot="content">
-            <span class="md-nav-tabs-title">Tasks:</span>
-            <md-tabs class="md-success" md-alignment="left">
-              <md-tab id="tab-home" md-label="Bugs" md-icon="bug_report">
-                <nav-tabs-table></nav-tabs-table>
-              </md-tab>
-
-              <md-tab id="tab-pages" md-label="Website" md-icon="code">
-                <nav-tabs-table></nav-tabs-table>
-              </md-tab>
-
-              <md-tab id="tab-posts" md-label="server" md-icon="cloud">
-                <nav-tabs-table></nav-tabs-table>
-              </md-tab>
-            </md-tabs>
-          </template>
-        </nav-tabs-card>
+    <div class="col" id="deadline">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Project Deadline</h5>
+          <div></div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import {
-  ChartCard,
-  NavTabsCard,
-  NavTabsTable,
-  OrderedTable,
-} from "@/components";
-
-export default {
-  components: {
-    ChartCard,
-    NavTabsCard,
-    NavTabsTable,
-  },
-  data() {
-    return {
-      dailySalesChart: {
-        data: {
-          labels: ["M", "T", "W", "T", "F", "S", "S"],
-          series: [[12, 17, 7, 17, 23, 18, 38]],
-        },
-        options: {
-          lineSmooth: this.$Chartist.Interpolation.cardinal({
-            tension: 0,
-          }),
-          low: 0,
-          high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-          chartPadding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0,
-          },
-        },
-      },
-      dataCompletedTasksChart: {
-        data: {
-          labels: ["12am", "3pm", "6pm", "9pm", "12pm", "3am", "6am", "9am"],
-          series: [[230, 750, 450, 300, 280, 240, 200, 190]],
-        },
-
-        options: {
-          lineSmooth: this.$Chartist.Interpolation.cardinal({
-            tension: 0,
-          }),
-          low: 0,
-          high: 1000, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-          chartPadding: {
-            top: 0,
-            right: 0,
-            bottom: 0,
-            left: 0,
-          },
-        },
-      },
-      emailsSubscriptionChart: {
-        data: {
-          labels: [
-            "Jan 12",
-            "Jan 18",
-            "Jan 20",
-            "Jan 23",
-            "Jan 27",
-            "Jan 28",
-            "Jan 29",
-          ],
-          series: [["15", "35", "75", "150", "65", "90", "80"]],
-        },
-        options: {
-          axisX: {
-            showGrid: false,
-          },
-          low: 0,
-          high: 900 / 4,
-          chartPadding: {
-            top: 0,
-            right: 5,
-            bottom: 0,
-            left: 0,
-          },
-        },
-        responsiveOptions: [
-          [
-            "screen and (max-width: 640px)",
-            {
-              seriesBarDistance: 5,
-              axisX: {
-                labelInterpolationFnc: function (value) {
-                  return value[0];
-                },
-              },
-            },
-          ],
-        ],
-      },
-    };
-  },
-};
+export default {};
 </script>
+
 <style scoped>
-.parent {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 4px;
-  grid-row-gap: 6px;
-  align-content: center;
-  align-items: center;
+.logo-container {
+  display: flex;
+}
+#realstit {
+  text-align: left;
+  height: 90px;
+}
+#projectdetails {
+  position: absolute;
+  width: 390px;
+  height: 700px;
+  left: 186px;
+  top: 230px;
+  background: #ffffff;
+  box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.02);
+  border-radius: 20px;
+  box-sizing: border-box;
 }
 
-.div1 {
-  grid-area: 1 / 1 / 3 / 2;
+.logo-container img {
+  width: 20px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 1px; /* Adjust the margin between images */
+  margin-left: 10px;
+}
+#deadline {
   position: absolute;
-  padding: 70px;
+  width: 530px;
+  height: 331px;
+  left: 603px;
+  top: 625px;
+
+  background: #ffffff;
+  border: 1px solid #e7e4e4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 14px;
+}
+
+#chart {
+  position: absolute;
+  width: 530px;
+  height: 363px;
+  left: 603px;
+  top: 227px;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 </style>
-

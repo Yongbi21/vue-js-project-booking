@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap';
 import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./App";
@@ -22,7 +24,6 @@ const router = new VueRouter({
   linkExactActiveClass: "nav-item active",
 });
 
-Vue.prototype.$Chartist = Chartist;
 
 Vue.use(VueRouter);
 Vue.use(MaterialDashboard);
@@ -36,7 +37,4 @@ new Vue({
   el: "#app",
   render: (h) => h(App),
   router,
-  data: {
-    Chartist: Chartist,
-  },
 });

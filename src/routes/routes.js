@@ -3,10 +3,9 @@ import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
 import Dashboard from "@/pages/Dashboard.vue";
 import PricingQuoting from "@/pages/PricingQuoting.vue";
 import TableList from "@/pages/ProjectRequest.vue";
-import Test from "@/pages/Test.vue";
+import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
-
 
 import Login from "@/pages/Login.vue";
 
@@ -35,9 +34,9 @@ const routes = [
         component: TableList,
       },
       {
-        path: "test",
-        name: "Test",
-        component: Test,
+        path: "projectstatus",
+        name: "projectstatus",
+        component: ProjectStatus,
       },
       {
         path: "messenger",
