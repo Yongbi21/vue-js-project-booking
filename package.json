@@ -3,7 +3,7 @@
   "version": "1.5.1",
   "private": true,
   "scripts": {
-    "start": "concurrently \"npm run sass\" \"run serve\"",
+    "start": "concurrently \"npm run sass\" \"npm run serve\"",
     "serve": "vue-cli-service serve --open",
     "dev": "npm run serve",
     "build": "vue-cli-service build",
