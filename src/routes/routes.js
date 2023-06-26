@@ -1,12 +1,11 @@
 import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
-
 import Dashboard from "@/pages/Dashboard.vue";
 import PricingQuoting from "@/pages/PricingQuoting.vue";
 import TableList from "@/pages/ProjectRequest.vue";
 import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
-
+import Signup from "@/pages/Signup.vue";
 import Login from "@/pages/Login.vue";
 
 const routes = [
@@ -16,7 +15,12 @@ const routes = [
     component: Login,
   },
   {
-    path: "/",
+    path: "/signup",
+    name: "signup",
+    component: Signup,
+  },
+  {
+    path: "/dashboard",
     name: "dashboard",
     component: DashboardLayout,
     children: [
@@ -47,13 +51,9 @@ const routes = [
         name: "Admin Settings",
         component: Settings,
       },
-      {
-        path: "/",
-        name: "login",
-        component: Login,
-      },
     ],
   },
 ];
 
 export default routes;
+
