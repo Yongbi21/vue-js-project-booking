@@ -1,6 +1,5 @@
 <template>
   <div class="wrapper" :class="{ 'nav-open': $sidebar.showSidebar }">
-
     <side-bar
       :sidebar-item-color="sidebarBackground"
       :sidebar-background-image="sidebarBackgroundImage"
@@ -18,7 +17,7 @@
         <i class="bi-graph-up-arrow"></i>
         <p>Pricing and Qutoting</p>
       </sidebar-link>
-      <sidebar-link to="/projectStatus">
+      <sidebar-link to="/projectstatus">
         <i class="bi bi-calendar"></i>
         <p>Project Tracking Status</p>
       </sidebar-link>
@@ -45,7 +44,7 @@
       >
       </fixed-plugin>
 
-      <dashboard-content> </dashboard-content>
+      <dashboard-content></dashboard-content>
 
       <content-footer v-if="!$route.meta.hideFooter"></content-footer>
     </div>
@@ -69,9 +68,11 @@ export default {
   },
   data() {
     return {
+      title: "", // Initialize the "title" property with an empty string
+    };
+    },
+
       sidebarBackground: "orange",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
     };
-  },
-};
 </script>

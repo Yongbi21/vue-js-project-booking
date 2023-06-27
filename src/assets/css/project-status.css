@@ -1,0 +1,23 @@
+.container {
+    padding: 20px;
+  }
+  
+  .big-container {
+    background-color: #f8f8f8;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mini-container {
+    background-color: #ebebeb;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .middle-container {
+    background-color: #ebebeb;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+  
