@@ -7,7 +7,6 @@ import ChartCards from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
 
-import Register from "@/pages/Register.vue";
 import Request from "@/pages/Request.vue";
 import Request1 from "@/pages/Request1.vue";
 import LandingPage from "@/pages/LandingPage.vue";
@@ -28,11 +27,6 @@ const routes = [
     path: "/request1",
     name: "request1",
     component: Request1,
-    },
-  {
-    path: "/register",
-    name: "register",
-    component: Register,
     },
   {
     path: "/login",
