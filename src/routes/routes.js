@@ -25,29 +25,31 @@ const routes = [
     component: DashboardLayout,
     children: [
       {
-        path: "dashboard",
+        path: "/dashboard",
         name: "Dashboard",
         component: Dashboard,
       },
       {
-        path: "pricing-quoting",
+        path: "/pricing-quoting",
+        name: "Pricing and Quoting",
         component: PricingQuoting,
       },
       {
-        path: "projectRequest",
+        path: "/projectRequest",
         component: TableList,
       },
       {
-        path: "projectstatus",
+        path: "/projectstatus",
         name: "projectstatus",
         component: ProjectStatus,
       },
       {
-        path: "messenger",
+        path: "/messenger",
+        name: "Messenger",
         component: Messenger,
       },
       {
-        path: "settings",
+        path: "/settings",
         name: "Admin Settings",
         component: Settings,
       },

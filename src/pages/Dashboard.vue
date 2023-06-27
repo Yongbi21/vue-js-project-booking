@@ -57,35 +57,35 @@
       </div>
     </div>
     <div class="col" id="deadline">
-      <h5 class="card-title" id="travelcard"><strong
-        >Project Deadline</strong></h5>
-      <div class="card text-bg-light mb-3" style="max-width: 18rem">
-        <div class="done" >Done</div>
+      <h5 class="card-title">
+        <strong>Project Deadline</strong>
+      </h5>
+      <div class="card text-bg-light mb-3" id="travel">
+        <div class="done">Done</div>
         <div class="card-body">
-          <h5 class="card-title" id="travelcard"><strong
-            >Travel Mobile Design</strong></h5>
+          <h5 class="card-title" id="travelcard">
+            <strong>Travel Mobile Design</strong>
+          </h5>
           <div class="logo-container">
             <img src="../assets/img/angkol.png" alt="Logo 1" id="img1" />
           </div>
           <i class="bi bi-calendar3">29 January 2023</i>
         </div>
       </div>
-      <div class="card text-bg-light mb-3" style="max-width: 18rem" id ="real">
+      <div class="card text-bg-light mb-3" id="real">
         <div class="done" id="card1">Done</div>
         <div class="card-body">
-          <h5 class="card-title"><strong
-            >Real Estate proeject</strong></h5>
+          <h5 class="card-title"><strong>Real Estate proeject</strong></h5>
           <div class="logo-container">
             <img src="../assets/img/angkol.png" alt="Logo 1" id="img1" />
           </div>
           <i class="bi bi-calendar3">29 January 2023</i>
         </div>
       </div>
-      <div class="card text-bg-light mb-3" style="max-width: 18rem" id ="health" >
-        <div class="done" >Done</div>
-        <div class="card-body" >
-          <h5 class="card-title" ><strong
-            >Health Tracker Device</strong></h5>
+      <div class="card text-bg-light mb-3" id="health">
+        <div class="done">Done</div>
+        <div class="card-body">
+          <h5 class="card-title"><strong>Health Tracker Device</strong></h5>
           <div class="logo-container">
             <img src="../assets/img/angkol.png" alt="Logo 1" id="img1" />
           </div>
@@ -93,7 +93,7 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -126,29 +126,48 @@ export default {};
   margin-right: 1px; /* Adjust the margin between images */
   margin-left: 10px;
 }
-
-#real{
+#travel {
+  position: absolute;
+  float: left;
+  top: 0;
+  margin-top: 35px;
+  right: 50%;
+  width: 255px;
+  margin-right: 10px;
+  background: #ffffff;
+  box-shadow: 0px 0px 35px 10px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
+}
+#real {
   position: absolute;
   float: right;
   top: 0;
-  right:60px;
-  margin-top: 20px;
-  
-  
- 
+  margin-top: 35px;
+  left: 50%;
+  width: 255px;
+  right: 50%;
+  margin-left: 10px;
+  background: #ffffff;
+  box-shadow: 0px 0px 35px 10px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
 }
-#health{
+#health {
   margin-top: 20px;
   position: absolute;
   top: 50%;
-  left: 35%;
+  left: 30%;
+  width: 255px;
+  right: 55%;
+  background: #ffffff;
+  box-shadow: 0px 0px 35px 10px rgba(0, 0, 0, 0.03);
+  border-radius: 12px;
 }
 #deadline {
   position: absolute;
   width: 600px;
-  height:40vh;
+  height: 40vh;
   left: 603px;
-  top: 625px;
+  top: 400px;
 
   background: #ffffff;
   border: 1px solid #e7e4e4;
@@ -164,8 +183,6 @@ export default {};
   padding: 10px 5px;
   border-radius: 4;
 }
-
-
 
 #chart {
   position: absolute;
