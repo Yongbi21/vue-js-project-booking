@@ -5,6 +5,8 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./App";
 
+
+
 // router setup
 import routes from "./routes/routes";
 
@@ -16,7 +18,8 @@ import GlobalDirectives from "./globalDirectives";
 // MaterialDashboard plugin
 import MaterialDashboard from "./material-dashboard";
 
-import Chartist from "chartist";
+
+
 
 // configure router
 const router = new VueRouter({
@@ -25,10 +28,12 @@ const router = new VueRouter({
 });
 
 
+
 Vue.use(VueRouter);
 Vue.use(MaterialDashboard);
 Vue.use(GlobalComponents);
 Vue.use(GlobalDirectives);
+
 
 //Vue.use(Notifications);
 
@@ -37,4 +42,6 @@ new Vue({
   el: "#app",
   render: (h) => h(App),
   router,
-});
+ 
+  }
+);

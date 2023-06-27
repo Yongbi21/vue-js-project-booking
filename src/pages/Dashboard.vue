@@ -51,12 +51,12 @@
     <div class="col" id="chart">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title">Project Status</h5>
-          <div></div>
+          <div class="card-title">Project Status</div>
+          <Bar :data="data" :options="options" />
         </div>
       </div>
     </div>
-    <div class="col" id="deadline">
+    <div class="col" id="deadline" style="color: ">
       <h5 class="card-title">
         <strong>Project Deadline</strong>
       </h5>
@@ -96,10 +96,45 @@
   </div>
 </template>
 
-<script>
-export default {};
-</script>
+<script lang="ts">
+import {
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale,
+} from "chart.js";
+import { Bar } from "vue-chartjs";
 
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
+
+export default {
+  name: "App",
+  components: {
+    Bar,
+  },
+  data() {
+    return {
+      data: {
+        labels: ["Jan 12", "Jan 18", "Jan 20", "Jan 23", "Jan 27","Jan 28", "Jan 29"],
+        datasets: [{ data: [15, 35, 75, 150, 70, 100, 80] }],
+      },
+      options: {
+        responsive: true,
+      },
+    };
+  },
+};
+</script>
 <style scoped>
 .logo-container {
   display: flex;
@@ -111,12 +146,12 @@ export default {};
 #projectdetails {
   position: absolute;
   width: 500px;
-  height: 70vh;
+  height: 85vh;
   left: 186px;
-  top: 230px;
+  top: 90px;
   background: #ffffff;
   box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.02);
-  border-radius: 20px;
+  border-radius: 14px;
   box-sizing: border-box;
 }
 
@@ -167,13 +202,20 @@ export default {};
   width: 600px;
   height: 40vh;
   left: 603px;
-  top: 400px;
+  top: 450px;
 
   background: #ffffff;
-  border: 1px solid #e7e4e4;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 14px;
   margin-bottom: 32px;
+}
+
+#chart {
+  position: absolute;
+  width: 600px;
+  height: 50vh;
+  left: 603px;
+  top: 95px;
+  border-radius: 14px;
 }
 
 #done {
@@ -182,15 +224,5 @@ export default {};
   margin-top: 10px;
   padding: 10px 5px;
   border-radius: 4;
-}
-
-#chart {
-  position: absolute;
-  width: 530px;
-  height: 363px;
-  left: 603px;
-  top: 227px;
-
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 </style>

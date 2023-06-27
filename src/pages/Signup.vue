@@ -1,7 +1,8 @@
 <template>
   <div class="signup-container">
     <div class="form-container">
-      <div class="Logo">
+      <span class="back" id = "backbtn"></span>
+      <div class="Logo" id ="sign">
         <img src="../assets/img/dreamers logo.png" alt="Logo" class="logo" />
       </div>
       <form @submit.prevent="signup">
@@ -48,6 +49,18 @@
               required
             />
           </div>
+          <div class="form-group">
+            <label for="middlename">Middle Name</label>
+            <input
+              v-model="middlename"
+              type="middlename"
+              id="middlename"
+              class="form-control"
+              placeholder="Enter your Middle Name"
+              required
+            />
+          </div>
+          
           <div class="form-group">
             <label for="lastname">Last Name</label>
             <input
@@ -111,6 +124,12 @@ export default {
   align-items: center;
   height: 100vh;
   border-radius: 8%;
+}
+#sign{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .form-container {

@@ -11,24 +11,19 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "apexcharts": "^3.41.0",
     "bootstrap": "^5.3.0",
     "bootstrap-vue": "^2.23.1",
     "chart.js": "^4.3.0",
-    "chartist": "0.11.4",
     "core-js": "3.26.1",
-    "echarts": "^5.4.2",
     "google-maps": "4.3.3",
     "mdb-ui-kit": "^6.4.0",
     "vue": "^2.7.14",
     "vue-chartjs": "^5.2.0",
     "vue-clickaway": "2.2.2",
-    "vue-echarts": "^6.6.0",
     "vue-github-buttons": "3.1.0",
     "vue-material": "1.0.0-beta-15",
     "vue-router": "3.5.2",
-    "vue-social-sharing": "3.0.9",
-    "vue3-apexcharts": "^1.4.1"
+    "vue-social-sharing": "3.0.9"
   },
   "devDependencies": {
     "@types/chart.js": "^2.9.37",

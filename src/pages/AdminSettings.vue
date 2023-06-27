@@ -63,7 +63,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-primary" @click="saveForm">Save</button>
+          <button class="btn btn-primary" id ="save" @click="saveForm">Save</button>
         </div>
       </div>
     </div>
@@ -102,6 +102,12 @@ export default {
   justify-content: center;
   height: 80vh;
   width: 100%;
+}
+#save{
+ position: absolute;
+  align-content: center;
+  align-items: center;
+  left: 50%;
 }
 
 .container-body {

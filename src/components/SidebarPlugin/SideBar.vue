@@ -88,7 +88,7 @@ export default {
 };
 </script>
 <style>
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 769px) {
   .nav-mobile-menu {
     display: none;
   }

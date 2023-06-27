@@ -1,6 +1,6 @@
 <template>
-  <section style="background-color: #eee">
     <div class="container">
+      <div class="container-body">
       <div class="row">
         <div class="col-md-6 col-lg-5 col-xl-4 mb-4 mb-md-0">
           <h5 class="font-weight-bold mb-3 text-center text-lg-start">
@@ -239,9 +239,15 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+ 
 </template>
 <style scoped>
+.container-body {
+  padding: 70px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
 #chat3 .form-control {
   border-color: transparent;
 }

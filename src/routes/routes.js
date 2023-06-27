@@ -1,7 +1,7 @@
 import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
 import Dashboard from "@/pages/Dashboard.vue";
 import PricingQuoting from "@/pages/PricingQuoting.vue";
-import TableList from "@/pages/ProjectRequest.vue";
+import ProjectRequest from "@/pages/ProjectRequest.vue";
 import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
@@ -36,7 +36,7 @@ const routes = [
       },
       {
         path: "/projectRequest",
-        component: TableList,
+        component: ProjectRequest,
       },
       {
         path: "/projectstatus",
