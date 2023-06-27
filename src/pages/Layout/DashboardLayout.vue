@@ -9,13 +9,13 @@
         <i class="bi bi-house"></i>
         <p>Dashboard</p>
       </sidebar-link>
-      <sidebar-link to="/projectRequest">
+      <sidebar-link to="/projectrequest">
         <i class="bi bi-folder"></i>
         <p>Project Request</p>
       </sidebar-link>
-      <sidebar-link to="/pricing-quoting">
+      <sidebar-link to="/pricingquoting">
         <i class="bi-graph-up-arrow"></i>
-        <p>Pricing and Qutoting</p>
+        <p>Pricing and Quoting</p>
       </sidebar-link>
       <sidebar-link to="/projectstatus">
         <i class="bi bi-calendar"></i>
@@ -46,14 +46,12 @@
 
       <dashboard-content></dashboard-content>
 
-      <content-footer v-if="!$route.meta.hideFooter"></content-footer>
     </div>
   </div>
 </template>
 
 <script>
 import TopNavbar from "./TopNavbar.vue";
-import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
 import MobileMenu from "@/pages/Layout/MobileMenu.vue";
 import FixedPlugin from "./Extra/FixedPlugin.vue";
@@ -62,17 +60,15 @@ export default {
   components: {
     TopNavbar,
     DashboardContent,
-    ContentFooter,
     MobileMenu,
     FixedPlugin,
   },
   data() {
     return {
-      title: "", // Initialize the "title" property with an empty string
-    };
-    },
-
+      title: "", 
       sidebarBackground: "orange",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
     };
+  },
+};
 </script>

@@ -36,6 +36,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import SidebarLink from "./SidebarLink.vue";
 
@@ -44,10 +45,6 @@ export default {
     SidebarLink,
   },
   props: {
-    /*title: {
-      type: String,
-      default: "dreameRS",
-    },*/
     sidebarBackgroundImage: {
       type: String,
       default: require("@/assets/img/sidebar-2.jpg"),
@@ -78,6 +75,11 @@ export default {
       autoClose: this.autoClose,
     };
   },
+  data() {
+    return {
+      title: "", // Add the "title" property
+    };
+  },
   computed: {
     sidebarStyle() {
       return {
@@ -87,6 +89,7 @@ export default {
   },
 };
 </script>
+
 <style>
 @media screen and (min-width: 991px) {
   .nav-mobile-menu {

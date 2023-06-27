@@ -5,7 +5,6 @@ import ProjectRequest from "@/pages/ProjectRequest.vue";
 import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
-import Register from "@/pages/Register.vue";
 import Request from "@/pages/Request.vue";
 import Request1 from "@/pages/Request1.vue";
 import LandingPage from "@/pages/LandingPage.vue";
@@ -28,18 +27,12 @@ const routes = [
     component: Request1,
   },
   {
-    path: "/register",
-    name: "register",
-    component: Register,
-  },
-  {
     path: "/login",
     name: "login",
     component: Login,
   },
   {
     path: "/dashboard",
-    name: "dashboard",
     component: DashboardLayout,
     children: [
       {
@@ -48,12 +41,12 @@ const routes = [
         component: Dashboard,
       },
       {
-        path: "pricing-quoting",
+        path: "pricingquoting",
         name: "PricingQoutiing",
         component: PricingQuoting,
       },
       {
-        path: "project-request",
+        path: "projectrequest",
         name: "ProjectRequest",
         component: ProjectRequest,
       },
@@ -68,7 +61,7 @@ const routes = [
       },
       {
         path: "settings",
-        name: "Admin Settings",
+        name: "settings",
         component: Settings,
       },
     ],
