@@ -53,7 +53,7 @@
     
           handleInput() {
       const combinedDate = this.weekValue + '-' + this.monthValue + '-' + this.yearValue;
-       }
+         }
         }
       };
       </script>

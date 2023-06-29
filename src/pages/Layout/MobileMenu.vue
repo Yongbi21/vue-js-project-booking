@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <ul class="nav nav-mobile-menu">
     <li>
       <drop-down>
@@ -29,4 +29,4 @@ export default {
     };
   },
 };
-</script>
+</script> -->

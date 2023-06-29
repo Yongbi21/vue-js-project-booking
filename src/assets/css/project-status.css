@@ -1,23 +1,130 @@
 .container {
-    padding: 20px;
+  padding: 20px;
+}
+
+.big-container {
+  background-color: #ffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.mini-container {
+  background-color: #ffff;
+  padding: 10px;
+}
+
+.middle-container {
+  background-color: #ebebeb;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-right: 30px;
+  width: 64vh;
+}
+
+.semi-middle-container {
+  background-color: #ebebeb;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-right: 30px;
+  width: 88vh;
+}
+
+.semi-mid-container {
+  background-color: #ebebeb;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin-right: 30px;
+  width: 40vh;
+}
+
+.ts,
+.tp,
+.tl,
+.pl,
+.ml {
+  font-weight: 500;
+}
+
+.chart-container {
+  margin-top: 100px;
+}
+
+#doughnut {
+  height: 50px; /* Decreased height */
+  width: 50px; /* Decreased width */
+}
+
+#bar {
+  height: 50px; /* Decreased height */
+  width: 50px; /* Decreased width */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table thead th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-cell {
+  background-color: black !important;
+  color: white !important;
+}
+
+.status-working {
+  color: greenyellow !important;
+}
+
+.status-cancelled {
+  color: red !important;
+}
+
+/* Media Queries for Responsive Layout */
+
+@media (max-width: 1199px) {
+  .middle-container,
+  .semi-middle-container,
+  .semi-mid-container {
+    margin-right: 0;
+    width: 100%;
   }
-  
+}
+
+@media (max-width: 767px) {
   .big-container {
-    background-color: #f8f8f8;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .mini-container {
-    background-color: #ebebeb;
     padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   }
-  
-  .middle-container {
-    background-color: #ebebeb;
-    padding: 10px;
-    margin-top: 20px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  .middle-container,
+  .semi-middle-container,
+  .semi-mid-container {
+    margin-top: 10px;
   }
-  
+}

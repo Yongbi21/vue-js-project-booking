@@ -30,7 +30,7 @@
       <input type="date" id="projectDeadline" placeholder="Enter due date" required>
       <label for="attachedFile">Attach File</label>
       <input type="file" id="attachedFile">
-      <router-link :to="{ name: 'request1' }" class="btn btn-ms-2" id="next">Proceed to next</router-link>
+      <button type="submit" class="next" id="next">Submit Request</button>
     </form>
   </div>
     </template>

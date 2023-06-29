@@ -41,26 +41,26 @@ const routes = [
         component: Dashboard,
       },
       {
-        path: "pricingquoting",
+        path: "/pricingquoting",
         name: "PricingQoutiing",
         component: PricingQuoting,
       },
       {
-        path: "projectrequest",
+        path: "/projectrequest",
         name: "ProjectRequest",
         component: ProjectRequest,
       },
       {
-        path: "projectstatus",
-        name: "Projectstatus",
+        path: "/projectstatus",
+        name: "Project Status",
         component: ProjectStatus,
       },
       {
-        path: "messenger",
+        path: "/messenger",
         component: Messenger,
       },
       {
-        path: "settings",
+        path: "/settings",
         name: "settings",
         component: Settings,
       },
