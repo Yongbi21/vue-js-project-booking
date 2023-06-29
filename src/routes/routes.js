@@ -7,16 +7,34 @@ import ChartCards from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
 
+import Request from "@/pages/Request.vue";
+import Request1 from "@/pages/Request1.vue";
+import LandingPage from "@/pages/LandingPage.vue";
 import Login from "@/pages/Login.vue";
 
 const routes = [
   {
     path: "/",
+    name: "landingpage",
+    component: LandingPage,
+  },
+  {
+  path: "/request",
+  name: "request",
+  component: Request,
+  },
+  {
+    path: "/request1",
+    name: "request1",
+    component: Request1,
+    },
+  {
+    path: "/login",
     name: "login",
     component: Login,
   },
   {
-    path: "/",
+    path: "/dashboard",
     name: "dashboard",
     component: DashboardLayout,
     children: [
