@@ -1,95 +1,197 @@
 <template>
-  <div class="row row-cols-1 row-cols-sm-1 g-3">
-    <div class="card" id="projectdetails" style="width: 25rem">
-      <ul class="list-group list-group-flush">
-        <div class="card-header">Project Details</div>
-        <div>
-          <span id="proj">Real Estate Project</span>
-          <i class="bi bi-three-dots-vertical"></i>
-          <p id="realstit">
-            Create a consistent look and feel smooth on web and mobile, revision
-            in landing page.
-          </p>
-          <br />
-          <div class="logo-container">
-            <a href="#">Kurt and team</a>
-            <img src="../assets/img/angkol.png" alt="Logo 1" />
-            <img src="../assets/img/kalbs.png" alt="Logo 2" />
-            <img src="../assets/img/angkol.png" alt="Logo 3" />
+  <div class="container">
+    <div class="row">
+      <div class="row">
+      <div class="team" id="team">
+        <div class="teambox">
+        <span class="add"><i class="bi bi-plus"></i></span>
+          <select name="team" id="team">
+            <option value="team A" selected disabled>team A</option>
+            <option value="team B">team B</option>
+            <option value="team C">team C</option>
+            <option value="team D">team D</option>
+          </select>
+          <div class="task" id="task">
+            <div class="taskbox">
+            <span class="add"><i class="bi bi-plus"></i></span>
+              <select name="task" id="task">
+                <option value="team A" selected disabled> Add Task</option>
+                <option value="team B">team B</option>
+                <option value="team C">team C</option>
+                <option value="team D">team D</option>
+              </select>
+            </div>
           </div>
-        </div>
-        <li class="list-group-item"></li>
-        <div>
-          <span id="proj">Travel Mobile Design</span>
-          <i class="bi bi-three-dots-vertical"></i>
-          <p id="realstit">
-            Create a consistent look and feel smooth on web and mobile, revision
-            in landing page.
-          </p>
-          <br />
-          <div class="logo-container">
-            <a href="#">Jonel</a>
-            <img src="../assets/img/angkol.png" alt="Logo 1" />
-          </div>
-        </div>
-        <li class="list-group-item"></li>
-        <div>
-          <span id="proj">Health Tracker Device</span>
-          <i class="bi bi-three-dots-vertical"></i>
-          <p id="realstit">
-            Create a consistent look and feel smooth on web and mobile, revision
-            in landing page.
-          </p>
-          <br />
-          <div class="logo-container">
-            <a href="#">Bembol</a>
-            <img src="../assets/img/kalbs.png" alt="Logo 1" />
-          </div>
-        </div>
-      </ul>
-    </div>
-    <div class="col" id="chart">
-      <div class="card">
-        <div class="card-body">
-          <div class="card-title">Project Status</div>
-          <Bar :data="data" :options="options" />
         </div>
       </div>
     </div>
-    <div class="col" id="deadline" style="color: ">
-      <h5 class="card-title">
-        <strong>Project Deadline</strong>
-      </h5>
-      <div class="card text-bg-light mb-3" id="travel">
-        <div class="done">Done</div>
-        <div class="card-body">
-          <h5 class="card-title" id="travelcard">
-            <strong>Travel Mobile Design</strong>
-          </h5>
-          <div class="logo-container">
-            <img src="../assets/img/angkol.png" alt="Logo 1" id="img1" />
-          </div>
-          <i class="bi bi-calendar3">29 January 2023</i>
+      <div class="col-md-5 col-sm-6">
+        <div class="card -md-8" id="details">
+          <div class="card-t">Project Details</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div>
+                <span id="proj">Real Estate Project</span>
+                <i class="bi bi-three-dots-vertical"></i>
+                <p>
+                  Create a consistent look and feel smooth on web and mobile,
+                  revision in landing page.
+                </p>
+                <br />
+                <div class="logo-container">
+                  <a href="#">Kurt and team</a>
+                  <img
+                    class="avatar"
+                    src="../assets/img/angkol.png"
+                    alt="Logo 1"
+                  />
+                  <img
+                    class="avatar"
+                    src="../assets/img/kalbs.png"
+                    alt="Logo 2"
+                  />
+                  <img
+                    class="avatar"
+                    src="../assets/img/angkol.png"
+                    alt="Logo 3"
+                  />
+                </div>
+              </div>
+            </li>
+
+            <li class="list-group-item">
+              <div>
+                <span id="proj">Travel Mobile Design</span>
+                <i class="bi bi-three-dots-vertical"></i>
+                <p>
+                  Create a consistent look and feel smooth on web and mobile,
+                  revision in landing page.
+                </p>
+                <br />
+                <div class="logo-container">
+                  <a href="#">Jonel</a>
+                  <img
+                    class="avatar"
+                    src="../assets/img/angkol.png"
+                    alt="Logo 1"
+                  />
+                </div>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div>
+                <span id="proj">Health Tracker Device</span>
+                <i class="bi bi-three-dots-vertical"></i>
+                <p id="realstit">
+                  Create a consistent look and feel smooth on web and mobile,
+                  revision in landing page.
+                </p>
+                <br />
+                <div class="logo-container">
+                  <a href="#">Bembol</a>
+                  <img
+                    class="avatar"
+                    src="../assets/img/kalbs.png"
+                    alt="Logo 1"
+                  />
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="card text-bg-light mb-3" id="real">
-        <div class="done" id="card1">Done</div>
-        <div class="card-body">
-          <h5 class="card-title"><strong>Real Estate proeject</strong></h5>
-          <div class="logo-container">
-            <img src="../assets/img/angkol.png" alt="Logo 1" id="img1" />
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12 col-sm-6">
+            <div class="card" id="chart">
+              <div class="card-body">
+                <div class="card-title">Project Status</div>
+                <Bar :data="data" :options="options" />
+              </div>
+            </div>
           </div>
-          <i class="bi bi-calendar3">29 January 2023</i>
-        </div>
-      </div>
-      <div class="card text-bg-light mb-3" id="health">
-        <div class="done">Done</div>
-        <div class="card-body">
-          <h5 class="card-title"><strong>Health Tracker Device</strong></h5>
-          <div class="logo-container">
-            <img src="../assets/img/angkol.png" alt="Logo 1" id="img1" />
+          <div class="col-md-12 col-sm-6">
+            <div class="card" id="deadline">
+              <div class="card-body">
+                <h5 class="card-title">Project Deadline</h5>
+                <div class="row row-cols-1 row-cols-sm-3 g-3">
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <div id="btn">
+                          <button
+                            type="button"
+                            disabled
+                            class="btn btn-info custom-button"
+                          >
+                            <p>Done</p>
+                          </button>
+                        </div>
+                        <div>
+                          <h5 class="card-title">Travel Mobile Design</h5>
+                        </div>
+                        <div>
+                          <img class="avatar" src="../assets/img/angkol.png" />
+                        </div>
+                        <div>
+                          <i class="bi bi-calendar3">29 January 2023</i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <div id="done">
+                          <button
+                            type="button"
+                            disabled
+                            class="btn btn-info custom-button"
+                          >
+                            <p>Done</p>
+                          </button>
+                        </div>
+                        <div>
+                          <h5 class="card-title">Real State Project</h5>
+                        </div>
+                        <div>
+                          <img class="avatar" src="../assets/img/angkol.png" />
+                        </div>
+                        <div>
+                          <i class="bi bi-calendar3">29 January 2023</i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="done">
+                          <button
+                            type="button"
+                            disabled
+                            class="btn btn-info custom-button"
+                            id="done"
+                          >
+                            <p>Done</p>
+                          </button>
+                        </div>
+                        <div>
+                          <h5 class="card-title">Health Tracker Device</h5>
+                        </div>
+                        <div>
+                          <img class="avatar" src="../assets/img/angkol.png" />
+                        </div>
+                        <div>
+                          <i class="bi bi-calendar3">29 January 2023</i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <i class="bi bi-calendar3">29 January 2023</i>
         </div>
       </div>
     </div>
@@ -118,15 +220,35 @@ ChartJS.register(
 );
 
 export default {
-  name: "App",
+  name: "BarChart",
   components: {
     Bar,
   },
   data() {
     return {
       data: {
-        labels: ["Jan 12", "Jan 18", "Jan 20", "Jan 23", "Jan 27","Jan 28", "Jan 29"],
-        datasets: [{ data: [15, 35, 75, 150, 70, 100, 80] }],
+        labels: [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
+        ],
+        datasets: [
+          {
+            label: "Completed Projects",
+            backgroundColor: "#f87979",
+            borderRadius: 10,
+            data: [15, 35, 75, 150, 70, 100, 80, 200, 100, 70, 250, 160],
+          },
+        ],
       },
       options: {
         responsive: true,
@@ -135,94 +257,29 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .logo-container {
   display: flex;
 }
-#realstit {
-  text-align: left;
-  height: 90px;
-}
 #projectdetails {
-  position: absolute;
-  width: 500px;
-  height: 85vh;
-  left: 186px;
-  top: 90px;
   background: #ffffff;
   box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.02);
   border-radius: 14px;
   box-sizing: border-box;
+  padding: 20px;
+  height: 90vh;
 }
-
-.logo-container img {
-  width: 20px; /* Adjust the width as needed */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 1px; /* Adjust the margin between images */
-  margin-left: 10px;
-}
-#travel {
-  position: absolute;
-  float: left;
-  top: 0;
-  margin-top: 35px;
-  right: 50%;
-  width: 255px;
-  margin-right: 10px;
-  background: #ffffff;
-  box-shadow: 0px 0px 35px 10px rgba(0, 0, 0, 0.03);
-  border-radius: 12px;
-}
-#real {
-  position: absolute;
+img.avatar {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
   float: right;
-  top: 0;
-  margin-top: 35px;
-  left: 50%;
-  width: 255px;
-  right: 50%;
-  margin-left: 10px;
-  background: #ffffff;
-  box-shadow: 0px 0px 35px 10px rgba(0, 0, 0, 0.03);
-  border-radius: 12px;
+  top: 10px;
 }
-#health {
-  margin-top: 20px;
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  width: 255px;
-  right: 55%;
-  background: #ffffff;
-  box-shadow: 0px 0px 35px 10px rgba(0, 0, 0, 0.03);
-  border-radius: 12px;
-}
-#deadline {
-  position: absolute;
-  width: 600px;
-  height: 40vh;
-  left: 603px;
-  top: 450px;
-
-  background: #ffffff;
-  border-radius: 14px;
-  margin-bottom: 32px;
-}
-
-#chart {
-  position: absolute;
-  width: 600px;
-  height: 50vh;
-  left: 603px;
-  top: 95px;
-  border-radius: 14px;
-}
-
-#done {
-  text-align: left;
-  margin-left: 10px;
-  margin-top: 10px;
-  padding: 10px 5px;
-  border-radius: 4;
+.custom-button {
+  width: 70px;
+  height: 25px;
 }
 </style>

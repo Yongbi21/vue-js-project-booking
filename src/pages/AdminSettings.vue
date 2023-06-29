@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-lg">
     <div class="container-body">
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -10,9 +10,11 @@
               id="checkbox1"
               v-model="automatedReminders"
             />
-            <label class="form-check-label" for="checkbox1"
-              >Automated Reminders</label
-            >
+            <h3>
+              <label class="form-check-label" for="checkbox1"
+                >Automated Reminders</label
+              >
+            </h3>
           </div>
           <div class="form-check mb-4">
             <h3>Delivery Method</h3>
@@ -63,7 +65,16 @@
               </div>
             </div>
           </div>
-          <button class="btn btn-primary" id ="save" @click="saveForm">Save</button>
+        </div>
+        <div class="savebtn">
+          <button
+            class="colored-button"
+            id="save"
+            @click="saveForm"
+            type="submit"
+          >
+            Save
+          </button>
         </div>
       </div>
     </div>
@@ -100,14 +111,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  height: 90vh;
   width: 100%;
-}
-#save{
- position: absolute;
-  align-content: center;
-  align-items: center;
-  left: 50%;
 }
 
 .container-body {
@@ -118,7 +123,33 @@ export default {
 
 @media (max-width: 576px) {
   .container-body {
-    padding: 10px;
+    padding: 20px;
   }
+
+  .col-md-6 {
+    margin-bottom: 20px;
+  }
+}
+.savebtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.colored-button {
+  padding: 10px 30px;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colored-button:hover {
+  background-color: #c68949;
 }
 </style>
