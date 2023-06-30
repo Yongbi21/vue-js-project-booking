@@ -2,7 +2,7 @@
   <md-toolbar md-elevation="0" class="md-transparent">
     <div class="md-toolbar-row">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title" :style="{ fontWeight: getRouteFontWeight }">{{ $route.name }}</h3>
+        <h3 class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">{{ $route.name }}</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -66,7 +66,8 @@ export default {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
     },
   },
-  computed: {
+  computed: 
+  {
   getRouteFontWeight() {
       const routeFontWeights = {
         "/dashboard": "500",
