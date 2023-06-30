@@ -1,33 +1,31 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="row">
-      <div class="team" id="team">
-        <div class="teambox">
-        <span class="add"><i class="bi bi-plus"></i></span>
-          <select name="team" id="team">
-            <option value="team A" selected disabled>team A</option>
-            <option value="team B">team B</option>
-            <option value="team C">team C</option>
-            <option value="team D">team D</option>
-          </select>
-          <div class="task" id="task">
-            <div class="taskbox">
-            <span class="add"><i class="bi bi-plus"></i></span>
-              <select name="task" id="task">
-                <option value="team A" selected disabled> Add Task</option>
-                <option value="team B">team B</option>
-                <option value="team C">team C</option>
-                <option value="team D">team D</option>
-              </select>
-            </div>
+      <div class="team">
+        <div class="btn-group" role="group">
+          <button type="button" class="team-btn" id="teambtn">
+            <i class="bi bi-plus-square-fill" id="plus"></i>
+          </button>
+
+          <div class="btn-group" role="group">
+            <button
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              Teams
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+              <li><a class="dropdown-item" href="#">Dropdown link</a></li>
+            </ul>
           </div>
         </div>
       </div>
-    </div>
+
       <div class="col-md-5 col-sm-6">
-        <div class="card -md-8" id="details">
-          <div class="card-t">Project Details</div>
+        <div class="card -md-10" id="details">
+          <div class="card-title">Project Details</div>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">
               <div>
@@ -201,23 +199,13 @@
 <script lang="ts">
 import {
   Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
   BarElement,
   CategoryScale,
   LinearScale,
 } from "chart.js";
 import { Bar } from "vue-chartjs";
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+ChartJS.register(CategoryScale, LinearScale, BarElement);
 
 export default {
   name: "BarChart",
@@ -259,27 +247,5 @@ export default {
 </script>
 
 <style scoped>
-.logo-container {
-  display: flex;
-}
-#projectdetails {
-  background: #ffffff;
-  box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.02);
-  border-radius: 14px;
-  box-sizing: border-box;
-  padding: 20px;
-  height: 90vh;
-}
-img.avatar {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  vertical-align: middle;
-  float: right;
-  top: 10px;
-}
-.custom-button {
-  width: 70px;
-  height: 25px;
-}
+@import "../assets/css/dashboard.css";
 </style>

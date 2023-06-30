@@ -14,10 +14,6 @@
           <img :src="imgLogo" alt="" />
         </div>
       </a>
-
-      <p>
-        {{ title }}
-      </p>
     </div>
     <div class="sidebar-wrapper">
       <slot name="content"></slot>
@@ -44,10 +40,6 @@ export default {
     SidebarLink,
   },
   props: {
-    /*title: {
-      type: String,
-      default: "dreameRS",
-    },*/
     sidebarBackgroundImage: {
       type: String,
       default: require("@/assets/img/sidebar-2.jpg"),

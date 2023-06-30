@@ -1,0 +1,28 @@
+ #projectdetails {
+    background: #ffffff;
+    box-shadow: 6px 10px 35px rgba(0, 0, 0, 0.02);
+    border-radius: 14px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin:20px;
+  }
+  img.avatar {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    vertical-align: middle;
+    float: right;
+    top: 10px;
+  }
+  .custom-button {
+    width: 70px;
+    height: 25px;
+  }
+  
+    #plus {
+  font-size: 25px; /* or specify custom dimensions */
+  border: 0;
+}
+.team{
+  margin: 10px;
+}
