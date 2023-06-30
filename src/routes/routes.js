@@ -5,19 +5,19 @@ import ProjectRequest from "@/pages/ProjectRequest.vue";
 import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
-import Signup from "@/pages/Signup.vue";
-import Login from "@/pages/Login.vue";
+import LandingPage from "@/pages/LandingPage.vue";
+import Request1 from "@/pages/Request1.vue";
 
 const routes = [
   {
     path: "/",
-    name: "login",
-    component: Login,
+    name: "landing",
+    component: LandingPage,
   },
   {
-    path: "/signup",
-    name: "signup",
-    component: Signup,
+    path: "/request1",
+    name: "request",
+    component: Request1,
   },
   {
     path: "/dashboard",
@@ -61,4 +61,3 @@ const routes = [
 ];
 
 export default routes;
-

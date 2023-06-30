@@ -107,49 +107,5 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 90vh;
-  width: 100%;
-}
-
-.container-body {
-  padding: 70px;
-  background-color: #f8f9fa;
-  border-radius: 10px;
-}
-
-@media (max-width: 576px) {
-  .container-body {
-    padding: 20px;
-  }
-
-  .col-md-6 {
-    margin-bottom: 20px;
-  }
-}
-.savebtn {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.colored-button {
-  padding: 10px 30px;
-  background-color: orange;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.colored-button:hover {
-  background-color: #c68949;
-}
+@import "../assets/css/adminsettings.css";
 </style>
