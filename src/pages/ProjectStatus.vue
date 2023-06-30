@@ -1,31 +1,24 @@
 <template>
+    <div class="responsive-wrapper">
   <div class="container">
     <div class="row">
       <div class="col-12 big-container">
         <div class="row">
           <div class="col-6 col-md-3 mini-container text-center">
             <h2>2</h2>
-            <hr>
             <h3>Completed Task</h3>
           </div>
           <div class="col-6 col-md-3 mini-container text-center">
             <h2>2</h2>
-            <hr>
             <h3>Inompleted Task</h3>
           </div>
           <div class="col-6 col-md-3 mini-container text-center">
             <h2>2</h2>
-            <hr>
-            <h3>Upcoming Task</h3>
-          </div>
-          <div class="col-6 col-md-3 mini-container text-center">
-            <h2>75%</h2>
-            <hr>
-            <h3>Overall Progress</h3>
+            <h3>Cancelled Task</h3>
           </div>
         </div>
         <div class="row">
-          <div class="col-6 col-md-6 middle-container">
+          <div class="col-6 col-md-6 middle-container align-center">
             <h4 class="ts text-center">Task Status</h4>
             <br>
             <div class="chart-wrapper d-flex justify-center align-center">
@@ -36,7 +29,7 @@
               />
             </div>
           </div>
-          <div class="col-6 col-md-6 middle-container">
+          <div class="col-6 col-md-6 middle-container align-center ">
             <h4 class="tp text-center">Team Progress</h4><br>
             <br>
             <div>
@@ -49,55 +42,77 @@
           </div>
           <div class="row">
         </div>
-            <div class="col-12 col-md-12  semi-middle-container">
+        <div class="col-12 col-md-12 semi-middle-container">
   <h4 class="pl text-left">Project Timeline</h4>
-  <table class="table">
-    <thead>
-      <tr>
-        <th class="header-cell">#</th>
-        <th class="header-cell">Task</th>
-        <th class="header-cell">Owner</th>
-        <th class="header-cell">Due Date</th>
-        <th class="header-cell">Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Create a Real Estate Landing Page</td>
-        <td>Kurt</td>
-        <td>01-07-23</td>
-        <td class="status-working">Working</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Create a Real Estate Landing Page</td>
-        <td>Kurt</td>
-        <td>01-07-23</td>
-        <td class="status-working">Working</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Create a Real Estate Landing Page</td>
-        <td>Kurt</td>
-        <td>01-07-23</td>
-        <td class="status-cancelled">Cancelled</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>Create a Real Estate Landing Page</td>
-        <td>Kurt</td>
-        <td>01-07-23</td>
-        <td class="status-working">Working</td>
-      </tr>
-         </tbody>
-        </table>
-      </div>
+  <div class="table-responsive d-flex">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="header-cell">#</th>
+          <th class="header-cell">Task</th>
+          <th class="header-cell">Owner</th>
+          <th class="header-cell">Due Date</th>
+          <th class="header-cell">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Create a Real Estate Landing Page</td>
+          <td>Kurt</td>
+          <td>01-07-23</td>
+          <td class="status-working">Working</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Create a Real Estate Landing Page</td>
+          <td>Kurt</td>
+          <td>01-07-23</td>
+          <td class="status-working">Working</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Create a Real Estate Landing Page</td>
+          <td>Kurt</td>
+          <td>01-07-23</td>
+          <td class="status-cancelled">Cancelled</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Create a Real Estate Landing Page</td>
+          <td>Kurt</td>
+          <td>01-07-23</td>
+          <td class="status-working">Working</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
           <div class="col-6 col-md-6 semi-mid-container">
             <h4 class="ml text-left">Milestones</h4>
+  <div class="table-responsive d-flex">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="header-cell">#</th>
+          <th class="header-cell">Milestone</th>
+          <th class="header-cell">Due Date</th>
+          <th class="header-cell">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(milestone, index) in milestones" :key="index">
+          <td>{{ index + 1 }}</td>
+          <td>{{ milestone.name }}</td>
+          <td>{{ milestone.dueDate }}</td>
+          <td :class="'status-' + milestone.status">{{ milestone.status }}</td>
+        </tr>
+      </tbody>
+    </table>
           </div>
         </div>
       </div>
+   </div>
   </div>
 </div>
 </template>
@@ -119,7 +134,7 @@ export default {
         datasets: [
           {
             label: 'Progress',
-            data: [100, 90, 80, 75, 70, 60, 40],
+            data: [30, 35, 40, 50, 55, 60, 75],
             backgroundColor: '#477BFF',
             borderColor: '#477BFF',
           },
@@ -152,9 +167,22 @@ export default {
         },
         aspectRatio: 1.5, // Adjust the aspect ratio of the doughnut chart
       },
+      milestones: [
+        {
+          name: 'Milestone 1',
+          dueDate: '01-07-23',
+          status: 'completed',
+        },
+        {
+          name: 'Milestone 2',
+          dueDate: '05-07-23',
+          status: 'incomplete',
+        },
+        // Add more milestones as needed
+      ],
     };
   },
-};
+};  
 
 </script>
 

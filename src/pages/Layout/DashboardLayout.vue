@@ -65,10 +65,15 @@ export default {
   },
   data() {
     return {
-      title: "", 
+      title: "",
       sidebarBackground: "orange",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
     };
+  },
+  methods: {
+    getRouteFontWeight(route) {
+      return this.$route.path === route ? "500" : "normal";
+    },
   },
 };
 </script>

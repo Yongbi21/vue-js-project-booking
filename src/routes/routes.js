@@ -42,12 +42,12 @@ const routes = [
       },
       {
         path: "/pricingquoting",
-        name: "PricingQoutiing",
+        name: "Pricing Qoutiing",
         component: PricingQuoting,
       },
       {
         path: "/projectrequest",
-        name: "ProjectRequest",
+        name: "Project Request",
         component: ProjectRequest,
       },
       {
@@ -56,16 +56,23 @@ const routes = [
         component: ProjectStatus,
       },
       {
-        path: "/messenger",
+        path: "/Messenger",
         component: Messenger,
       },
       {
         path: "/settings",
-        name: "settings",
+        name: "Settings",
         component: Settings,
       },
     ],
   },
 ];
+
+routes.forEach(route => {
+  if (route.name) {
+    route.meta = { ...route.meta, fontWeight: "500" };
+  }
+});
+
 
 export default routes;
