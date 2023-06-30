@@ -7,6 +7,7 @@
         </div>
         <div class="input-container">
           <input
+            v-model="email"
             type="email"
             id="typeEmailX"
             class="form-control form-control-lg"
@@ -15,6 +16,7 @@
           />
           <br>
           <input
+            v-model="password"
             type="password"
             id="typePasswordX"
             class="form-control form-control-lg"
@@ -24,9 +26,7 @@
         </div>
         <p><a href="#!" style="color: cornflowerblue">Forgot password?</a></p>
         <div class="loginbtn">
-          <router-link to="/dashboard">
-            <button class="colored-button" type="submit">Login</button>
-          </router-link>
+          <button class="colored-button" type="submit">Login</button>
         </div>
         <div class="social-login">
           <p id="sign-in">Sign in with</p>
@@ -43,6 +43,45 @@
     </div>
   </div>
 </template>
+
+
+
+<script>
+import axios from 'axios';
+
+export default {
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  methods: {
+    login() {
+      axios.post('http://localhost:8000/api/login', {
+        email: this.email,
+        password: this.password,
+      })
+      .then(response => {
+        // Handle successful login
+        console.log(response.data);
+        // Store the user role in local storage or Vuex store
+        // Redirect the user to the dashboard or perform any other desired actions
+        this.$router.push('/dashboard');
+      })
+      .catch(error => {
+        // Handle login error
+        if (error.response && error.response.data) {
+          console.error(error.response.data);
+        } else {
+          console.error(error);
+        }
+      });
+    },
+  },
+};
+</script>
+
 
 <style scoped>
 .login-container {
@@ -78,11 +117,12 @@
   display: flex;
   justify-content: center;
   margin-bottom: 2rem;
+
 }
 
 .colored-button {
   padding: 10px 30px;
-  background-color: orange;
+  background-color: #ff8400;
   border: none;
   border-radius: 5px;
   text-decoration: none;
@@ -93,8 +133,8 @@
   align-items: center;
 }
 
-.colored-button:hover {
-  background-color: #c68949;
+.colored-button:active {
+  background-color: #5e3000;
 }
 
 .social-login {
@@ -119,16 +159,6 @@
 }
 </style>
 
-<script>
-export default {
-  data() {
-    return {
-      username: "",
-      password: "",
-    };
-  },
-};
-</script>
 
 
 

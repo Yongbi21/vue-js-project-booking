@@ -23,11 +23,13 @@ const routes = [
     path: "/dashboard",
     name: "dashboard",
     component: DashboardLayout,
+    meta: { requiresAuth: true },
     children: [
       {
-        path: "/dashboard",
-        name: "Dashboard",
-        component: Dashboard,
+        path: '/dashboard',
+      name: 'dashboard',
+      component: Dashboard,
+      
       },
       {
         path: "/pricing-quoting",
