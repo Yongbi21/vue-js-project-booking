@@ -37,51 +37,49 @@
           placeholder="Confirm your password"
           required
         />
-        <div class="form-group">
-          <label for="firstname">First Name</label>
-          <input
-            v-model="firstname"
-            type="firstname"
-            id="firstname"
-            class="form-control"
-            placeholder="Enter your First Name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="middlename">Middle Name</label>
-          <input
-            v-model="middlename"
-            type="middlename"
-            id="middlename"
-            class="form-control"
-            placeholder="Enter your Middle Name"
-            required
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="lastname">Last Name</label>
-          <input
-            v-model="lastname"
-            type="lastname"
-            id="lastname"
-            class="form-control"
-            placeholder="Enter your Last Name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="contactnum">Contact Number</label>
-          <input
-            v-model="contactnum"
-            type="contacnum"
-            id="contactnum"
-            class="form-control"
-            placeholder="Enter your Contact Number"
-            required
-          />
-        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input
+          v-model="firstName"
+          type="text"
+          id="firstname"
+          class="form-control"
+          placeholder="Enter your First Name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="middlename">Middle Name</label>
+        <input
+          v-model="middleName"
+          type="text"
+          id="middlename"
+          class="form-control"
+          placeholder="Enter your Middle Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input
+          v-model="lastName"
+          type="text"
+          id="lastname"
+          class="form-control"
+          placeholder="Enter your Last Name"
+          required
+        />
+      </div>
+      <div class="form-group">
+        <label for="contactnum">Contact Number</label>
+        <input
+          v-model="contactNumber"
+          type="text"
+          id="contactnum"
+          class="form-control"
+          placeholder="Enter your Contact Number"
+          required
+        />
       </div>
       <button type="submit" class="btn btn-primary">Create Account</button>
     </form>
@@ -96,23 +94,41 @@ export default {
       email: "",
       password: "",
       confirmPassword: "",
+      firstName: "",
+      middleName: "",
+      lastName: "",
+      contactNumber: ""
     };
   },
   methods: {
     signup() {
-      // Perform signup logic here
       if (this.password === this.confirmPassword) {
-        // Valid signup
-        console.log("Signup successful!");
+        // Passwords match, proceed with registration
+        const formData = {
+          first_name: this.firstName,
+          middle_name: this.middleName,
+          last_name: this.lastName,
+          contact_number: this.contactNumber,
+          email: this.email,
+          password: this.password
+        };
+
+        // Make an API request to register the user
+        axios
+          .post("/api/register", formData)
+          .then(response => {
+            console.log("Registration successful!");
+            // Redirect or show success message to the user
+          })
+          .catch(error => {
+            console.log("Registration failed:", error.response.data);
+            // Show error message to the user
+          });
       } else {
-        // Passwords do not match
         console.log("Passwords do not match");
+        // Show error message to the user
       }
-    },
-  },
+    }
+  }
 };
 </script>
-
-<style scoped>
-@import "@/assets/css/signup.css";
-</style>
