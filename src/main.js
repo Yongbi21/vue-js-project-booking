@@ -35,6 +35,7 @@ Vue.use(GlobalComponents);
 Vue.use(GlobalDirectives);
 
 
+
 //Vue.use(Notifications);
 
 /* eslint-disable no-new */

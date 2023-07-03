@@ -41,13 +41,13 @@
           </li>
         </ul>
         <div class="login">
-          <Modal @close="toggleModal" :modalActive="modalActive">
+          <Modal @close="toggleLoginModal" :modalActive="loginModalActive">
             <div class="modal-content">
               <Login></Login>
             </div>
           </Modal>
           <button
-            @click="toggleModal"
+            @click="toggleLoginModal"
             type="button"
             class="btn btn-custom-btn ms-4"
             style="color: black"
@@ -55,12 +55,21 @@
             Login
           </button>
         </div>
-        <router-link
-          :to="{ name: 'signup' }"
-          class="btn btn-custom-btn ms-4"
-          style="color: black"
-          >Register</router-link
-        >.
+        <div class="signup">
+          <Modal @close="toggleSignupModal" :modalActive="signupModalActive">
+            <div class="modal-content">
+              <Signup></Signup>
+            </div>
+          </Modal>
+          <button
+            @click="toggleSignupModal"
+            type="button"
+            class="btn btn-custom-btn ms-4"
+            style="color: black"
+          >
+            Register
+          </button>
+        </div>
       </div>
     </nav>
     <div class="text-center" id="content">
@@ -371,24 +380,36 @@
 </template>
 
 <script>
+import Signup from "../components/signup";
 import Login from "../components/login";
 import Modal from "@/components/Modal.vue";
 import { ref } from "vue";
 
 export default {
-  name: "LandingPage",
+  name: "Landing Page",
   components: {
+    Signup,
     Login,
     Modal,
   },
   setup() {
-    const modalActive = ref(false);
+    const loginModalActive = ref(false);
+    const signupModalActive = ref(false);
 
-    const toggleModal = () => {
-      modalActive.value = !modalActive.value;
+    const toggleLoginModal = () => {
+      loginModalActive.value = !loginModalActive.value;
     };
 
-    return { modalActive, toggleModal };
+    const toggleSignupModal = () => {
+      signupModalActive.value = !signupModalActive.value;
+    };
+
+    return {
+      loginModalActive,
+      signupModalActive,
+      toggleLoginModal,
+      toggleSignupModal,
+    };
   },
   mounted() {
     const navbar = document.getElementById("navbar");

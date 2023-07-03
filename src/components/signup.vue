@@ -85,7 +85,9 @@
       </div>
       <button type="submit" class="btn btn-primary">Create Account</button>
     </form>
-    <p>Already have an account? <router-link to="/">Log In</router-link></p>
+    <p>
+      Already have an account? <router-link to="/login">Log In</router-link>
+    </p>
   </div>
 </template>
 
