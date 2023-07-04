@@ -79,7 +79,8 @@
                       <td>01-07-23</td>
                       <td>01-014-23</td>
                       <td class="status-working">In Progress</td>
-                      <td class="status-working">''</td>
+                      <td class="status-working">
+                      <i class="fas fa-eye" id="milestone-cell"></i></td>
                     </tr>
                     <tr>
                       <td>2</td>
@@ -88,7 +89,8 @@
                       <td>01-07-23</td>
                       <td>01-014-23</td>
                       <td class="status-working">In Progress</td>
-                      <td class="status-working">''</td>
+                      <td class="status-working">
+                      <i class="fas fa-eye" id="milestone-cell"></i></td>                    
                     </tr>                   
                       <tr>
                       <td>3</td>
@@ -97,7 +99,8 @@
                       <td>01-07-23</td>
                       <td>01-014-23</td>
                       <td class="status-working">In Progress</td>
-                      <td class="status-working">''</td>
+                      <td class="status-working">
+                      <i class="fas fa-eye" id="milestone-cell"></i></td>                    
                     </tr>
                     <tr>
                       <td>4</td>
@@ -106,7 +109,8 @@
                       <td>01-07-23</td>
                       <td>01-014-23</td>
                       <td class="status-working">In Progress</td>
-                      <td class="status-working">''</td>
+                      <td class="status-working">
+                      <i class="fas fa-eye" id="milestone-cell"></i></td>                    
                     </tr>
                   </tbody>
                 </table>
@@ -114,13 +118,24 @@
             </div>
         </div>
       </div>
+      <!-- Modal Form -->
+<div id="milestoneModal" class="modal">
+  <div class="modal-content">
+    <span class="close" @click="closeModal">&times;</span>
+    <!-- Your form content goes here -->
+    <h2>Milestones Completed</h2>
+    <hr>
+    <ul>
+        <li v-for="milestone in completedMilestones" :key="milestone.id">{{ milestone.name }}</li>
+      </ul>
+  </div>
+</div>
       </div>
     </div>
 </template>
 
 <script>
-import { Bar } from 'vue-chartjs';
-import { Doughnut } from 'vue-chartjs';
+import { Bar, Doughnut } from 'vue-chartjs';
 import 'chartjs-plugin-labels';
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, ArcElement } from 'chart.js';
 ChartJS.register(Title, Tooltip, Legend, BarElement, ArcElement, CategoryScale, LinearScale);
@@ -168,33 +183,10 @@ export default {
         },
         aspectRatio: 1.5,
       },
-      milestones: [
-        {
-          name: 'Design Phase',
-          dueDate: '01-07-23',
-          status: 'Completed',
-        },
-        {
-          name: 'Development Phase',
-          dueDate: '01-07-23',
-          status: 'Completed',
-        },
-        {
-          name: 'Testing Phase',
-          dueDate: '05-07-23',
-          status: 'Completed',
-        },
-        {
-          name: 'Deployment Phase',
-          dueDate: '05-07-23',
-          status: 'Incomplete',
-        },
-        ],
     };
   },
   methods: {
     searchTable() {
-      // The searchTable function is now inside the export default block
       const filter = this.searchInput.toUpperCase();
       const table = document.querySelector('.table');
       const tr = table.getElementsByTagName('tr');
@@ -211,8 +203,26 @@ export default {
         }
       }
     },
+
+    openModal() {
+      const modal = document.getElementById("milestoneModal");
+      modal.style.display = "block";
+    },
+
+    closeModal() {
+      const modal = document.getElementById("milestoneModal");
+      modal.style.display = "none";
+    },
+  },
+  mounted() {
+    // Add event listeners to the "view" icons to trigger the openModal() method
+    const viewIcons = document.querySelectorAll(".status-working i.fas.fa-eye");
+    viewIcons.forEach((icon) => {
+      icon.addEventListener("click", this.openModal);
+    });
   },
 };
+
 
 
 </script>
