@@ -48,7 +48,7 @@
       goToLandingPage() {
       // Code to navigate to the landing page using router
       // For example, if your landing page route name is 'landing':
-      this.$router.push({ name: 'landing' });
+      this.$router.push({ name: 'landingpage' });
     },
     // Rest of the component code
     },
