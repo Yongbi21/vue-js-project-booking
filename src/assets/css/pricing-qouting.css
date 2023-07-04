@@ -1,0 +1,161 @@
+
+.pricing-quoting-wrapper 
+.big-container {
+
+        background-color: #ffff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        width: 140vh;
+        height: 70vh;
+      }
+
+      #services {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #477BFF !important;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      #services:hover {
+        transform: scale(1.2);
+      }
+      #space{
+        margin-bottom: 100px;
+      }
+
+      .custom-button {
+        font-size: 15px;
+        padding: 8px 20px;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+      }
+      
+      .custom-button:hover {
+        transform: scale(1.05);
+      }
+      #edit-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        color: #477BFF !important;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+      }
+      #edit-icon:hover {
+        transform: scale(1.2);
+      }
+
+      .modal-content {
+        display: -webkit-box !important;
+        margin-top: 80px !important;
+        max-width: 500px; 
+        margin: 0 auto;
+        background-color: #f9f9f9;
+        padding: 30px; 
+        border-radius: 10px;
+      }
+    
+      .form-group {
+        margin-bottom: 20px;
+      }
+    
+      label {
+        font-weight: bold;
+        display: block;
+      }
+    
+      select,
+      input[type="number"],
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    
+      select {
+        appearance: none;
+        background-color: #fff;
+        cursor: pointer;
+      }
+    
+      textarea {
+        resize: vertical;
+      }
+    
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+      }
+    
+      button:hover {
+        background-color: #0056b3;
+      }
+    #add-btn{
+        justify-content: center;
+    }
+    .group[type="date"]
+    {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 15px;  
+    }
+#projectDate{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.estimatedTime input[type="week"],
+.estimatedTime input[type="month"]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+.row {
+    display: flex;
+    justify-content: center;
+  }
+.add{
+    width: 150px; /* Adjust the width to make the button larger */
+    margin: left;
+    border-radius: 20px;
+  }
+  .cancel{
+    width: 150px; /* Adjust the width to make the button larger */
+    margin: right;
+    border-radius: 20px;
+  }
+  #projectCost1,
+  #projectCost2,
+  #projectCost3,
+  #projectCost4,
+  #projectCost5, 
+  input[type ="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
