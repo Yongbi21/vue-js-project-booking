@@ -31,7 +31,7 @@
                       <td class="status-working">
                         <i class="fas fa-eye" id="services" @click="openServicesModal"></i>
                      </td>
-                      <td class="amount">100,000</td>
+                      <td class="amount">₱100,000</td>
                       <td class="status-working">
                         <i class="fas fa-edit" id="edit-icon" @click="openEditModal"></i>
                       </td>
@@ -44,7 +44,7 @@
                       <td class="status-working">
                         <i class="fas fa-eye" id="services" @click="openServicesModal"></i>
                      </td>
-                      <td class="amount">100,000</td>
+                      <td class="amount">₱100,000</td>
                       <td class="status-working">
                         <i class="fas fa-edit" id="edit-icon" @click="openEditModal"></i>
                       </td>
@@ -57,7 +57,7 @@
                       <td class="status-working">
                         <i class="fas fa-eye" id="services" @click="openServicesModal"></i>
                      </td>
-                      <td class="amount">100,000</td>
+                      <td class="amount">₱100,000</td>
                       <td class="status-working">
                         <i class="fas fa-edit" id="edit-icon" @click="openEditModal"></i>
                       </td>
