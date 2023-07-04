@@ -237,6 +237,8 @@ export default {
   name: "LandingPage",
 
   mounted() { 
+    
+    
     const navbar = document.getElementById("navbar");
     const content = document.getElementById("content1");
     const initialNavbarTop = navbar ? navbar.offsetTop : 0;

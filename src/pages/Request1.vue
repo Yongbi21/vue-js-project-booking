@@ -8,8 +8,6 @@
       </div>
       <legend class="prf"> Project Request Form</legend><br>
       <hr style="border: 1px solid black;">
-      <label for="projectName">Project Name</label>
-      <input type="text" id="projectName" placeholder="Enter project name" required>
       <label for="projectComplexity">Project Complexity</label>
       <select id="projectComplexity" required>
         <option value="" disabled selected>Select the complexity</option>
@@ -24,7 +22,7 @@
       </div>
       <label for="additionalServices">Additional Services</label>
       <textarea id="additionalServices" placeholder="Enter your additional services" required></textarea>  
-      <button type="submit" class="next" id="next">Submit Request</button>
+      <router-link :to="{ name: 'landingpage' }" class="btn btn-ms-2" id="next">Submit Request</router-link>
     </form>
   </div>      
   </template>

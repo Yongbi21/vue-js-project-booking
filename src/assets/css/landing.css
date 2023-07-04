@@ -9,7 +9,7 @@
     border-bottom: 2px solid  #FFD1C3;
   }
   .navbar-fixed {
-    position: fixed;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 999
@@ -88,13 +88,6 @@
   .request-button:hover {
       opacity: 0.8;
   }
-  .navbar-fixed {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
-  }
-
   .custom-btn-disabled
   {
     opacity: 0.5; 
@@ -246,14 +239,14 @@
   }
   @media (max-width: 768px) {
     .hero-text h1 {
-      font-size: 28px;
+      font-size: 40px;
     }
     .hero-text h3 {
       font-size: 18px;
     }
   
     .feat {
-      font-size: 24px;
+      font-size: 20px;
     }
     .feat2 {
       font-size: 16px;
@@ -329,6 +322,7 @@
 #home1, #feature1, #about1{
   font-size: 20px;
 }
+
 @media (max-width: 1660px) {
   #border1 img {
     width: 500px;
@@ -485,5 +479,14 @@
 @media (max-width: 480px) {
   #feature1 {
     font-size: 14px;
+  }
+}
+@media (max-width: 454px) {
+  .hero-text h1 {
+    font-size: 15px; 
+    font-weight: 500;
+  }
+  .hero-text h3 {
+    font-size: 12px; 
   }
 }
