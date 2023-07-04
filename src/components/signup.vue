@@ -114,8 +114,7 @@ export default {
         };
 
         // Make an API request to register the user
-        axios
-          .post("/api/register", formData)
+        axios.post("/api/register", formData)
           .then(response => {
             console.log("Registration successful!");
             // Redirect or show success message to the user

@@ -12,8 +12,8 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@popperjs/core": "^2.11.8",
-    "axios": "^1.4.0",
     "@vueuse/core": "^10.2.1",
+    "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "bootstrap-vue": "^2.23.1",
     "chart.js": "^4.3.0",
@@ -25,7 +25,7 @@
     "vue-clickaway": "2.2.2",
     "vue-github-buttons": "3.1.0",
     "vue-material": "1.0.0-beta-15",
-    "vue-router": "3.5.2",
+    "vue-router": "^3.5.2",
     "vue-social-sharing": "3.0.9"
   },
   "devDependencies": {

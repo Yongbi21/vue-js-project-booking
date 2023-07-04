@@ -4,7 +4,9 @@
       <img src="../assets/img/dreamers logo.png" alt="Logo" class="logo" />
     </div>
     <div class="alert alert-danger" role="alert" v-if="loginError">
-      Invalid email or password.
+      <ul>
+        <li v-for="error in errorMessages" :key="error">{{ error }}</li>
+      </ul>
     </div>
     <div class="input-container">
       <input
@@ -22,7 +24,6 @@
       id="typePasswordX"
       class="form-control form-control-lg"
       placeholder="Password"
-      required
     />
 
     </div>
@@ -30,7 +31,7 @@
       <a href="#!" style="color: cornflowerblue">Forgot password?</a>
     </p>
     <div class="loginbtn">
-        <button class="colored-button" type="submit">Login</button>
+        <button class="colored-button" type="submit"> Login</button>
     </div>
     <div class="social-login">
       <p id="sign-in">Sign in with</p>
@@ -67,42 +68,43 @@ export default {
     return {
       email: '',
       password: '',
-      loginError: false, // Added loginError property
+      loginError: false,
+      errorMessages: [],
     };
   },
   methods: {
-    login() {
-      // Reset loginError before making the login request
+    async login() {
       this.loginError = false;
-
-      axios
-        .post('http://localhost:8000/api/login', {
+      try {
+        const response = await axios.post('http://localhost:8000/api/login', {
           email: this.email,
           password: this.password,
-        })
-        .then(response => {
-          // Handle successful login
-          console.log(response.data);
-
-          // Store the authentication token
-          const token = response.data.token;
-          localStorage.setItem('token', token);
-
-          // Redirect to the dashboard
-          this.$router.push('/dashboard');
-        })
-        .catch(error => {
-          // Handle login error
-          this.loginError = true;
-          if (error.response && error.response.data) {
-            console.error(error.response.data);
-          } else {
-            console.error(error);
-          }
         });
+
+        const { user, token } = response.data;
+
+        // Save the token to local storage for future requests
+        localStorage.setItem('token', token);
+
+        // Redirect the user to the dashboard or any other route
+        this.$router.push('/dashboard'); // Update '/dashboard' with your desired route
+
+      } catch (error) {
+        this.loginError = true;
+        if (error.response && error.response.data && error.response.data.errors) {
+          const errorFields = Object.keys(error.response.data.errors);
+          this.errorMessages = errorFields.map(field => {
+            return error.response.data.errors[field][0];
+          });
+        } else {
+          this.errorMessages = ['An error occurred during login. Please try again later.'];
+        }
+        console.error(error);
+      }
     },
   },
 };
 </script>
+
 
 
