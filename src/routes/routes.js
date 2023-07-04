@@ -1,9 +1,8 @@
 import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
-
 import Dashboard from "@/pages/Dashboard.vue";
 import PricingQuoting from "@/pages/PricingQuoting.vue";
-import TableList from "@/pages/ProjectRequest.vue";
-import ChartCards from "@/pages/ProjectStatus.vue";
+import ProjectRequest from "@/pages/ProjectRequest.vue";
+import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
 
@@ -19,14 +18,15 @@ const routes = [
     component: LandingPage,
   },
   {
-  path: "/request",
-  name: "request",
-  component: Request,
+    path: "/request",
+    name: "request",
+    component: Request,
   },
   {
     path: "/request1",
     name: "request1",
     component: Request1,
+  },
     },
   {
     path: "/login",
@@ -35,43 +35,46 @@ const routes = [
   },
   {
     path: "/dashboard",
-    name: "dashboard",
     component: DashboardLayout,
     children: [
       {
-        path: "dashboard",
+        path: "",
         name: "Dashboard",
         component: Dashboard,
       },
       {
-        path: "pricing-quoting",
+        path: "/pricingquoting",
+        name: "Pricing Qoutiing",
         component: PricingQuoting,
       },
       {
-        path: "projectRequest",
-        component: TableList,
+        path: "/projectrequest",
+        name: "Project Request",
+        component: ProjectRequest,
       },
       {
-        path: "projectStatus",
+        path: "/projectstatus",
         name: "Project Status",
-        component: ChartCards,
+        component: ProjectStatus,
       },
       {
-        path: "messenger",
+        path: "/Messenger",
         component: Messenger,
       },
       {
-        path: "settings",
-        name: "Admin Settings",
+        path: "/settings",
+        name: "Settings",
         component: Settings,
-      },
-      {
-        path: "/",
-        name: "login",
-        component: Login,
       },
     ],
   },
 ];
+
+routes.forEach(route => {
+  if (route.name) {
+    route.meta = { ...route.meta, fontWeight: "500" };
+  }
+});
+
 
 export default routes;

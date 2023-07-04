@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <ul class="nav nav-mobile-menu">
     <li>
       <drop-down>
@@ -12,12 +12,6 @@
           <li><a href="#">You have 3 new tasks</a></li>
         </ul>
       </drop-down>
-    </li>
-    <li>
-      <a href="#" data-toggle="dropdown" class="dropdown-toggle"
-        ><i class="material-icons">person</i>
-        <p>Profile</p></a
-      >
     </li>
   </ul>
 </template>
@@ -35,4 +29,4 @@ export default {
     };
   },
 };
-</script>
+</script> -->

@@ -2,7 +2,7 @@
   <md-toolbar md-elevation="0" class="md-transparent">
     <div class="md-toolbar-row">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">{{ $route.name }}</h3>
+        <h3 class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">{{ $route.name }}</h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -26,23 +26,6 @@
             </md-autocomplete>
           </div>
           <md-list>
-            <!-- <md-list-item href="#/notifications" class="dropdown">
-              <drop-down>
-                <a slot="title" class="dropdown-toggle" data-toggle="dropdown">
-                  <i class="material-icons">notifications</i>
-                  <span class="notification">5</span>
-                  <p class="hidden-lg hidden-md">Notifications</p>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li><a href="#">Mike John responded to your email</a></li>
-                  <li><a href="#">You have 5 new tasks</a></li>
-                  <li><a href="#">You're now friend with Andrew</a></li>
-                  <li><a href="#">Another Notification</a></li>
-                  <li><a href="#">Another One</a></li>
-                </ul>
-              </drop-down>
-            </md-list-item> -->
-
             <li class="md-list-item">
               <router-link
                 to="/dashboard"
@@ -69,11 +52,6 @@
                 </div>
               </router-link>
             </li>
-
-            <md-list-item href="#/user">
-              <i class="material-icons">person</i>
-              <p class="hidden-lg hidden-md">Profile</p>
-            </md-list-item>
           </md-list>
         </div>
       </div>
@@ -83,15 +61,26 @@
 
 <script>
 export default {
-  data() {
-    return {
-      selectedEmployee: null,
-      employees: ["Jim Halpert", "Angela Martin", "Kelly Kapoor"],
-    };
-  },
   methods: {
     toggleSidebar() {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
+    },
+  },
+  computed: 
+  {
+  getRouteFontWeight() {
+      const routeFontWeights = {
+        "/dashboard": "500",
+        "/projectrequest": "500",
+        "/pricingquoting": "500",
+        "/projectstatus": "500",
+        "/messenger": "500",
+        "/settings": "500",
+        // Add more routes and their respective font weights here
+      };
+
+      const currentRoute = this.$route.path;
+      return routeFontWeights[currentRoute] || "normal";
     },
   },
 };
