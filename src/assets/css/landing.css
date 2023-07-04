@@ -532,3 +532,6 @@
     font-size: 12px; 
   }
 }
+.modal-open {
+  overflow: hidden;
+}

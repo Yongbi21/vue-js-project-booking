@@ -108,7 +108,7 @@ body {
     padding: 0.375rem 0.75rem;
   }
   .request-form {
-    max-width: 446px;
+    max-width: 600px;
     padding: 10px;
   }
   @media (max-width: 382px) {

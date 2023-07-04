@@ -6,18 +6,12 @@ import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
 import LandingPage from "@/pages/LandingPage.vue";
-import Request1 from "@/pages/Request1.vue";
 
 const routes = [
   {
     path: "/",
     name: "landing",
     component: LandingPage,
-  },
-  {
-    path: "/request1",
-    name: "request",
-    component: Request1,
   },
   {
     path: "/dashboard",

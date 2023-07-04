@@ -1,33 +1,12 @@
 <template>
-  <div class="container">
-    <div class="section1">Section 1</div>
-    <div class="section2">Section 2</div>
-    <div class="section3">Section 3</div>
+  <div class="parent">
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
   </div>
 </template>
 <style scoped>
-.container {
-  display: flex;
-  flex-wrap: wrap;
-}
-.section1,
-.section2,
-.section3 {
-  width: 100%;
-  height: 215px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 22px;
-  font-weight: 700;
-}
-.section1 {
-  background: lightgreen;
-}
-.section2 {
-  background: lightblue;
-}
-.section3 {
-  background: lightsalmon;
-}
+.div1 { grid-area: 1 / 1 / 3 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 2 / 2 / 3 / 3; }
 </style>

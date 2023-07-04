@@ -3,9 +3,6 @@
     <div class="row">
       <div class="team">
         <div class="btn-group" role="group">
-          <button type="button" class="team-btn" id="teambtn">
-            <i class="bi bi-plus-square-fill" id="plus"></i>
-          </button>
 
           <div class="btn-group" role="group">
             <button
