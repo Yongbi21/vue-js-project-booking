@@ -87,7 +87,7 @@ export default {
         localStorage.setItem('token', token);
 
         // Redirect the user to the dashboard or any other route
-        this.$router.push('/dashboard'); // Update '/dashboard' with your desired route
+        this.$router.push('/dashboard'); // Update with your desired route
 
       } catch (error) {
         this.loginError = true;
@@ -97,7 +97,7 @@ export default {
             return error.response.data.errors[field][0];
           });
         } else {
-          this.errorMessages = ['An error occurred during login. Please try again later.'];
+          this.errorMessages = ['Invalid email or password. Please try again.'];
         }
         console.error(error);
       }
