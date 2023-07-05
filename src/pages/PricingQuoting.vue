@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="price " style="margin-left: auto; margin-bottom: 30px; padding: 10px;">
-                  <button class="btn btn-primary custom-button" id="" @click="openPriceModal">Edit Prices</button>
+                  <button class="btn btn-primary custom-button" id="edit-price" @click="openPriceModal">Edit Prices</button>
         </div>
    </div>
    <div class="row"> 

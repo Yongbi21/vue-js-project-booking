@@ -2,7 +2,13 @@
   <md-toolbar md-elevation="0" class="md-transparent">
     <div class="md-toolbar-row">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">{{ $route.name }}</h3>
+        <!-- Use the v-if directive to conditionally render the route name -->
+        <h3 v-if="!isModalOpen" class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">
+          {{ $route.name }}
+        </h3>
+        <h3 v-else class="md-title hide-route-name" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">
+          <!-- Empty space to keep the layout intact, but hide the route name -->
+        </h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -60,15 +66,23 @@
 </template>
 
 <script>
-export default {
+  export default {
+    data() {
+    return {
+      isModalOpen: false,
+    };
+  },
   methods: {
     toggleSidebar() {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
     },
+    onModalOpened() {
+      // Set the flag to true when the modal is opened
+      this.isModalOpen = true;
+    },
   },
-  computed: 
-  {
-  getRouteFontWeight() {
+  computed: {
+    getRouteFontWeight() {
       const routeFontWeights = {
         "/dashboard": "500",
         "/projectrequest": "500",
@@ -82,8 +96,34 @@ export default {
       const currentRoute = this.$route.path;
       return routeFontWeights[currentRoute] || "normal";
     },
+    displayedRouteName() {
+      // Return an empty string when isModalOpen is true, otherwise return the actual route name
+      return this.isModalOpen ? '' : this.$route.name;
+    },
+  },
+  created() {
+    this.$root.$on("modal-opened", this.onModalOpened);
+  },
+  beforeDestroy() {
+    this.$root.$off("modal-opened", this.onModalOpened);
+  },
+  watch: {
+    isModalOpen(val) {
+      // When the value of isModalOpen changes, if it's true, block the route name
+      // by setting it to an empty string
+      if (val) {
+        this.$route.name = "";
+      } else {
+        // When isModalOpen is false, restore the original route name
+        this.$route.name = this.$route.meta.title || "Default Title"; // You can change "Default Title" to a fallback title if necessary.
+      }
+    },
   },
 };
 </script>
 
-<style lang="css"></style>
+<style>
+  .hide-route-name {
+    display: none;
+  }
+</style>

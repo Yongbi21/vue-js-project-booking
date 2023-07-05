@@ -27,7 +27,7 @@
         margin-bottom: 100px;
       }
 
-      .custom-button {
+      #edit-price {
         font-size: 15px;
         padding: 8px 20px;
         border-radius: 20px;
@@ -35,7 +35,7 @@
         transition: all 0.3s ease;
       }
       
-      .custom-button:hover {
+      #edit-price:hover {
         transform: scale(1.05);
       }
       #edit-icon{
