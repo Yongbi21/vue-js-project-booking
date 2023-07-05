@@ -5,10 +5,10 @@
     </div>
     <form @submit.prevent="login">
       <div class="alert alert-danger" role="alert" v-if="loginError">
-        <ul>
-          <li v-for="error in errorMessages" :key="error">{{ error }}</li>
-        </ul>
-      </div>
+       <ul>
+         <li v-for="error in errorMessages" :key="error">{{ error }}</li>
+       </ul>
+     </div>
       <div class="input-container">
         <input
           v-model="email"
@@ -58,6 +58,9 @@
   </div>
 </template>
 
+
+
+
 <style scoped>
 @import "../assets/css/login.css";
 </style>
@@ -99,7 +102,7 @@ export default {
             return error.response.data.errors[field][0];
           });
         } else {
-          this.errorMessages = ['Invalid email or password. Please try again.'];
+          this.errorMessages = ['Something went wrong. Please try again.'];
         }
         console.error(error);
       }
