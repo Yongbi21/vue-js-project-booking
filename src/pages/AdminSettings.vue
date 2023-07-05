@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <!-- Will work -->
     <div class="md-layout">
       <div class="md-layout-item">
         <md-card>
