@@ -1,119 +1,119 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .request-form {
-    max-width: 500px;
-    padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center; 
-  }
-  
-  .request-form label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 10px;
-    text-align: left; 
-  }
-  
-  .request-form input[type="text"],
-  .request-form input[type="number"],
-  .request-form input[type="file"],
-  .request-form input[type="date"],
-  .request-form input[type="week"],
-  .request-form input[type="month"],
-  .request-form select,
-  .request-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 15px;
-  }
-  
-  .request-form textarea {
-    resize: vertical;
-    height: 100px;
-  }
-  
-  .request-form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.request-form {
+  max-width: 500px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center; 
+}
+
+.request-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left; 
+}
+
+.request-form input[type="text"],
+.request-form input[type="number"],
+.request-form input[type="file"],
+.request-form input[type="date"],
+.request-form input[type="week"],
+.request-form input[type="month"],
+.request-form select,
+.request-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+
+.request-form textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.request-form button {
+  padding: 10px 20px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.request-form button:hover {
+  background-color: darkorange;
+}
+.prf{
+  font-weight: 600;
+}
+  #next {
     padding: 10px 20px;
-    background-color: orange;
+    font-weight: 400;
+    background: #F5612F !important;
+    border: 0.5px solid #ABA5A2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px !important;
     color: white;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
   }
-  
-  .request-form button:hover {
-    background-color: darkorange;
+
+  #next:hover {
+    text-emphasis-color: white !important;
   }
-  .prf{
-    font-weight: 600;
-  }
-    #next {
-      padding: 10px 20px;
-      font-weight: 400;
-      background: #F5612F !important;
-      border: 0.5px solid #ABA5A2;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      border-radius: 40px !important;
-      color: white;
-      cursor: pointer;
-    }
-  
-    #next:hover {
-      text-emphasis-color: white !important;
-    }
-  .close-icon {
-    cursor: pointer;
-  }
-  
-  .close-icon i {
-    font-size: 24px;
-    color: #888;
-  }
-  
-  .close-icon i:hover {
-    color: #f00;
-  }
-  .close-back {
-    cursor: pointer;
-  }
-  
-  .close-back i {
-    font-size: 24px;
-    color: #888;
-  }
-  
-  .close-back i:hover {
-    color: #f00;
-  }
-  .close-back {
-    margin-right: 10px;
-    float: left;
-  }
-  
-  .form-floating {
-    flex: 1;
-    margin-bottom: 15px;
-  }
-  
-  .form-floating label {
-    padding: 0.375rem 0.75rem;
-  }
+.close-icon {
+  cursor: pointer;
+}
+
+.close-icon i {
+  font-size: 24px;
+  color: #888;
+}
+
+.close-icon i:hover {
+  color: #f00;
+}
+.close-back {
+  cursor: pointer;
+}
+
+.close-back i {
+  font-size: 24px;
+  color: #888;
+}
+
+.close-back i:hover {
+  color: #f00;
+}
+.close-back {
+  margin-right: 10px;
+  float: left;
+}
+
+.form-floating {
+  flex: 1;
+  margin-bottom: 15px;
+}
+
+.form-floating label {
+  padding: 0.375rem 0.75rem;
+}
+.request-form {
+  max-width: 600px;
+  padding: 10px;
+}
+@media (max-width: 382px) {
   .request-form {
-    max-width: 446px;
+    max-width: 382px;
     padding: 10px;
   }
-  @media (max-width: 382px) {
-    .request-form {
-      max-width: 382px;
-      padding: 10px;
-    }
-  }
+}

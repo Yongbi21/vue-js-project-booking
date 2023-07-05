@@ -41,13 +41,13 @@
           </li>
         </ul>
         <div class="login">
-          <Modal @close="toggleModal" :modalActive="modalActive">
+          <Modal @close="toggleLoginModal" :modalActive="loginModalActive">
             <div class="modal-content">
               <Login></Login>
             </div>
           </Modal>
           <button
-            @click="toggleModal"
+            @click="toggleLoginModal"
             type="button"
             class="btn btn-custom-btn ms-4"
             style="color: black"
@@ -55,12 +55,21 @@
             Login
           </button>
         </div>
-        <router-link
-          :to="{ name: 'signup' }"
-          class="btn btn-custom-btn ms-4"
-          style="color: black"
-          >Register</router-link
-        >.
+        <div class="signup">
+          <Modal @close="toggleSignupModal" :modalActive="signupModalActive">
+            <div class="modal-content">
+              <Signup></Signup>
+            </div>
+          </Modal>
+          <button
+            @click="toggleSignupModal"
+            type="button"
+            class="btn btn-custom-btn ms-4"
+            style="color: black"
+          >
+            Register
+          </button>
+        </div>
       </div>
     </nav>
     <div class="text-center" id="content">
@@ -93,9 +102,23 @@
         <div class="request">
           <div class="row">
             <div class="col-12 text-center">
-              <router-link :to="{ name: 'request' }" class="request-button"
-                >REQUEST NOW!</router-link
-              >
+              <div class="request">
+                <Modal
+                  @close="toggleRequestModal"
+                  :modalActive="requestModalActive"
+                >
+                  <div class="modal-content">
+                    <Request></Request>
+                  </div>
+                </Modal>
+                <button
+                  @click="toggleRequestModal"
+                  type="button"
+                  class="request-button"
+                >
+                  Request
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -371,24 +394,45 @@
 </template>
 
 <script>
+import Signup from "../components/signup";
 import Login from "../components/login";
-import Modal from "@/components/Modal.vue";
+import Modal from "@/components/LandingModals.vue";
+import Request from "@/components/request.vue";
 import { ref } from "vue";
 
 export default {
-  name: "LandingPage",
+  name: "Landing Page",
   components: {
+    Signup,
     Login,
     Modal,
+    Request,
   },
   setup() {
-    const modalActive = ref(false);
+    const loginModalActive = ref(false);
+    const signupModalActive = ref(false);
+    const requestModalActive = ref(false);
 
-    const toggleModal = () => {
-      modalActive.value = !modalActive.value;
+    const toggleLoginModal = () => {
+      loginModalActive.value = !loginModalActive.value;
     };
 
-    return { modalActive, toggleModal };
+    const toggleSignupModal = () => {
+      signupModalActive.value = !signupModalActive.value;
+    };
+
+    const toggleRequestModal = () => {
+      requestModalActive.value = !requestModalActive.value;
+    };
+
+    return {
+      loginModalActive,
+      signupModalActive,
+      requestModalActive,
+      toggleLoginModal,
+      toggleSignupModal,
+      toggleRequestModal,
+    };
   },
   mounted() {
     const navbar = document.getElementById("navbar");

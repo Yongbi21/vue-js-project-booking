@@ -1,14 +1,12 @@
- .form-container {
-    background-color: #fff;
-    padding: 4rem;
-    border-radius: 4%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    height: 90vh;
-    margin: auto;
-  }
+.form-container {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 600px;
+}
   
-  .logo-container {
+  .Logo {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +16,7 @@
   .input-container {
     margin-bottom: 2rem;
   }
-  
+ 
   .loginbtn {
     display: flex;
     justify-content: center;
