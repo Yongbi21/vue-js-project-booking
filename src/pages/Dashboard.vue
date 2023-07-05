@@ -39,80 +39,86 @@
           </div>
           <div class="row">
             <div class="col-12 col-md-6 middle-container align-center">
-              <h4 class="ts text-center">Project Details</h4>
+              <h4 class="ts text-left">Project Details</h4>
               <div class="card -md-10" id="projectdetails">
                 <ul class="list-group list-group-flush">
                   <li class="list-group-item">
-                    <div id="realstit">
-                      <span id="proj">Real Estate Project</span>
-                      <i class="bi bi-three-dots-vertical"></i>
-                      <p>
-                        Create a consistent look and feel smooth on web and
-                        mobile, revision in landing page.
-                      </p>
-                      <br />
-                      <div class="team-container">
-                        <button type="button" class="btn btn-danger" disabled>
-                          Kurt and team
-                        </button>
-                        <img
-                          src="../assets/img/angkol.png"
-                          alt="Avatar"
-                          class="avatar"
-                        />
-                        <img
-                          src="../assets/img/angkol.png"
-                          alt="Avatar"
-                          class="avatar"
-                        />
-                        <img
-                          src="../assets/img/angkol.png"
-                          alt="Avatar"
-                          class="avatar"
-                        />
+                    <div class="card">
+                      <div class="card-body" id="realstit">
+                        <span id="proj">Real Estate Project</span>
+                        <i class="bi bi-three-dots-vertical" id="dots"></i>
+                        <p>
+                          Create a consistent look and feel smooth on web and
+                          mobile, revision in landing page.
+                        </p>
+                        <br />
+                        <div class="team-container">
+                          <button type="button" class="btn btn-danger" disabled>
+                            Kurt and team
+                          </button>
+                          <img
+                            src="../assets/img/angkol.png"
+                            alt="Avatar"
+                            class="avatar"
+                          />
+                          <img
+                            src="../assets/img/angkol.png"
+                            alt="Avatar"
+                            class="avatar"
+                          />
+                          <img
+                            src="../assets/img/angkol.png"
+                            alt="Avatar"
+                            class="avatar"
+                          />
+                        </div>
                       </div>
                     </div>
                   </li>
 
                   <li class="list-group-item">
-                    <div id="mobile">
-                      <span id="proj">Travel Mobile Design</span>
-                      <i class="bi bi-three-dots-vertical"></i>
-                      <p>
-                        Create a consistent look and feel smooth on web and
-                        mobile, revision in landing page.
-                      </p>
-                      <br />
-                      <div class="logo-container">
-                        <button type="button" class="btn btn-info" disabled>
-                          Jonel
-                        </button>
-                        <img
-                          src="../assets/img/angkol.png"
-                          alt="Avatar"
-                          class="avatar"
-                        />
+                    <div class="card">
+                      <div class="card-body" id="mobile">
+                        <span id="proj">Travel Mobile Design</span>
+                        <i class="bi bi-three-dots-vertical" id="dots"></i>
+                        <p>
+                          Create a consistent look and feel smooth on web and
+                          mobile, revision in landing page.
+                        </p>
+                        <br />
+                        <div class="logo-container">
+                          <button type="button" class="btn btn-danger" disabled>
+                            Jonel
+                          </button>
+                          <img
+                            src="../assets/img/angkol.png"
+                            alt="Avatar"
+                            class="avatar"
+                          />
+                        </div>
                       </div>
                     </div>
                   </li>
                   <li class="list-group-item">
-                    <div id="helth">
-                      <span id="proj">Health Tracker Device</span>
-                      <i class="bi bi-three-dots-vertical"></i>
-                      <p id="realstit">
-                        Create a consistent look and feel smooth on web and
-                        mobile, revision in landing page.
-                      </p>
-                      <br />
-                      <div class="logo-container">
-                        <button type="button" class="btn btn-danger" disabled>
-                          Bembol
-                        </button>
-                        <img
-                          src="../assets/img/angkol.png"
-                          alt="Avatar"
-                          class="avatar"
-                        />
+                    <div class="card">
+                      <div class="card-body" id="helth">
+                        <span id="proj">Health Tracker Device</span>
+                        <i class="bi bi-three-dots-vertical" id="dots"></i>
+                        <p id="realstit">
+                          Create a consistent look and feel smooth on web and
+                          mobile, revision in landing page.
+                        </p>
+                        <br />
+                        <div class="logo-container">
+                          <button type="button" class="btn btn-danger" disabled>
+                            Bembol
+                          </button>
+                          <img
+                            src="../assets/img/angkol.png"
+                            alt="Avatar"
+                            class="avatar"
+                          />
+                        </div>
                       </div>
                     </div>
                   </li>
@@ -126,7 +132,7 @@
             <div class="col-12 col-md-12 middle-container align-center">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="tp text-center">Project Progress</h4>
+                  <h4 class="tp text-left">Project Progress</h4>
                   <br /><br />
                   <Bar
                     id="chart-wrapper d-flex justify-center align-center"
@@ -137,7 +143,7 @@
               </div>
               <div class="card">
                 <div class="card-body">
-                  <h4 class="tp text-center">Project Deadline</h4>
+                  <h4 class="tp text-left">Project Deadline</h4>
                   <div class="row row-cols-1 row-cols-md-2 g-4">
                     <div class="col">
                       <div class="card">
