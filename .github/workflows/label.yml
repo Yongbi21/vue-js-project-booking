@@ -17,6 +17,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/labeler@v4
-    
-    with:
+      with:
         repo-token: "${{ secrets.GITHUB_TOKEN }}"
