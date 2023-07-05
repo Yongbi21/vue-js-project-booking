@@ -2,8 +2,29 @@
   <div class="pricing-quoting-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-6 big-container">   
+        <div class="col-12 big-container">   
               <div class="table-responsive d-flex">
+                <div class="col-6 sort-by" id="sort">
+                  <label for="sortDropdown"></label>
+                <select v-model="sortOption" @change="sortTable" id="sortDropdown">
+                <option value="default">Sort by:</option>
+                <option value="high">High</option>
+                <option value="med">Medium</option>
+                <option value="normal">Normal</option>
+                <option value="low">Low</option>
+                </select>
+                <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                </div>
+                <div class="col-6 sort-by" id="sort2">
+                  <label for="sortDropdown"></label>
+                <select v-model="sortOption" @change="sortTable" id="sortDropdown">
+                <option value="default">Sort by:</option>
+                <option value="asc">Ascending</option>
+                <option value="desc">Descending</option>
+                </select>
+                <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                </div>
+
                 <div class="price " style="margin-left: auto; margin-bottom: 30px; padding: 10px;">
                   <button class="btn btn-primary custom-button" id="" @click="openPriceModal">Edit Prices</button>
         </div>
@@ -73,7 +94,6 @@
 <div id="priceModal" class="modal"> 
     <div class="modal-content">
       <span class="close" @click="closeModal">&times;</span>
-      <!-- Your form content for editing prices goes here -->
       <h2 style="color: black;">Edit Prices</h2>
       <hr style="border: 1px solid black;">
       <form class="group">
@@ -101,7 +121,6 @@
 <div id="editModal" class="modal">
     <div class="modal-content">
       <span class="close" @click="closeModal">&times;</span>
-      <!-- Your form content for editing prices goes here -->
       <h2 style="color: black;">Edit Price</h2>
       <form class="group">
       <hr style="border: 1px solid black;">
@@ -142,7 +161,6 @@
   <div id="servicesModal" class="modal">
     <div class="modal-content">
       <span class="close" @click="closeModal">&times;</span>
-      <!-- Your content for the Services Modal goes here -->
       <h2>Additional Services</h2>
       <hr>
       <label for="additional-services">Services Requested:</label>
@@ -157,6 +175,7 @@
 export default {
   data() {
        return {
+        sortOption: "default", 
        weekValue: '',
         monthValue: ''
       };

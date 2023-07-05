@@ -124,7 +124,6 @@
   <div id="milestoneModal" class="modal">
   <div class="modal-content">
     <span class="close" @click="closeModal">&times;</span>
-    <!-- Your form content goes here -->
     <h2>Milestones Completed</h2>
     <hr>
     <ul>
