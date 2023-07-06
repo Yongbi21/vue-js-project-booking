@@ -12,16 +12,21 @@
 
 <script>
 export default {
-  props: ["modalActive"],
-  setup(props, { emit }) {
-    const close = () => {
-      emit("close");
-    };
-
-    return { close };
+  props: {
+    modalActive: {
+      type: Boolean,
+      default: false
+    }
   },
+  methods: {
+    close() {
+      this.$emit("close");
+    }
+  }
 };
 </script>
+
+
 <style lang="scss" scoped>
 .modal-animation-enter-active,
 .modal-animation-leave-active {

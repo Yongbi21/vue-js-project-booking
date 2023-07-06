@@ -19,7 +19,7 @@
           <div v-if="signupError" class="error-message">{{ getErrorMessage('first_name') }}</div>
         </div>
         <div class="form-group">
-          <label for="middlename">Middle Name</label>
+          <label for="middlename">M.I</label>
           <input
             v-model="middlename"
             type="text"
@@ -115,7 +115,7 @@ export default {
   methods: {
     async signup() {
       this.signupError = false;
-      
+
       try {
         const response = await axios.post('http://localhost:8000/api/signup', {
           first_name: this.firstname,
@@ -128,15 +128,20 @@ export default {
         });
 
         const { user, token } = response.data;
-        
+
+        // Save the token to local storage for future requests
+        localStorage.setItem('token', token);
+
+        // Redirect the user to the dashboard or any other route
+        this.$router.push('/dashboard'); // Update with your desired route
 
       } catch (error) {
         this.signupError = true;
         this.errorMessages = error.response.data.errors;
       }
-      
     },
-      getErrorMessage(field) {
+    
+    getErrorMessage(field) {
       if (this.signupError && this.errorMessages[field]) {
         return this.errorMessages[field][0];
       }
@@ -145,6 +150,7 @@ export default {
   },
 };
 </script>
+
 
 <style scoped>
 @import "@/assets/css/signup.css";

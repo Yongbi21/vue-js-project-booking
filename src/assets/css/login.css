@@ -62,3 +62,8 @@
       padding: 3rem;
     }
   }
+
+  .visually-hidden::placeholder {
+    color: transparent;
+  }
+  

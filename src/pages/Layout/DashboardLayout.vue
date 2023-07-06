@@ -29,10 +29,22 @@
         <i class="bi bi-gear-fill"></i>
         <p>Admin Settings</p>
       </sidebar-link>
-      <sidebar-link to="/">
-        <i class="bi bi-box-arrow-left"></i>
-        <p>Logout</p>
-      </sidebar-link>
+      <div class="md-list-item">
+        <div class="md-list-item-content md-ripple">
+          <i class="bi bi-box-arrow-left"></i>
+        <Modal @close="toggleLogoutModal" :modalActive="logoutModalActive">
+            <div class="modal-content">
+              <Logout></Logout>
+            </div>
+          </Modal>
+          <p
+            @click="toggleLogoutModal"
+            style="color: black"
+          >
+            Logout
+          </p>
+        </div>  
+      </div>
     </side-bar>
 
     <div class="main-panel">
@@ -54,6 +66,8 @@ import TopNavbar from "./TopNavbar.vue";
 import DashboardContent from "./Content.vue";
 import MobileMenu from "@/pages/Layout/MobileMenu.vue";
 import FixedPlugin from "./Extra/FixedPlugin.vue";
+import Modal from "@/components/LandingModals.vue";
+import Logout from "../components/logout";
 
 export default {
   components: {
@@ -61,6 +75,19 @@ export default {
     DashboardContent,
     MobileMenu,
     FixedPlugin,
+    Modal,
+    Logout,
+  },
+  setup() {
+    const logoutModalActive = ref(false);
+
+    const toggleLogoutModal = () => {
+      logoutModalActive.value = !logoutModalActive.value;
+    };
+
+    return {
+      logoutModalActive,
+    };
   },
   data() {
     return {
