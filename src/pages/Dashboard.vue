@@ -47,7 +47,7 @@
                       <div class="card-body" id="realstit">
                         <span id="proj">Real Estate Project</span>
                         <i class="bi bi-three-dots-vertical" id="dots"></i>
-                        <p>
+                        <p id="realstit">
                           Create a consistent look and feel smooth on web and
                           mobile, revision in landing page.
                         </p>
@@ -81,7 +81,7 @@
                       <div class="card-body" id="mobile">
                         <span id="proj">Travel Mobile Design</span>
                         <i class="bi bi-three-dots-vertical" id="dots"></i>
-                        <p>
+                        <p id="realstit">
                           Create a consistent look and feel smooth on web and
                           mobile, revision in landing page.
                         </p>

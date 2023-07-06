@@ -81,7 +81,9 @@
   margin: 2px;
 }
 
-
+#realstit{
+  text-align: left;
+}
 
 #bar {
   height: 50px;

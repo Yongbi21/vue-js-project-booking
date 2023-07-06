@@ -15,7 +15,7 @@
       </sidebar-link>
       <sidebar-link to="/pricing-quoting">
         <i class="bi-graph-up-arrow"></i>
-        <p>Pricing and Qutoting</p>
+        <p>Pricing and Quoting</p>
       </sidebar-link>
       <sidebar-link to="/projectstatus">
         <i class="bi bi-calendar"></i>

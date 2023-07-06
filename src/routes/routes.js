@@ -25,14 +25,14 @@ const routes = [
         component: Dashboard,
       },
       {
-        path: "/pricing-quoting",
-        name: "Pricing and Quoting",
-        component: PricingQuoting,
-      },
-      {
         path: "/projectRequest",
         name: "Project Request",
         component: ProjectRequest,
+      },
+      {
+        path: "/pricing-quoting",
+        name: "Pricing and Quoting",
+        component: PricingQuoting,
       },
       {
         path: "/projectstatus",
