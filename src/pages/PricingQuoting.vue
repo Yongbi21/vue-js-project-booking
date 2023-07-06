@@ -134,11 +134,15 @@
         <option value="low">Low</option>
       </select>
       
-      <div class="estimatedTime">
-      <label for="estimatedTime">Estimated Time</label>
-      <input type="week" v-model="weekValue" @input="handleInput">
-      <input type="month" v-model="monthValue" @input="handleInput">
+  <div id="q-app" style="min-height: 100vh;">
+    <div class="q-pa-md">
+      <div class="q-pb-sm">
+        Model: {{ model }}
       </div>
+      <q-date v-model="model" range></q-date>
+    </div>
+  </div>
+
 
       <label for="projectDate">Date Created</label>
       <input type="date" id="projectDate" placeholder="Enter date created" required>

@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
-import Vue from "vue";
+import { VMoney } from 'v-money';
+import Vue from 'vue';
 import VueRouter from "vue-router";
 import App from "./App";
 
@@ -10,7 +11,6 @@ import routes from "./routes/routes";
 // Plugins
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
-import Notifications from "./components/NotificationPlugin";
 
 // MaterialDashboard plugin
 import MaterialDashboard from "./material-dashboard";
@@ -22,7 +22,7 @@ const router = new VueRouter({
   linkExactActiveClass: "nav-item active",
 });
 
-
+Vue.directive('money', VMoney);
 Vue.use(VueRouter);
 Vue.use(MaterialDashboard);
 Vue.use(GlobalComponents);
