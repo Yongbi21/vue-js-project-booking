@@ -27,10 +27,6 @@ export default {
   },
   methods: {
     login() {
-      // Perform login logic here
-      // This could include making an API call to the server to verify the credentials
-
-      // After successful login, navigate to the dashboard page
       this.$router.push("/dashboard");
     },
   },
