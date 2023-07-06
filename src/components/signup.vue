@@ -5,14 +5,10 @@
       <img src="../assets/img/dreamers logo.png" alt="Logo" class="logo"/>
     </div>
     <form @submit.prevent="signup">
-      <div class="form-group">
-        <div v-if="signupError" class="alert alert-danger" role="alert">
-          <ul>
-            <li v-for="message in errorMessages" :key="message">{{ message }}</li>
-          </ul>
-        </div>
+          <div class="form-group">
         <div class="form-group">
-          <label for="firstname">First Name</label>
+          
+          <label for="firstname">First Name<span style="color: red;"> *</span></label>
           <input
             v-model="firstname"
             type="text"
@@ -20,6 +16,7 @@
             class="form-control"
             placeholder="Enter your First Name"  
           />
+          <div v-if="signupError" class="error-message">{{ getErrorMessage('first_name') }}</div>
         </div>
         <div class="form-group">
           <label for="middlename">Middle Name</label>
@@ -30,9 +27,10 @@
             class="form-control"
             placeholder="Enter your Middle Name"
           />
+          <div v-if="signupError" class="error-message">{{ getErrorMessage('middle_name') }}</div>
         </div>
         <div class="form-group">
-          <label for="lastname">Last Name</label>
+          <label for="lastname">Last Name<span style="color: red;"> *</span></label>
           <input
             v-model="lastname"
             type="text"
@@ -40,6 +38,7 @@
             class="form-control"
             placeholder="Enter your Last Name"
           />
+          <div v-if="signupError" class="error-message">{{ getErrorMessage('last_name') }}</div>
         </div>
         <div class="form-group">
           <label for="contactnum">Contact Number</label>
@@ -50,9 +49,10 @@
             class="form-control"
             placeholder="Enter your Contact Number"
           />
+          <div v-if="signupError" class="error-message">{{ getErrorMessage('contact_number') }}</div>
         </div>
         <div class="form-group">
-          <label for="email">Email:</label>
+          <label for="email">Email:<span style="color: red;"> *</span></label>
           <input
             v-model="email"
             type="email"
@@ -60,9 +60,11 @@
             class="form-control"
             placeholder="Enter your email"
           />
+          <div v-if="signupError" class="error-message">{{ getErrorMessage('email') }}</div>
         </div>
+
         <div class="form-group">
-          <label for="password">Password:</label>
+          <label for="password">Password:<span style="color: red;"> *</span></label>
           <input
             v-model="password"
             type="password"
@@ -70,9 +72,10 @@
             class="form-control"
             placeholder="Enter your password"
           />
+          <div v-if="signupError" class="error-message">{{ getErrorMessage('password') }}</div>
         </div>
         <div class="form-group">
-          <label for="confirmPassword">Confirm Password:</label>
+          <label for="confirmPassword">Confirm Password:<span style="color: red;"> *</span></label>
           <input
             v-model="confirmPassword"
             type="password"
@@ -81,6 +84,7 @@
             placeholder="Confirm your password"
           />
         </div>
+        <div v-if="signupError" class="error-message">{{ getErrorMessage('password_confirmation') }}</div>
         <button type="submit" class="btn btn-primary">Create Account</button>
       </div>
     </form>
@@ -111,6 +115,7 @@ export default {
   methods: {
     async signup() {
       this.signupError = false;
+      
       try {
         const response = await axios.post('http://localhost:8000/api/signup', {
           first_name: this.firstname,
@@ -123,12 +128,19 @@ export default {
         });
 
         const { user, token } = response.data;
-        // Handle successful response and store the user and token if needed
+        
 
       } catch (error) {
         this.signupError = true;
         this.errorMessages = error.response.data.errors;
       }
+      
+    },
+      getErrorMessage(field) {
+      if (this.signupError && this.errorMessages[field]) {
+        return this.errorMessages[field][0];
+      }
+      return '';
     },
   },
 };
