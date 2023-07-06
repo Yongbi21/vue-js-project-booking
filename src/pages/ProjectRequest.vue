@@ -7,7 +7,6 @@
                     <div class="search" id="search-req">
                       <div class="input-group mb-3" id="search-request" style="width: 30vh;">
                         <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" @click="searchTable()">Search</button>
                     </div>
                       <input
                         type="text"
