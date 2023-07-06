@@ -11,8 +11,12 @@
                   role="group"
                   aria-label="Button group with nested dropdown"
                 >
-                  <button type="button" class="btn btn-primary">
-                    <i class="fa fa-plus-square" aria-hidden="true"></i>
+                  <button
+                    class="btn btn-primary custom-button"
+                    id=""
+                    @click="openteamModal"
+                  >
+                    <i class="bi bi-plus-lg"></i>
                   </button>
 
                   <div class="btn-group" role="group">
@@ -26,10 +30,10 @@
                     </button>
                     <ul class="dropdown-menu">
                       <li>
-                        <a class="dropdown-item" href="#">Dropdown link</a>
+                        <a class="dropdown-item" href="#">Angkol Devs</a>
                       </li>
                       <li>
-                        <a class="dropdown-item" href="#">Dropdown link</a>
+                        <a class="dropdown-item" href="#">Anty Devs</a>
                       </li>
                     </ul>
                   </div>
@@ -219,6 +223,64 @@
         </div>
       </div>
     </div>
+    <div id="teamModal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close" @click="closeModal">&times;</span>
+        <h2 style="color: black">Add New Team</h2>
+        <hr style="border: 1px solid black" />
+        <form class="group">
+          <label for="team">Team Name</label>
+          <div class="input-container">
+            <div id>
+              <input
+                v-model="teamName"
+                type="text"
+                id="teamName"
+                class="form-control form-control-lg"
+                placeholder="Enter your team name"
+                required
+              />
+
+              <div>
+                <label for="teamLeader">Team Leader</label>
+                <input
+                  v-model="teamLeader"
+                  type="text"
+                  id="teamLeader"
+                  class="form-control form-control-lg"
+                  placeholder="Enter your team leader name"
+                  required
+                />
+              </div>
+            </div>
+            <label for="teamDetails">Team Details(optional)</label>
+            <textarea
+              id="teamDetails"
+              placeholder="Put description of your project"
+              required
+            ></textarea>
+          </div>
+          <div class="row">
+            <button
+              type="submit"
+              class="btn btn-primary add"
+              id="save"
+              @click="$router.push('/teams')"
+            >
+              Save
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger cancel"
+              id="canc"
+              @click="closeModal"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -247,9 +309,14 @@ ChartJS.register(
 
 export default {
   name: "Charts",
-  components: { Bar },
+  components: {
+    Bar,
+  },
   data() {
     return {
+      sortOption: "default",
+      weekValue: "",
+      monthValue: "", // Add a data property to track modal visibility
       barData: {
         labels: [
           "January",
@@ -294,6 +361,16 @@ export default {
         aspectRatio: 1.5,
       },
     };
+  },
+  methods: {
+    openteamModal() {
+      const modal = document.getElementById("teamModal");
+      modal.style.display = "block";
+    },
+    closeModal() {
+      const modal = document.getElementById("teamModal");
+      modal.style.display = "none";
+    },
   },
 };
 </script>

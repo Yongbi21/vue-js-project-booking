@@ -6,6 +6,7 @@ import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
 import LandingPage from "@/pages/LandingPage.vue";
+import Teams from "@/pages/Teams.vue";
 
 const routes = [
   {
@@ -21,8 +22,14 @@ const routes = [
     children: [
       {
         path: "/dashboard",
-        name: "dashboard",
+        name: "Dashboard",
         component: Dashboard,
+      },
+      
+      {
+        path: "/teams",
+        name: "Teams",
+        component: Teams,
       },
       {
         path: "/projectRequest",

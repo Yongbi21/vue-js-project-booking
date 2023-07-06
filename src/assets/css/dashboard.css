@@ -107,6 +107,23 @@
 }
 
 
+#save{
+  padding: 15px;
+  width: 20%;
+  margin: 5px;
+  border-radius: 7px;
+}
+#cancel{
+  padding: 15px;
+  width: 20%;
+  margin: 5px;
+  border-radius: 7px;
+
+}
+
+
+
+
 
 
 

@@ -149,8 +149,8 @@
     @include toolbar-colors($brand-success);
   }
 
-  &.navbar-transparent{
-      background-color: transparent;
+  &.navbar{
+      background-color: darkgoldenrod;
       box-shadow: none;
       border-bottom: 0;
 
