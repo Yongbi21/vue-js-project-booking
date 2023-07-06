@@ -1,70 +1,46 @@
 <template>
-  <div class="content">
-    <!-- Will work -->
-    <div class="md-layout">
-      <div class="md-layout-item">
-        <md-card>
-          <md-card-content>
-            <div id="settings">
-              <div class="left">
-                <div class="auto">
-                  <div class="form-outline form-white mb-4">
-                    <input type="checkbox" id="checkbox1" />
-                    <label class="form-label" for="checkbox1"
-                      >Automated Reminders</label
-                    >
-                  </div>
-                </div>
-                <div class="in app">
-                  <h2>Delivery Methods</h2>
-                  <div class="form-outline form-white mb-4">
-                    <input type="checkbox" id="checkbox1" />
-                    <label class="form-label" for="checkbox1"
-                      >In - App notifications</label
-                    >
-                  </div>
-                </div>
-                <div class="email">
-                  <div class="form-outline form-white mb-4">
-                    <input type="checkbox" id="checkbox1" />
-                    <label class="form-label" for="checkbox1">Email</label>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row">
-                <h2>Admin Notifications</h2>
-                <div class="form-outline form-white mb-4">
-                  <select name="dog-names" id="dog-names">
-                    <option value="" disabled selected hidden>
-                      In app notifications
-                    </option>
-                    <option value="rigatoni">Rigatoni</option>
-                    <option value="dave">Dave</option>
-                    <option value="pumpernickel">Pumpernickel</option>
-                    <option value="reeses">Reeses</option>
-                  </select>
-                </div>
-                <div class="row">
-                  <h2>Deadline Remainders</h2>
-                  <div class="form-outline form-white mb-4">
-                    <input type="date" id="datepicker" placeholder="01/06/23" />
-                  </div>
-                </div>
-                <button>Save</button>
-              </div>
+  <div class="settings-wrapper">
+    <div class="settings-container">
+      <div class="profile-container">
+        <form class="card mb-4">
+          <div class="card-header">
+            <h2 class="card-heading" style="font-weight: 500;">Edit Profile</h2>
+          </div>
+          <div class="card-body">
+            <div class="mb-4">
+              <label class="form-label">First Name</label>
+              <input class="form-control" type="text" placeholder="First Name">
             </div>
-          </md-card-content>
-        </md-card>
+            <div class="mb-4">
+              <label class="form-label">Last Name</label>
+              <input class="form-control" type="text" placeholder="Last Name">
+            </div>
+            <div class="mb-4">
+              <label class="form-label">Middle Initial</label>
+              <input class="form-control" type="text" placeholder="Middle Initial">
+            </div>
+            <div class="mb-4">
+              <label class="form-label">Email</label>
+              <input class="form-control" type="email" placeholder="Email">
+            </div>
+            <div class="mb-4">
+              <label class="form-label">Contact Number</label>
+              <input class="form-control" type="number" placeholder="Contact Number">
+            </div>
+          </div>
+          <div class="card-footer text-center">
+            <button class="btn btn-primary" type="submit">Update Profile</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
 </template>
-<style scoped>
-.right {
-  float: right;
-}
-</style>
+
 <script>
 export default {};
 </script>
+
+<style scoped>
+@import '../assets/css/settings.css';
+</style>
