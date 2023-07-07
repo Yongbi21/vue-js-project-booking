@@ -88,10 +88,21 @@
             </div>
           </div>
         </div>
+        <div class="savebtn">
+          <button
+            class="colored-button"
+            id="save"
+            @click="saveForm"
+            type="submit"
+          >
+            Save
+          </button>
+
         <div class="card-footer text-center">
           <button class="btn btn-primary" id="save" type="save">Save</button>
         </div>
       </div>
+</div>
 </div>
 </div>
   
