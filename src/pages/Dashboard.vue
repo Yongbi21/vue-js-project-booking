@@ -61,9 +61,6 @@
                             Kurt and team
                           </button>
                           <!-- <img
-
-                          <img
-
                             src="../assets/img/angkol.png"
                             alt="Avatar"
                             class="avatar"
@@ -78,8 +75,6 @@
                             alt="Avatar"
                             class="avatar"
                           /> -->
-
-                          />
                         </div>
                       </div>
                     </div>
@@ -104,12 +99,6 @@
                             alt="Avatar"
                             class="avatar"
                           /> -->
-
-                          <img
-                            src="../assets/img/angkol.png"
-                            alt="Avatar"
-                            class="avatar"
-                          />
                         </div>
                       </div>
                     </div>
@@ -133,12 +122,6 @@
                             alt="Avatar"
                             class="avatar"
                           /> -->
-
-                          <img
-                            src="../assets/img/angkol.png"
-                            alt="Avatar"
-                            class="avatar"
-                          />
                         </div>
                       </div>
                     </div>
@@ -176,15 +159,12 @@
                           </div>
                           <h5 class="card-title">Real State Project</h5>
                           <!-- <div>
-
-                          <div>
                             <img
                               src="../assets/img/angkol.png"
                               alt="Avatar"
                               class="avatar"
                             />
                           </div> -->
-                          </div>
                           <div>
                             <i class="bi bi-calendar3">29 January 2023</i>
                           </div>
@@ -201,16 +181,12 @@
                           </div>
                           <h5 class="card-title">Travel Mobile Design</h5>
                           <!-- <div>
-
-                          <div>
                             <img
                               src="../assets/img/angkol.png"
                               alt="Avatar"
                               class="avatar"
                             />
                           </div> -->
-
-                          </div>
                           <div>
                             <i class="bi bi-calendar3">29 January 2023</i>
                           </div>
@@ -227,16 +203,12 @@
                           </div>
                           <h5 class="card-title">Health Tracker Device</h5>
                           <!-- <div>
-
-                          <div>
                             <img
                               src="../assets/img/angkol.png"
                               alt="Avatar"
                               class="avatar"
                             />
                           </div> -->
-
-                          </div>
                           <div>
                             <i class="bi bi-calendar3">29 January 2023</i>
                           </div>
@@ -301,8 +273,6 @@
               type="button"
               class="btn btn-danger cancel"
               id="cancel"
-
-              id="canc"
               @click="closeModal"
             >
               Cancel

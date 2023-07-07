@@ -14,6 +14,10 @@
           <img :src="imgLogo" alt="" />
         </div>
       </a>
+
+      <p>
+        {{ title }}
+      </p>
     </div>
     <div class="sidebar-wrapper">
       <slot name="content"></slot>
@@ -87,7 +91,7 @@ export default {
 </script>
 
 <style>
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 991px) {
   .nav-mobile-menu {
     display: none;
   }

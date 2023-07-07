@@ -236,7 +236,6 @@
 </template>
 <style scoped>
 @import '../assets/css/messenger.css';
-
 </style>
 
 

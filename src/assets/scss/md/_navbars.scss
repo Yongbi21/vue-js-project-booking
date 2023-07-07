@@ -3,8 +3,8 @@
   padding: 10px 15px;
   border-radius: 3px;
 
-  &.md-dark{
-    background-color: darkgray !important;
+  &.md-transparent{
+    background-color: transparent !important;
     box-shadow: none;
 
     .md-title,
@@ -149,8 +149,8 @@
     @include toolbar-colors($brand-success);
   }
 
-  &.navbar{
-      background-color: darkgoldenrod;
+  &.navbar-transparent{
+      background-color: transparent;
       box-shadow: none;
       border-bottom: 0;
 
