@@ -1,5 +1,5 @@
 <template>
-  <md-toolbar md-elevation="0" class="md-transparent">
+  <md-toolbar md-elevation="0" class="md-transparent" style="z-index: 0;">
     <div class="md-toolbar-row">
       <div class="md-toolbar-section-start">
         <div class="md-toolbar-section-start" :class="{ 'modal-open': isModalOpen }">
@@ -115,7 +115,5 @@ closeModal(event) {
 </script>
 
 <style>
-.modal-open .md-title {
-  display: none;
-}
+
 </style>
