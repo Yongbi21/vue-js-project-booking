@@ -4,31 +4,15 @@
       <div class="container-fluid" id="header">
         <div class="d-flex align-items-center ml-4">
           <a href="#">
-            <img
-              src="../assets/img/dreamers logo.png"
-              width="80px;"
-              class="mr-2"
-            />
+            <img src="../assets/img/dreamers logo.png" width="80px;" class="mr-2">
           </a>
           <a class="navbar-brand" href="#">Project Booking App</a>
         </div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#sideheader"
-          aria-controls="sideheader"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sideheader" aria-controls="sideheader" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
       </div>
-      <div
-        class="collapse navbar-collapse"
-        id="sideheader"
-        style="padding-right: 40px"
-      >
+      <div class="collapse navbar-collapse" id="sideheader" style="padding-right: 40px;">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-4">
           <li class="nav-item ms-2">
             <a class="nav-link" id="home1" aria-current="page" href="#">Home</a>
@@ -440,8 +424,7 @@ export default {
     const initialNavbarTop = navbar ? navbar.offsetTop : 0;
 
     function handleScroll() {
-      const scrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop;
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
       if (navbar && scrollPosition >= initialNavbarTop) {
         navbar.classList.add("navbar-fixed");

@@ -95,6 +95,7 @@
   .custom-btn-disabled
   {
     opacity: 0.5; /* Adjust the opacity as needed */
+    opacity: 0.5; 
     pointer-events: none;
   }
   @keyframes fadeIn {
@@ -122,6 +123,7 @@
     position: absolute;
     top: 50%;
     right: -15px; /* Adjust the position of the arrow */
+    right: -15px; 
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
@@ -178,13 +180,11 @@
     font-size: 20px;
     font-weight: 450;
   }
-  /* Footer container */
   .footer {
     background-color: #5B4679;
     padding: 30px 0;
   }
 
-  /* Footer column headings */
   .footer h5 {
     font-size: 18px;
     font-weight: bold;
@@ -220,7 +220,6 @@
     color: #007bff;
   }
 
-  /* Subscribe form */
   .footer form .input-group {
     max-width: 300px;
   }
@@ -356,8 +355,10 @@
     }
   }
 }
-@media (max-width: 1660px) {
+
   /* Adjust the size and position of the images and request button for smaller screens */
+
+@media (max-width: 1660px) {
   #border1 img {
     width: 500px;
     margin-bottom: 30px;
@@ -459,6 +460,7 @@
 @media (max-width: 360px) {
   .row-cols-md-3 {
     flex: column;
+    flex-direction: column;
   }
 }
 #feature .col {
@@ -531,7 +533,7 @@
   .hero-text h3 {
     font-size: 12px; 
   }
-}
+  }
 .modal-open {
   overflow: hidden;
 }

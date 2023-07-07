@@ -59,6 +59,7 @@
          </div>
        </div>
    </div>
+          <div class="table-responsive">
                 <table class="table">
                   <thead>
                     <tr>
@@ -114,15 +115,15 @@
                     </tr>
                   </tbody>
                 </table>
-              </div>
+               </div>
+             </div>
             </div>
-        </div>
+         </div>
       </div>
       <!-- Modal Form -->
-<div id="milestoneModal" class="modal">
+  <div id="milestoneModal" class="modal">
   <div class="modal-content">
     <span class="close" @click="closeModal">&times;</span>
-    <!-- Your form content goes here -->
     <h2>Milestones Completed</h2>
     <hr>
     <ul>
@@ -222,9 +223,6 @@ export default {
     });
   },
 };
-
-
-
 </script>
 
 <style scoped>

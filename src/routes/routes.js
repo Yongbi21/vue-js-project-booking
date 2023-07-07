@@ -60,4 +60,11 @@ const routes = [
   },
 ];
 
+routes.forEach(route => {
+  if (route.name) {
+    route.meta = { ...route.meta, fontWeight: "500" };
+  }
+});
+
+
 export default routes;

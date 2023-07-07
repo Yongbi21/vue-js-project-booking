@@ -2,7 +2,9 @@
   <md-toolbar md-elevation="0" class="md-dark">
     <div class="md-toolbar-row">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">{{ $route.name }}</h3>
+        <div class="md-toolbar-section-start" :class="{ 'modal-open': isModalOpen }">
+           <h3 class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">{{ $route.name }}</h3>
+        </div>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -52,11 +54,6 @@
                 </div>
               </router-link>
             </li>
-
-            <md-list-item href="#/user">
-              <i class="material-icons">person</i>
-              <p class="hidden-lg hidden-md">Profile</p>
-            </md-list-item>
           </md-list>
         </div>
       </div>
@@ -65,19 +62,60 @@
 </template>
 
 <script>
-export default {
-  data() {
+  export default {
+    data() {
     return {
-      selectedEmployee: null,
-      employees: ["Jim Halpert", "Angela Martin", "Kelly Kapoor"],
+      isModalOpen: false,
     };
   },
   methods: {
     toggleSidebar() {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
     },
+    openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "block";
+  this.isModalOpen = true;
+},
+
+closeModal(event) {
+  const modal = event.target.closest(".modal");
+  modal.style.display = "none";
+  this.isModalOpen = false;
+  },    
+},
+
+  computed: {
+    getRouteFontWeight() {
+      const routeFontWeights = {
+        "/dashboard": "500",
+        "/projectrequest": "500",
+        "/pricingquoting": "500",
+        "/projectstatus": "500",
+        "/messenger": "500",
+        "/settings": "500",
+        // Add more routes and their respective font weights here
+      };
+
+      const currentRoute = this.$route.path;
+      return routeFontWeights[currentRoute] || "normal";
+    },
+    displayedRouteName() {
+      // Return an empty string when isModalOpen is true, otherwise return the actual route name
+      return this.isModalOpen ? '' : this.$route.name;
+    },
+  },
+  created() {
+    this.$root.$on("modal-opened", this.onModalOpened);
+  },
+  beforeDestroy() {
+    this.$root.$off("modal-opened", this.onModalOpened);
   },
 };
 </script>
 
-<style lang="css"></style>
+<style>
+.modal-open .md-title {
+  display: none;
+}
+</style>

@@ -284,6 +284,8 @@
   </div>
 </template>
 
+
+
 <script>
 import { Bar } from "vue-chartjs";
 import "chartjs-plugin-labels";
