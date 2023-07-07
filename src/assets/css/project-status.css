@@ -1,6 +1,142 @@
 .container {
     padding: 5px;
     padding-right: 500px;
+}
+
+.big-container {
+  background-color: #ffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+
+.mini-container {
+  background-color: #ffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 43vh;
+  border-radius: 20px;
+}
+.h{
+  font-weight: 450;
+}
+#mini1, #mini2, #mini3 {
+  margin-right: 10px;
+}
+#inc-task{
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+
+}
+.middle-container {
+  background-color: #ffff;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-right: 30px;
+  width: 64vh;
+}
+
+.semi-middle-container {
+  background-color: #FFFF;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-right: 30px;
+  justify-content: center;
+  align-items: center;
+  /* width: 1200px; */
+ margin-right: 0;
+}
+
+.semi-mid-container {
+  display: contents;
+  background-color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-right: 30px;
+  width: 40vh;
+}
+
+.ts,
+.tp,
+.tl,
+.pl,
+.ml {
+  font-weight: 500;
+}
+
+.chart-container {
+  margin-top: 100px;
+}
+
+#doughnut {
+  height: 50px;
+  width: 50px;
+}
+
+#bar {
+  height: 50px;
+  width: 50px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table thead th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-cell {
+  background-color: black !important;
+  color: white !important;
+}
+
+.status-working {
+  color: greenyellow !important;
+}
+
+.status-cancelled {
+  color: red !important;
+}
+
+
+
+@media (max-width: 1199px) {
+  .middle-container,
+  .semi-middle-container,
+  .semi-mid-container {
+    margin-right: 0;
+    width: 100%;
+
   }
   
   .big-container {

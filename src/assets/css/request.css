@@ -187,6 +187,21 @@ body {
   #next:hover {
     text-emphasis-color: white !important;
   }
+  #next2 {
+    padding: 10px 20px;
+    font-weight: 400;
+    background: #F5612F !important;
+    border: 0.5px solid #ABA5A2;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px !important;
+    color: white;
+    cursor: pointer;
+    width: 50%;
+  }
+
+  #next2:hover {
+    text-emphasis-color: white !important;
+  }
 .close-icon {
   cursor: pointer;
 }
@@ -227,6 +242,7 @@ body {
 .request-form {
   max-width: 446px;
   padding: 10px;
+  width: 100%;
 }
 @media (max-width: 382px) {
   .request-form {

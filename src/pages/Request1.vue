@@ -22,7 +22,7 @@
       </div>
       <label for="additionalServices">Additional Services</label>
       <textarea id="additionalServices" placeholder="Enter your additional services" required></textarea>  
-      <router-link :to="{ name: 'landingpage' }" class="btn btn-ms-2" id="next">Submit Request</router-link>
+      <router-link :to="{ name: 'landingpage' }" class="btn btn-ms-2" id="next2">Submit Request</router-link>
     </form>
   </div>      
   </template>

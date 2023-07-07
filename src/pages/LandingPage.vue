@@ -118,6 +118,10 @@
           width="700"
           class="img-fluid"
         />
+
+        <img src="../assets/img/landing-page1.png" width="700" class="img-fluid">
+        <img src="../assets/img/landing-page2.png" width="700" class="img-fluid">
+
       </div>
     </div>
     <div class="text-center" id="feature">

@@ -1,0 +1,90 @@
+.settings-wrapper {
+    padding: 5px;
+    padding-right: 100px;
+    margin-left: 80px;
+  }
+  
+  .settings-container {
+    background-color: #ffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+
+  }
+  .form-control {
+    width: 70%; 
+  }
+  #projectCost1, 
+  #projectCost2, 
+  #projectCost3, 
+  #projectCost4, 
+  #projectCost5, 
+  input[type ="text"],
+  input[type ="number"] {
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+  .card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
+    color: var(--bs-card-color);
+    margin-left: 65px;
+}
+.form-control1[type ="file"]{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+#avatar {
+  width: 70% !important;
+  height: 70% !important;
+  -o-object-fit: cover !important;
+  object-fit: cover !important;
+  border-radius: 200px;
+}
+#save{
+  width: 8%; 
+  border-radius: 20px;
+} 
+#update{
+  width: 13%;
+  border-radius: 20px;
+}
+#notif-dropdown{
+  height: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+#settings-date{
+  height: 10%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+}
+.checkbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.header-container, .card-header{
+  background-color: #ffff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
