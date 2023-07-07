@@ -1,8 +1,8 @@
 <template>
     <div class="request-form">
 
-    <form>
-      <div class="d-flex justify-content-between">
+    <form style="font-size: 16px;">
+      <div class="d-flex justify-content-between" >
         <div class="close-icon">
           <i class="fas fa-times" @click="goToLandingPage"></i>
         </div>
@@ -10,7 +10,7 @@
       <legend class="prf">Project Request Form</legend><br>
       <hr style="border: 1px solid black;">
       <label for="projectName">Project Name</label>
-      <input type="text" id="projectName" placeholder="Enter project name" required>
+      <input type="text" id="projectName" placeholder="Enter project name" style="font-size: 16px;"  required>
       
       <label for="projectDescription">Project Description</label>
       <textarea id="projectDescription" placeholder="Enter project description" required></textarea>  
