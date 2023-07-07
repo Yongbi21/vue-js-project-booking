@@ -1,22 +1,52 @@
 <template>
-  <div class="modal" id="logoutModal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-        <h4>Log Out <i class="fa fa-lock"></i></h4>
-      </div>
-      <div class="modal-body">
-        <p><i class="fa fa-question-circle"></i> Are you sure you want to log-off? <br /></p>
-        <div class="actionsBtns">
-            <form action="/logout" method="post">
-                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                <input type="submit" class="btn btn-default btn-primary" data-dismiss="modal" value="Logout" />
-	                <button class="btn btn-default" data-dismiss="modal">Cancel</button>
-            </form>
-        </div>
+  <div class="logout-content">
+    <div class="logout-header">
+      <h4>Log Out <i class="fa fa-lock"></i></h4>
+    </div>
+    <div class="logout-body">
+      <p><i class="fa fa-question-circle"></i> Are you sure you want to log off?</p>
+      <div class="logout-actions">
+        <button class="logout-btn logout-btn-primary" @click="logout">Logout</button>
+        <button class="logout-btn logout-btn-secondary" @click="close">Cancel</button>
       </div>
     </div>
   </div>
-</div>
 </template>
+
+<script>
+import axios from 'axios';
+
+export default {
+  methods: {
+    async logout() {
+      try {
+        // Add the authentication token to the request headers
+        const token = localStorage.getItem('token');
+
+        const response = await axios.post('http://localhost:8000/api/logout', null, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (response.status === 200) {
+          // Clear the token from local storage
+          localStorage.removeItem('token');
+          
+          // Redirect to the landing page
+          this.$router.push('/');
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    close() {
+      this.$emit('close');
+    },
+  },
+};
+</script>
+
+<style scoped>
+@import "../assets/scss/logout.scss";
+</style>

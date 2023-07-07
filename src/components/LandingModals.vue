@@ -4,7 +4,7 @@
       <div v-show="modalActive" class="modal-inner">
         <i @click="close" class="bi bi-x-square-fill"></i>
         <!-- Modal Content -->
-        <slot />
+        <slot></slot>
       </div>
     </div>
   </transition>
@@ -25,7 +25,6 @@ export default {
   }
 };
 </script>
-
 
 <style lang="scss" scoped>
 .modal-animation-enter-active,
@@ -48,34 +47,30 @@ export default {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.7);
+}
 
-  .modal-inner {
-    position: relative;
-    max-width: 640px;
-    width: 80%;
-    background-color: #fff;
-    padding: 64px 16px;
+.modal-inner {
+  position: relative;
+  max-width: 640px;
+  width: 80%;
+  background-color: #fff;
+  padding: 64px 16px;
+}
 
-    i {
-      position: absolute;
-      top: 15px;
-      right: 15px;
-      font-size: 20px;
-      cursor: pointer;
+.modal-inner i {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
 
-      &:hover {
-        color: crimson;
-      }
-    }
-
-    button {
-      padding: 20px 30px;
-      border: none;
-      font-size: 16px;
-      background-color: crimson;
-      color: #fff;
-      cursor: pointer;
-    }
-  }
+.modal-inner button {
+  padding: 20px 30px;
+  border: none;
+  font-size: 16px;
+  background-color: crimson;
+  color: #fff;
+  cursor: pointer;
 }
 </style>

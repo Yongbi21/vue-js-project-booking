@@ -15,7 +15,7 @@
       </sidebar-link>
       <sidebar-link to="/pricing-quoting">
         <i class="bi-graph-up-arrow"></i>
-        <p>Pricing and Qutoting</p>
+        <p>Pricing and Quoting</p>
       </sidebar-link>
       <sidebar-link to="/projectstatus">
         <i class="bi bi-calendar"></i>
@@ -32,48 +32,45 @@
       <div class="md-list-item">
         <div class="md-list-item-content md-ripple">
           <i class="bi bi-box-arrow-left"></i>
-        <Modal @close="toggleLogoutModal" :modalActive="logoutModalActive">
-            <div class="modal-content">
-              <Logout></Logout>
-            </div>
-          </Modal>
-          <p
-            @click="toggleLogoutModal"
-            style="color: black"
-          >
+          <button @click="toggleLogoutModal" type="button" class="btn btn-custom-btn ms-4" style="color: #fff;">
             Logout
-          </p>
-        </div>  
+          </button>
+          <Modal @close="toggleLogoutModal" :modalActive="logoutModalActive">
+            <template #default>
+              <div class="modal-content">
+                <Logout @close="toggleLogoutModal" />
+              </div>
+            </template>
+          </Modal>
+          
+        </div>
       </div>
     </side-bar>
+    
 
     <div class="main-panel">
       <top-navbar></top-navbar>
 
-      <fixed-plugin
-        :color.sync="sidebarBackground"
-        :image.sync="sidebarBackgroundImage"
-      >
+      <fixed-plugin :color.sync="sidebarBackground" :image.sync="sidebarBackgroundImage">
       </fixed-plugin>
 
-      <dashboard-content> </dashboard-content>
+      <dashboard-content></dashboard-content>
     </div>
   </div>
 </template>
 
 <script>
 import TopNavbar from "./TopNavbar.vue";
-import DashboardContent from "./Content.vue";
-import MobileMenu from "@/pages/Layout/MobileMenu.vue";
+import DashboardContent from "./Content.vue";    
 import FixedPlugin from "./Extra/FixedPlugin.vue";
 import Modal from "@/components/LandingModals.vue";
-import Logout from "../components/logout";
+import Logout from "@/components/logout.vue";
+import { ref } from "vue";
 
 export default {
   components: {
     TopNavbar,
     DashboardContent,
-    MobileMenu,
     FixedPlugin,
     Modal,
     Logout,
@@ -87,6 +84,7 @@ export default {
 
     return {
       logoutModalActive,
+      toggleLogoutModal,
     };
   },
   data() {
@@ -97,3 +95,4 @@ export default {
   },
 };
 </script>
+
