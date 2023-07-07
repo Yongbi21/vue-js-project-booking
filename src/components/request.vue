@@ -23,9 +23,19 @@
         <option value="normal">Normal</option>
         <option value="low">Low</option>
       </select>
-      <label for="projectBudget">Budget</label>
-      <input type="number" id="projectBudget" placeholder="Enter budget" required>
-
+      <label for="newProjectBudget">Budget:</label>
+        <input
+        type="text"
+        id="newProjectBudget"
+        v-model="budgetValue"
+        v-money="{
+          decimal: '.',
+          thousands: ',',
+          prefix: '₱',
+          precision: 2,
+          masked: false
+        }"
+        required>
       <label for="projectDeadline">Due Date</label>
       <input type="date" id="projectDeadline" placeholder="Enter due date" required>
       <label for="attachedFile">Attach File</label>
