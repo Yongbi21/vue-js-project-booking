@@ -9,11 +9,11 @@
         <i class="bi bi-house"></i>
         <p>Dashboard</p>
       </sidebar-link>
-      <sidebar-link to="/projectrequest">
+      <sidebar-link to="/projectRequest">
         <i class="bi bi-folder"></i>
         <p>Project Request</p>
       </sidebar-link>
-      <sidebar-link to="/pricingquoting">
+      <sidebar-link to="/pricing-quoting">
         <i class="bi-graph-up-arrow"></i>
         <p>Pricing and Quoting</p>
       </sidebar-link>
@@ -44,8 +44,7 @@
       >
       </fixed-plugin>
 
-      <dashboard-content></dashboard-content>
-
+      <dashboard-content> </dashboard-content>
     </div>
   </div>
 </template>
@@ -53,27 +52,21 @@
 <script>
 import TopNavbar from "./TopNavbar.vue";
 import DashboardContent from "./Content.vue";
-// import MobileMenu from "@/pages/Layout/MobileMenu.vue";
+import MobileMenu from "@/pages/Layout/MobileMenu.vue";
 import FixedPlugin from "./Extra/FixedPlugin.vue";
 
 export default {
   components: {
     TopNavbar,
     DashboardContent,
-    // MobileMenu,
+    MobileMenu,
     FixedPlugin,
   },
   data() {
     return {
-      title: "",
       sidebarBackground: "orange",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
     };
-  },
-  methods: {
-    getRouteFontWeight(route) {
-      return this.$route.path === route ? "500" : "normal";
-    },
   },
 };
 </script>

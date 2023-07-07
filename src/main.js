@@ -1,9 +1,11 @@
+/* eslint-disable prettier/prettier */
 import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.bundle';
-import { VMoney } from 'v-money';
-import Vue from 'vue';
+import 'bootstrap';
+import Vue from "vue";
 import VueRouter from "vue-router";
 import App from "./App";
+
+
 
 // router setup
 import routes from "./routes/routes";
@@ -12,8 +14,11 @@ import routes from "./routes/routes";
 import GlobalComponents from "./globalComponents";
 import GlobalDirectives from "./globalDirectives";
 
+
 // MaterialDashboard plugin
 import MaterialDashboard from "./material-dashboard";
+
+
 
 
 // configure router
@@ -22,11 +27,15 @@ const router = new VueRouter({
   linkExactActiveClass: "nav-item active",
 });
 
-Vue.directive('money', VMoney);
+
+
 Vue.use(VueRouter);
 Vue.use(MaterialDashboard);
 Vue.use(GlobalComponents);
 Vue.use(GlobalDirectives);
+
+
+
 //Vue.use(Notifications);
 
 /* eslint-disable no-new */
@@ -34,4 +43,6 @@ new Vue({
   el: "#app",
   render: (h) => h(App),
   router,
-});
+ 
+  }
+);
