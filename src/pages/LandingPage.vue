@@ -34,14 +34,16 @@
           with Effortless Communication<br>
           and Management</h1>
         <h3 class="hasBreak nobr">
-          <img id="arrow1" src="../assets/img/arrow1.png" width="40" style="margin-right: 10px;">
+          <img id="arrow1" src="../assets/img/arrow1.png" width="40" style="margin-right: 35px;">
           Optimize Project Management and Collaboration
-          <img id="arrow2" src="../assets/img/arrow2.png" width="40" style=" margin-right : 10px;">
+          <img id="arrow2" src="../assets/img/arrow2.png" width="40" style=" margin-left : 35px;">
           <br> 
-          with Real-Time Messaging, Tracking, and
+          with Real-Time Messaging, Tracking, and Automated
           <br>
-          Automated Notifications
-        </h3>
+           Notifications. Send a request or
+          <br>
+          Book your Project now to get started.
+        </h3> 
         <br>
         <div class="request">
         <div class="row">
@@ -261,17 +263,17 @@ export default {
       var arrow1 = document.getElementById("arrow1");
       var arrow2 = document.getElementById("arrow2");
       if (arrow1 && arrow2) {
-        arrow1.style.transition = "margin-bottom 2s";
-        arrow2.style.transition = "margin-bottom 2s";
-        arrow1.style.marginBottom = "-120px";
-        arrow2.style.marginBottom = "-120px";
+        arrow1.style.transition = "margin-bottom 4s";
+        arrow2.style.transition = "margin-bottom 4s";
+        arrow1.style.marginBottom = "-300px";
+        arrow2.style.marginBottom = "-300px";
 
         setTimeout(function () {
-          arrow1.style.transition = "margin-bottom 2s";
-          arrow2.style.transition = "margin-bottom 2s";
+          arrow1.style.transition = "margin-bottom 3s";
+          arrow2.style.transition = "margin-bottom 3s";
           arrow1.style.marginBottom = "0";
           arrow2.style.marginBottom = "0";
-        }, 2000);
+        }, 3000);
       }
     }
 

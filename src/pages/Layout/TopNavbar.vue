@@ -1,13 +1,11 @@
 <template>
-  <md-toolbar md-elevation="0" class="md-transparent">
+  <md-toolbar md-elevation="0" class="md-transparent" style="z-index: 0;">
     <div class="md-toolbar-row">
       <div class="md-toolbar-section-start">
-        <!-- Use the v-if directive to conditionally render the route name -->
-        <h3 v-if="!isModalOpen" class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">
+          <h3 v-if="!isModalOpen" class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">
           {{ $route.name }}
         </h3>
         <h3 v-else class="md-title hide-route-name" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">
-          <!-- Empty space to keep the layout intact, but hide the route name -->
         </h3>
       </div>
       <div class="md-toolbar-section-end">
@@ -123,7 +121,5 @@
 </script>
 
 <style>
-  .hide-route-name {
-    display: none;
-  }
+
 </style>

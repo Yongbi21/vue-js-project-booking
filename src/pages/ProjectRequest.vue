@@ -1,8 +1,8 @@
 <template>
-  <div class="pricing-quoting-wrapper">
+  <div class="    -wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-12 big-container">   
+        <div class="col-12 big-container" id="req1">   
               <div class="table-responsive d-flex">
                 <div class="search" id="search-req">
                    <div class="input-group mb-3" id="search-request" style="width: 30vh;">
@@ -95,38 +95,47 @@
           </div>
       </div>
   </div>
-<!-- Add Project Request Modal -->
-<div id="addModal" class="modal"> 
-  <div class="modal-content">
-    <span class="close" @click="closeModal">&times;</span>
-    <h2 style="color: black;">Add New Project</h2>
-    <hr style="border: 1px solid black;">
-    <div class="row">
-      <div class="col-md-4">
-        <form class="group">
-          <label for="newName">Name:</label>
-          <input type="text" id="newName" placeholder="Enter your Name" required>
-        </form>
-      </div>
-      <div class="col-md-4">
-        <form class="group">
-          <label for="newProjectEmail">Email:</label>
-          <input type="email" id="newProjectEmail" placeholder="Enter your email" required>
-        </form>
-      </div>
-      <div class="col-md-4">
-        <form class="group">
-          <label for="newProjectName">Project Name:</label>
-          <input type="text" id="newProjectName" placeholder="Enter your project name" required>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <form class="group">
-          <label for="newProjectBudget">Budget:</label>
-          <input type="text" id="newProjectBudget" placeholder="Enter your budget" required>
-        </form>
+    <!-- Add Project Request Modal -->
+    <div id="addModal" class="modal"> 
+      <div class="modal-content">
+        <span class="close" @click="closeModal">&times;</span>
+        <h2 style="color: black;">Add New Project</h2>
+        <hr style="border: 1px solid black;">
+        <div class="row">
+          <div class="col-md-4">
+            <form class="group">
+              <label for="newName">Name:</label>
+              <input type="text" id="newName" placeholder="Enter your Name" required>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <form class="group">
+              <label for="newProjectEmail">Email:</label>
+              <input type="email" id="newProjectEmail" placeholder="Enter your email" required>
+            </form>
+          </div>
+          <div class="col-md-4">
+            <form class="group">
+              <label for="newProjectName">Project Name:</label>
+              <input type="text" id="newProjectName" placeholder="Enter your project name" required>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+                <div class="col-md-4">
+        <label for="newProjectBudget">Budget:</label>
+        <input
+        type="text"
+        id="newProjectBudget"
+        v-model="budgetValue"
+        v-money="{
+          decimal: '.',
+          thousands: ',',
+          prefix: '₱',
+          precision: 2,
+          masked: false
+        }"
+        required>      
       </div>
       <div class="col-md-4">
         <form class="group">
@@ -170,7 +179,7 @@
 <div id="editModal" class="modal"> 
   <div class="modal-content">
     <span class="close" @click="closeModal">&times;</span>
-    <h2 style="color: black;">Add New Project</h2>
+    <h2 style="color: black;">Edit Project</h2>
     <hr style="border: 1px solid black;">
     <div class="row">
       <div class="col-md-4">
@@ -279,20 +288,6 @@ export default {
     const viewIcons = document.querySelectorAll(".status-working i.fas.fa-edit");
     viewIcons.forEach((icon) => {
       icon.addEventListener("click", this.openEditModal);
-    });
-
-    const budgetInput = document.getElementById("newProjectBudget");
-
-    budgetInput.addEventListener("input", function (e) {
-      const inputText = e.target.value.replace(/\D/g, "");
-
-      const formattedBudget = new Intl.NumberFormat("en-PH", {
-        style: "currency",
-        currency: "PHP",
-      }).format(inputText);
-
-      // Update the input value with the formatted budget
-      e.target.value = formattedBudget;
     });
   },
 };
