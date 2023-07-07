@@ -82,6 +82,7 @@
           <span class="close" @click="closeModal">&times;</span>
           <h2 style="color: black">Members</h2>
           <hr style="border: 1px solid black" />
+
           <div class="row">
             <div class="table-responsive" id="space">
               <table class="table">
@@ -217,4 +218,4 @@
   <style scoped>
   @import "../assets/css/teams.css";
   </style>
-  
+ 

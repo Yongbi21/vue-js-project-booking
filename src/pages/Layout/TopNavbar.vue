@@ -2,11 +2,10 @@
   <md-toolbar md-elevation="0" class="md-transparent" style="z-index: 0;">
     <div class="md-toolbar-row">
       <div class="md-toolbar-section-start">
-          <h3 v-if="!isModalOpen" class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">
-          {{ $route.name }}
-        </h3>
-        <h3 v-else class="md-title hide-route-name" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">
-        </h3>
+
+        <div class="md-toolbar-section-start" :class="{ 'modal-open': isModalOpen }">
+           <h3 class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">{{ $route.name }}</h3>
+        </div>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -74,11 +73,19 @@
     toggleSidebar() {
       this.$sidebar.displaySidebar(!this.$sidebar.showSidebar);
     },
-    onModalOpened() {
-      // Set the flag to true when the modal is opened
-      this.isModalOpen = true;
-    },
-  },
+    openModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.style.display = "block";
+  this.isModalOpen = true;
+},
+
+closeModal(event) {
+  const modal = event.target.closest(".modal");
+  modal.style.display = "none";
+  this.isModalOpen = false;
+  },    
+},
+
   computed: {
     getRouteFontWeight() {
       const routeFontWeights = {
@@ -104,18 +111,6 @@
   },
   beforeDestroy() {
     this.$root.$off("modal-opened", this.onModalOpened);
-  },
-  watch: {
-    isModalOpen(val) {
-      // When the value of isModalOpen changes, if it's true, block the route name
-      // by setting it to an empty string
-      if (val) {
-        this.$route.name = "";
-      } else {
-        // When isModalOpen is false, restore the original route name
-        this.$route.name = this.$route.meta.title || "Default Title"; // You can change "Default Title" to a fallback title if necessary.
-      }
-    },
   },
 };
 </script>

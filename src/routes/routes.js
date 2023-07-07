@@ -5,65 +5,55 @@ import ProjectRequest from "@/pages/ProjectRequest.vue";
 import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
-
-import Request from "@/pages/Request.vue";
-import Request1 from "@/pages/Request1.vue";
 import LandingPage from "@/pages/LandingPage.vue";
-import Login from "@/pages/Login.vue";
+import Teams from "@/pages/Teams.vue";
 
 const routes = [
   {
     path: "/",
-    name: "landingpage",
+    name: "landing",
     component: LandingPage,
   },
   {
-    path: "/request",
-    name: "request",
-    component: Request,
-  },
-  {
-    path: "/request1",
-    name: "request1",
-    component: Request1,
-  },
-  
-  {
-    path: "/login",
-    name: "login",
-    component: Login,
-  },
-  {
     path: "/dashboard",
+    name: "dashboard",
     component: DashboardLayout,
+    meta: { requiresAuth: true },
     children: [
       {
-        path: "",
+        path: "/dashboard",
         name: "Dashboard",
         component: Dashboard,
       },
+      
       {
-        path: "/pricingquoting",
-        name: "Pricing Qoutiing",
-        component: PricingQuoting,
+        path: "/teams",
+        name: "Teams",
+        component: Teams,
       },
       {
-        path: "/projectrequest",
+        path: "/projectRequest",
         name: "Project Request",
         component: ProjectRequest,
       },
       {
+        path: "/pricing-quoting",
+        name: "Pricing and Quoting",
+        component: PricingQuoting,
+      },
+      {
         path: "/projectstatus",
-        name: "Project Status",
+        name: "projectstatus",
         component: ProjectStatus,
       },
       {
-        path: "/Messenger",
+        path: "/messenger",
+        name: "Messenger",
         component: Messenger,
       },
       {
         path: "/settings",
-        name: "Settings",
+        name: "Admin Settings",
         component: Settings,
       },
     ],
