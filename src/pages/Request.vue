@@ -30,7 +30,7 @@
       <input type="date" id="projectDeadline" placeholder="Enter due date" required>
       <label for="attachedFile">Attach File</label>
       <input type="file" id="attachedFile">
-      <button type="submit" class="next" id="next">Submit Request</button>
+      <button type="submit" class="next" id="next">Proceed to Next</button>
     </form>
   </div>
     </template>

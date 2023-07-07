@@ -59,7 +59,6 @@
          </div>
        </div>
    </div>
-          <div class="table-responsive">
                 <table class="table">
                   <thead>
                     <tr>
@@ -115,15 +114,15 @@
                     </tr>
                   </tbody>
                 </table>
-               </div>
-             </div>
+              </div>
             </div>
-         </div>
+        </div>
       </div>
       <!-- Modal Form -->
-  <div id="milestoneModal" class="modal">
+<div id="milestoneModal" class="modal">
   <div class="modal-content">
     <span class="close" @click="closeModal">&times;</span>
+    <!-- Your form content goes here -->
     <h2>Milestones Completed</h2>
     <hr>
     <ul>
@@ -140,7 +139,6 @@ import { Bar, Doughnut } from 'vue-chartjs';
 import 'chartjs-plugin-labels';
 import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale, ArcElement } from 'chart.js';
 ChartJS.register(Title, Tooltip, Legend, BarElement, ArcElement, CategoryScale, LinearScale);
-
 export default {
   name: 'Charts',
   components: { Bar, Doughnut },
@@ -191,7 +189,6 @@ export default {
       const filter = this.searchInput.toUpperCase();
       const table = document.querySelector('.table');
       const tr = table.getElementsByTagName('tr');
-
       for (let i = 0; i < tr.length; i++) {
         const td = tr[i].getElementsByTagName('td')[1]; // Column index to filter (Task column in this case)
         if (td) {
@@ -204,12 +201,10 @@ export default {
         }
       }
     },
-
     openModal() {
       const modal = document.getElementById("milestoneModal");
       modal.style.display = "block";
     },
-
     closeModal() {
       const modal = document.getElementById("milestoneModal");
       modal.style.display = "none";

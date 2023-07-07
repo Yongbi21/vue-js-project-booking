@@ -2,7 +2,7 @@
   <div class="pricing-quoting-wrapper">
     <div class="container">
       <div class="row">
-        <div class="col-12 big-container">   
+        <div class="col-12 big-container" id="price1">   
               <div class="table-responsive d-flex">
                 <div class="col-6 sort-by" id="sort">
                   <label for="sortDropdown"></label>
@@ -98,13 +98,13 @@
       <hr style="border: 1px solid black;">
       <form class="group">
       <label for="projectCost">Cost for Project Complexity:</label>
-      <input type="text" id="projectCost1" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="High - ₱30,000" required>
+      <input type="text" id="projectCost" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="High - ₱30,000" required>
       <label for="projectCost">Cost for Project Complexity:</label>
-      <input type="text" id="projectCost2" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="Average - ₱20,000" required>
+      <input type="text" id="projectCost" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="Average - ₱20,000" required>
       <label for="projectCost">Cost for Project Complexity:</label>
-      <input type="text" id="projectCost3" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="Low - ₱10,000" required>
+      <input type="text" id="projectCost" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="Low - ₱10,000" required>
       <label for="projectCost">Cost for Time Estimation:</label>
-      <input type="text" id="projectCost4" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="1 month - ₱30,000" required>
+      <input type="text" id="projectCost" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="1 month - ₱30,000" required>
       <label for="projectCost">Cost for Additional Services:</label>
       <input type="text" id="projectCost" pattern="^[A-Za-z]{1,3}\s?\d+(\.\d{1,2})?$" placeholder="₱10,000" required>
 
@@ -143,8 +143,19 @@
       <label for="projectDate">Date Created</label>
       <input type="date" id="projectDate" placeholder="Enter date created" required>
       
-      <label for="projectAmount">Total Amount</label>
-      <input type="number" id="projectAmount" placeholder="Enter Total Amount" required>
+  <label for="Total Amount">Total Amount:</label>
+  <input
+  type="text"
+  id="totalAmount"
+  v-model="totalValue"
+  v-money="{
+    decimal: '.',
+    thousands: ',',
+    prefix: '₱',
+    precision: 2,
+    masked: false
+  }"
+  required>      
 
       <label for="additional-services">Additional Services</label>
       <textarea id="additional-services" placeholder="Input Additional Services" required></textarea>  

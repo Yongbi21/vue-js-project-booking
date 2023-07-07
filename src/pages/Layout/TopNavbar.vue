@@ -2,6 +2,7 @@
   <md-toolbar md-elevation="0" class="md-transparent" style="z-index: 0;">
     <div class="md-toolbar-row">
       <div class="md-toolbar-section-start">
+
         <div class="md-toolbar-section-start" :class="{ 'modal-open': isModalOpen }">
            <h3 class="md-title" :style="{ fontWeight: getRouteFontWeight, fontSize: '30px' }">{{ $route.name }}</h3>
         </div>

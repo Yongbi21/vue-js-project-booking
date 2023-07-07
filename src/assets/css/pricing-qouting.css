@@ -1,7 +1,5 @@
 
-.pricing-quoting-wrapper 
 .big-container {
-
         background-color: #ffff;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -137,28 +135,15 @@
     justify-content: center;
   }
 .add{
-    width: 150px; /* Adjust the width to make the button larger */
+    width: 150px; 
     margin: left;
     border-radius: 20px;
   }
   .cancel{
-    width: 150px; /* Adjust the width to make the button larger */
+    width: 150px; 
     margin: right;
     border-radius: 20px;
   }
-  #projectCost1,
-  #projectCost2,
-  #projectCost3,
-  #projectCost4,
-  #projectCost5, 
-  input[type ="text"] {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-bottom: 15px;
-}
 #sort{
   width: 10%;
   margin-top: 30px;
@@ -173,5 +158,24 @@
   position: relative;
   top: auto;
   transform: translateY(0%);
-  margin-left: -20px; /* Adjust this value to control the horizontal position */
+  margin-left: -20px;
+}
+.close{
+  display: flex;
+  justify-content: end;
+}
+#totalAmount{
+  width: 100%;
+}
+#projectCost{
+  width: 100%;
+}
+#price1 {
+  background-color: #ffff;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  height: auto;
+  height: 80vh !important;
 }

@@ -92,4 +92,20 @@ export default {
     display: none;
   }
 }
+.wrapper 
+.sidebar 
+.logo 
+.simple-text
+.logo-img,
+.wrapper 
+.off-canvas-sidebar 
+.logo 
+.simple-text
+.logo-img {
+    width: 250px;
+    display: inline-block;
+    height: 40px;
+    overflow: hidden;
+    margin-left: -20px;
+}
 </style>
