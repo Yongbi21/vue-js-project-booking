@@ -1,5 +1,5 @@
 <template>
-  <div class="form-container">
+  <div class="form">
     <span class="back" id="backbtn"></span>
     <div class="Logo" id="sign">
       <img src="../assets/img/dreamers logo.png" alt="Logo" class="logo" />

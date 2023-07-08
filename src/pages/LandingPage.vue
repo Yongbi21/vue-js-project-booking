@@ -4,15 +4,31 @@
       <div class="container-fluid" id="header">
         <div class="d-flex align-items-center ml-4">
           <a href="#">
-            <img src="../assets/img/dreamers logo.png" width="80px;" class="mr-2">
+            <img
+              src="../assets/img/dreamers logo.png"
+              width="80px;"
+              class="mr-2"
+            />
           </a>
           <a class="navbar-brand" href="#">Project Booking App</a>
         </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sideheader" aria-controls="sideheader" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-</button>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sideheader"
+          aria-controls="sideheader"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-      <div class="collapse navbar-collapse" id="sideheader" style="padding-right: 40px;">
+      <div
+        class="collapse navbar-collapse"
+        id="sideheader"
+        style="padding-right: 40px"
+      >
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-4">
           <li class="nav-item ms-2">
             <a class="nav-link" id="home1" aria-current="page" href="#">Home</a>
@@ -83,35 +99,39 @@
           Automated Notifications
         </h3>
         <br />
-        <div class="request">
-          <div class="row">
-            <div class="col-12 text-center">
-              <div class="request">
-                <Modal
-                  @close="toggleRequestModal"
-                  :modalActive="requestModalActive"
-                >
-                  <div class="modal-content">
-                    <Request></Request>
-                  </div>
-                </Modal>
-                <button
-                  @click="toggleRequestModal"
-                  type="button"
-                  class="request-button"
-                >
-                  Request
-                </button>
-              </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="request1">
+              <Modal
+                @close="toggleRequestModal"
+                :modalActive="requestModalActive"
+              >
+                <div class="modal-content">
+                  <Request1></Request1>
+                </div>
+              </Modal>
+              <button
+                @click="toggleRequestModal"
+                type="button"
+                class="request1-button"
+              >
+                Request
+              </button>
             </div>
           </div>
         </div>
       </header>
       <div class="d-flex justify-content-between" id="border1">
-       
-        <img src="../assets/img/landing-page1.jpg" width="700" class="img-fluid">
-        <img src="../assets/img/landing-page2.jpg" width="700" class="img-fluid">
-
+        <img
+          src="../assets/img/landing-page1.jpg"
+          width="700"
+          class="img-fluid"
+        />
+        <img
+          src="../assets/img/landing-page2.jpg"
+          width="700"
+          class="img-fluid"
+        />
       </div>
     </div>
     <div class="text-center" id="feature">
@@ -375,7 +395,7 @@
 import Signup from "../components/signup";
 import Login from "../components/login";
 import Modal from "@/components/LandingModals.vue";
-import Request from "@/components/request.vue";
+import Request1 from "@/components/request1.vue";
 import { ref } from "vue";
 
 export default {
@@ -384,7 +404,7 @@ export default {
     Signup,
     Login,
     Modal,
-    Request,
+    Request1,
   },
   setup() {
     const loginModalActive = ref(false);
@@ -418,7 +438,8 @@ export default {
     const initialNavbarTop = navbar ? navbar.offsetTop : 0;
 
     function handleScroll() {
-      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
 
       if (navbar && scrollPosition >= initialNavbarTop) {
         navbar.classList.add("navbar-fixed");

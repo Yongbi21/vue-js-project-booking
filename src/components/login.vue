@@ -1,5 +1,5 @@
 <template>
-  <div class="form-container">
+  <div class="form">
     <div class="Logo">
       <img src="../assets/img/dreamers logo.png" alt="Logo" class="logo" />
     </div>
@@ -49,7 +49,14 @@
       <div class="signup-link">
         <p class="mb-0">
           Don't have an account?
-          <router-link to="/signup">Sign Up</router-link>
+          <Modal @close="toggleSignupModal" :modalActive="signupModalActive">
+            <div class="modal-content">
+              <Signup></Signup>
+            </div>
+          </Modal>
+          <button @click="toggleSignupModal" type="button" class="btn btn-link">
+            Signup
+          </button>
         </p>
       </div>
     </form>
@@ -61,9 +68,28 @@
 </style>
 
 <script>
+import Signup from "../components/signup";
 import axios from "axios";
+import { ref } from "vue";
+import Modal from "@/components/LandingModals.vue";
 
 export default {
+  components: {
+    Signup,
+    Modal,
+  },
+  setup() {
+    const signupModalActive = ref(false);
+
+    const toggleSignupModal = () => {
+      signupModalActive.value = !signupModalActive.value;
+    };
+
+    return {
+      signupModalActive,
+      toggleSignupModal,
+    };
+  },
   data() {
     return {
       email: "",

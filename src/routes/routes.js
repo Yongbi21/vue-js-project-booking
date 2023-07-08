@@ -25,7 +25,6 @@ const routes = [
         name: "Dashboard",
         component: Dashboard,
       },
-      
       {
         path: "/teams",
         name: "Teams",
@@ -60,11 +59,10 @@ const routes = [
   },
 ];
 
-routes.forEach(route => {
+routes.forEach((route) => {
   if (route.name) {
     route.meta = { ...route.meta, fontWeight: "500" };
   }
 });
-
 
 export default routes;

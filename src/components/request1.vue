@@ -1,11 +1,7 @@
 <template>
   <div class="request-form">
     <form>
-      <div class="d-flex justify-content-between">
-        <div class="close-icon">
-          <i class="fas fa-times" @click="goToLandingPage"></i>
-        </div>
-      </div>
+      <div class="d-flex justify-content-between"></div>
       <legend class="prf">Project Request Form</legend>
       <br />
       <hr style="border: 1px solid black" />
@@ -49,7 +45,21 @@
       />
       <label for="attachedFile">Attach File</label>
       <input type="file" id="attachedFile" />
-      <button type="submit" class="next" id="next">Submit Request</button>
+      <div class="request2">
+        <Modal @close="toggleRequest2Modal" :modalActive="request2ModalActive">
+          <div class="modal-content">
+            <Request2></Request2>
+          </div>
+        </Modal>
+        <button
+          @click="toggleRequest2Modal"
+          type="submit"
+          class="request1-button"
+          id="next"
+        >
+          Submit Request
+        </button>
+      </div>
     </form>
   </div>
 </template>
@@ -60,28 +70,41 @@
 </style>
 
 <script>
+import Request2 from "@/components/request2.vue";
+import Modal from "@/components/LandingModals.vue";
+import { ref } from "vue";
 export default {
-  // name: "Request1",
-  // methods: {
-  //   goToLandingPage() {
-  //     // Code to navigate to the landing page using router
-  //     // For example, if your landing page route name is 'landing':
-  //     // this.$router.push({ name: "landingpage" });
-  //   },
-  //   // Rest of the component code
-  // },
-  // submitForm(event) {
-  //   event.preventDefault();
+  components: { Request2, Modal },
+  setup() {
+    const request2ModalActive = ref(false);
+    const toggleRequest2Modal = () => {
+      request2ModalActive.value = !request2ModalActive.value;
+    };
+    return {
+      request2ModalActive,
+      toggleRequest2Modal,
+    };
+  },
+  methods: {
+    goToLandingPage() {
+      // Code to navigate to the landing page using router
+      // For example, if your landing page route name is 'landing':
+      this.$router.push({ name: "landingpage" });
+    },
+    // Rest of the component code
+  },
+  submitForm(event) {
+    event.preventDefault();
 
-  //   // Perform manual form validation
-  //   if (event.target.checkValidity()) {
-  //     // All required fields are filled, proceed to next
-  //     // Add your logic here
-  //     // For example, you can navigate to the next page using router
-  //     // this.$router.push({ name: 'request1' });
-  //   } else {
-  //     // Invalid form, display error messages or handle validation errors
-  //   }
-  // },
+    // Perform manual form validation
+    if (event.target.checkValidity()) {
+      // All required fields are filled, proceed to next
+      // Add your logic here
+      // For example, you can navigate to the next page using router
+      // this.$router.push({ name: 'request1' });
+    } else {
+      // Invalid form, display error messages or handle validation errors
+    }
+  },
 };
 </script>

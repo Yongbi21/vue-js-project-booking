@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: "Request1",
+  name: "Request",
   data() {
     return {
       weekValue: "",
@@ -51,9 +51,10 @@ export default {
   },
   methods: {
     goBack() {
-      // Code to navigate back to the previous page
-      this.$router.go(-1);
+      // Navigate back to the previous page
+      this.$router.back();
     },
+
 
     handleInput() {
       const combinedDate =
