@@ -1,4 +1,9 @@
-#chat3 .form-control {
+.container-body {
+    padding: 70px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  }
+  #chat3 .form-control {
     border-color: transparent;
   }
   
@@ -13,38 +18,4 @@
     width: 10px;
     margin-left: 2.9rem;
     margin-top: -0.75rem;
-    }
-
-    .mess-container
-     {
-        background-color: #ffff;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        border-radius: 20px;
-      }
-
-      .mess-wrapper {
-        padding: 5px;
-        padding-right: 15px; 
-        padding-left: 15px; 
-      }
-      
-      @media (min-width: 576px) {
-        .mess-wrapper {
-          padding-right: 250px; 
-          padding-left: 250px; 
-        }
-      }
-      #textAreaExample2{
-        width: 100%;
-      }
-      #out{
-        background-color: #ffffff; 
-        border: 1px solid #dddddd;
-      }
-      #send{
-        color: white;
-        width: 15%;
-        border-radius: 20px;
-      }
-
+  }

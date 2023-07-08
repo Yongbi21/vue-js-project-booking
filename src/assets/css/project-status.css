@@ -8,14 +8,13 @@
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
-  height: auto;
 }
 
 .mini-container {
   background-color: #ffff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 10px;
-    width: 43vh;
+  width: 43vh;
   border-radius: 20px;
 }
 .h{
@@ -45,8 +44,11 @@
   margin-top: 20px;
   border-radius: 20px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin-right: 30px;
   justify-content: center;
   align-items: center;
+  /* width: 1200px; */
+ margin-right: 0;
 }
 
 .semi-mid-container {
@@ -326,56 +328,88 @@
       width: 100%;
     }
   }
-
- .status{
-  color: red;
- }
- #milestone-cell {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  color: #477BFF !important;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-#milestone-cell:hover {
-  transform: scale(1.2);
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-}
-
-.close {
-  color: #aaa;
-  display: flex;
-  justify-content: end;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
   
+  @media (max-width: 336px) {
+    .big-container .mini-container,
+    .middle-container,
+    .semi-middle-container,
+    .semi-mid-container {
+      margin-bottom: 15px;
+    }
+    .big-container .mini-container:last-child {
+      margin-bottom: 0;
+    }
+  }
+  @media (max-width: 336px) {
+    .big-container .mini-container,
+    .middle-container,
+    .semi-middle-container,
+    .semi-mid-container {
+      padding: 4px;
+      margin-bottom: 15px;
+      margin-right: 10px;
+      width: 80%;
+    }
+    .big-container .mini-container:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .big-container {
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    }
+    
+   .status{
+    color: red;
+   }
+   #milestone-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #477BFF !important;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  #milestone-cell:hover {
+    transform: scale(1.2);
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
