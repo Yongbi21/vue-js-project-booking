@@ -32,17 +32,17 @@
       <header class="hero-text" style="opacity: 1;">
         <h1 class="hasBreak nobr">Streamline Your Project Workflow<br>  
           with Effortless Communication<br>
-          and Management</h1>
+          and Management with</h1>
         <h3 class="hasBreak nobr">
           <img id="arrow1" src="../assets/img/arrow1.png" width="40" style="margin-right: 35px;">
           Optimize Project Management and Collaboration
           <img id="arrow2" src="../assets/img/arrow2.png" width="40" style=" margin-left : 35px;">
           <br> 
-          with Real-Time Messaging, Tracking, and Automated
+           Real-Time Messaging, Tracking, and Automated
           <br>
-           Notifications. Send a request or
+           Notifications. Send a request or Book your
           <br>
-          Book your Project now to get started.
+          Project now to get started.
         </h3> 
         <br>
         <div class="request">
@@ -263,17 +263,17 @@ export default {
       var arrow1 = document.getElementById("arrow1");
       var arrow2 = document.getElementById("arrow2");
       if (arrow1 && arrow2) {
-        arrow1.style.transition = "margin-bottom 4s";
-        arrow2.style.transition = "margin-bottom 4s";
+        arrow1.style.transition = "margin-bottom 2s";
+        arrow2.style.transition = "margin-bottom 2s";
         arrow1.style.marginBottom = "-300px";
         arrow2.style.marginBottom = "-300px";
 
         setTimeout(function () {
-          arrow1.style.transition = "margin-bottom 3s";
-          arrow2.style.transition = "margin-bottom 3s";
+          arrow1.style.transition = "margin-bottom 2s";
+          arrow2.style.transition = "margin-bottom 2s";
           arrow1.style.marginBottom = "0";
           arrow2.style.marginBottom = "0";
-        }, 3000);
+        }, 2000);
       }
     }
 
