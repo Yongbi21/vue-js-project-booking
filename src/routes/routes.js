@@ -2,7 +2,6 @@ import DashboardLayout from "@/pages/Layout/DashboardLayout.vue";
 import Dashboard from "@/pages/Dashboard.vue";
 import PricingQuoting from "@/pages/PricingQuoting.vue";
 import ProjectRequest from "@/pages/ProjectRequest.vue";
-import ProjectStatus from "@/pages/ProjectStatus.vue";
 import Messenger from "@/pages/Messenger.vue";
 import Settings from "@/pages/AdminSettings.vue";
 
@@ -51,11 +50,6 @@ const routes = [
         path: "/projectrequest",
         name: "Project Request",
         component: ProjectRequest,
-      },
-      {
-        path: "/projectstatus",
-        name: "Project Status",
-        component: ProjectStatus,
       },
       {
         path: "/Messenger",

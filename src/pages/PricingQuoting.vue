@@ -134,31 +134,41 @@
         <option value="low">Low</option>
       </select>
       
-      <div class="estimatedTime">
-      <label for="estimatedTime">Estimated Time</label>
-      <input type="week" v-model="weekValue" @input="handleInput">
-      <input type="month" v-model="monthValue" @input="handleInput">
-      </div>
+        <label for="estimatedTime">Estimated Time</label>
+        <input type="text" id="estimatedTime" value="1 month" required>
+    <!-- <datepicker
+      v-model="estimatedTime"
+      :type="dateType"
+      :format="dateFormat"
+      :language="en"
+      input-class="form-control"
+      required
+    ></datepicker>       -->
 
       <label for="projectDate">Date Created</label>
-      <input type="date" id="projectDate" placeholder="Enter date created" required>
-      
-  <label for="Total Amount">Total Amount:</label>
-  <input
-  type="text"
-  id="totalAmount"
-  v-model="totalValue"
-  v-money="{
-    decimal: '.',
-    thousands: ',',
-    prefix: '₱',
-    precision: 2,
-    masked: false
-  }"
-  required>      
+      <input type="date" id="projectDate" value="2023-07-01" required>
+
+      <div>
+    <label for="projectAmount">Total Amount:</label>
+    <input
+      type="text"
+      id="projectAmount"
+      v-model="totalAmount"
+      v-money="{
+        decimal: '.',
+        thousands: ',',
+        prefix: '₱',
+        precision: 2,
+        masked: false
+      }"
+      placeholder="₱100,000"
+      required
+    >
+  </div>
+
 
       <label for="additional-services">Additional Services</label>
-      <textarea id="additional-services" placeholder="Input Additional Services" required></textarea>  
+      <textarea id="additional-services" placeholder="Web Design, UI Design, Maintainenance" required></textarea>  
     </form>
     <div class="row">
     <button type="submit" class="btn btn-primary add" id="add">Edit</button>
@@ -183,21 +193,39 @@
   </template>
 
 <script>
+// import Datepicker from 'vuejs-datepicker';
+
 export default {
+  // components: {
+  //   Datepicker,
+  // },
   data() {
        return {
         sortOption: "default", 
-       weekValue: '',
-        monthValue: ''
+        totalAmount: ''
+      //   estimatedTime: null,
+      // dateType: 'month', // 'day', 'week', or 'month'
+      // dateFormat: 'yyyy-MM-dd', // 'yyyy-MM-dd', 'yyyy-ww', or 'yyyy-MM'
       };
     },
     
-
+    computed: {
+    moneyOptions() {
+      return {
+        decimal: '.',
+        thousands: ',',
+        prefix: '₱',
+        precision: 2,
+        masked: false
+      };
+    },
+    placeholderText() {
+      return this.totalAmount ? '' : '₱100,000';
+    }
+  },
 
   methods: {
-    handleInput() {
-      const combinedDate = this.weekValue + '-' + this.monthValue + '-' 
-    },
+
     openModal(modalId) {
       const modal = document.getElementById(modalId);
       modal.style.display = "block";

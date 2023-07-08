@@ -17,10 +17,6 @@
         <i class="bi-graph-up-arrow"></i>
         <p>Pricing and Quoting</p>
       </sidebar-link>
-      <sidebar-link to="/projectstatus">
-        <i class="bi bi-calendar"></i>
-        <p>Project Tracking Status</p>
-      </sidebar-link>
       <sidebar-link to="/messenger">
         <i class="bi bi-chat-dots"></i>
         <p>Messenger</p>

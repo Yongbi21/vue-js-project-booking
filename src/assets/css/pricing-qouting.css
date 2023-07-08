@@ -121,12 +121,12 @@
     margin-bottom: 15px;
 }
 
-.estimatedTime input[type="week"],
-.estimatedTime input[type="month"]{
+#estimatedTime{
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin-bottom: 15px;
 }
@@ -164,12 +164,13 @@
   display: flex;
   justify-content: end;
 }
-#totalAmount{
+#projectAmount{
   width: 100%;
 }
 #projectCost{
   width: 100%;
 }
+
 #price1 {
   background-color: #ffff;
   padding: 20px;
